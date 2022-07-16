@@ -6,11 +6,9 @@ class Config {
 
     public static function get() {
 
-        // dd(__METHOD__);
-
         $user = \Sentinel::check();
 
-        \Log::info(__METHOD__ . '===>' . ($user ? $user->id : 'No user'));
+        
 
         $roles = $user ? $user->roles : NULL;
 
@@ -27,13 +25,21 @@ class Config {
         {
             /** deocamdata la rolul operator */
             $user->workingCustomers = NULL;
+
             if($user->role->slug == 'operator')
             {
                 $user->workingCustomers = \Decalex\Models\TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
             }
 
+            \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
+
             $user->settings = \Decalex\Models\UserSetting::where('user_id', $user->id)->get()->pluck('value', 'code');
+
+            \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
         }
+
+        \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
+        
 
         return [
             'user' => $user ? $user : NULL,
