@@ -9,6 +9,11 @@ use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
 class HomeController extends Controller {
 
     public function index(Request $r) {
+
+        $user = \Sentinel::check();
+
+        \Log::ingo(__METHOD__ . ($user ? $user->id : 'No user ...'));
+
         return Response::View('~templates.index', asset('apps/login/index.js'));
     }
 

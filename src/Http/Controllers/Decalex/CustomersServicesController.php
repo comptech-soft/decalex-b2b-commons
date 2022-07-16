@@ -1,0 +1,40 @@
+<?php
+
+namespace Decalex\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Comptech\Helpers\Response;
+use Decalex\Models\CustomerOrderService;
+
+class CustomersServicesController extends Controller {
+    
+    public function index(Request $r) {
+        return Response::View('~templates.index', asset('apps/customers-services/index.js'));
+    }
+
+    public function getItems(Request $r) {
+        return CustomerOrderService::getItems($r->all());
+    }
+
+    public function doAction($action, Request $r) {
+        return CustomerOrderService::doAction($action, $r->all());
+    }
+
+    public function export(Request $r) {
+        return CustomerOrderService::export($r->all());
+    }
+
+    public function exportPreview() {
+
+        $records = CustomerOrderService::with(['order.customer', 'order.contract', 'service'])->get();
+
+        return view('exports.customers-services.xls-export', [
+            'columns' => CustomerOrderService::$exportedColumns,
+            'records' => $records,
+        ]);
+    }
+
+    
+
+}

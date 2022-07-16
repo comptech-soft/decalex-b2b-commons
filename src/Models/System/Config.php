@@ -8,8 +8,6 @@ class Config {
 
         $user = \Sentinel::check();
 
-        
-
         $roles = $user ? $user->roles : NULL;
 
         $locale = app()->getLocale();
