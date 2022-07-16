@@ -40,7 +40,7 @@ class Config {
             'shortname' => config('app.shortname'),
             'url' => config('app.url'),
             'env' => config('app.env'),
-            'sysconfig' => \System\Models\Configuration::all(),
+            'sysconfig' => \ComptechSoft\Decalex\Models\System\Configuration::all(),
             'languages' => [
                 'ro' => [
                     'caption' => 'Romanian',
