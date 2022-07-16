@@ -4,7 +4,7 @@ namespace B2B\Http\Controllers\System;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
+use B2B\Classes\Comptech\Helpers\Response;
 
 class HomeController extends Controller {
 

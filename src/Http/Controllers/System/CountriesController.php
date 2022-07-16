@@ -4,8 +4,8 @@ namespace B2B\Http\Controllers\System;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Comptech\Helpers\Response;
-use System\Models\Country;
+use B2B\Classes\Comptech\Helpers\Response;
+use B2B\Models\System\Country;
 
 class CountriesController extends Controller {
     

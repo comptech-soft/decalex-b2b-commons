@@ -4,7 +4,7 @@ namespace B2B\Http\Controllers\System;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use System\Models\Validation;
+use B2B\Models\System\Validation;
 
 class ValidationController extends Controller {
 
