@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Models;
+namespace B2B\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
 

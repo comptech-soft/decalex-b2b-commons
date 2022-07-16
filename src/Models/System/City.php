@@ -1,12 +1,12 @@
 <?php
 
-namespace System\Models;
+namespace B2B\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
 
-use System\Traits\City\Actions;
-use System\Traits\City\GetCities;
-use System\Traits\City\Relations;
+use B2B\Traits\System\City\Actions;
+use B2B\Traits\System\City\GetCities;
+use B2B\Traits\System\City\Relations;
 
 class City extends Model {
 
