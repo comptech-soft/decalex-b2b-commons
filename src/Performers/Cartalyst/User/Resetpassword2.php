@@ -4,7 +4,7 @@ namespace ComptechSoft\Decalex\Performers\Cartalyst\User;
 
 use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
 
-class Resetpassword extends Perform {
+class Resetpassword2 extends Perform {
 
 
     public function Action() {
