@@ -9,6 +9,9 @@ class Config {
         // dd(__METHOD__);
 
         $user = \Sentinel::check();
+
+        \Log::info(__METHOD__);
+
         $roles = $user ? $user->roles : NULL;
 
         $locale = app()->getLocale();
