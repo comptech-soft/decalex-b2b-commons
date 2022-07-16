@@ -2,6 +2,7 @@
 
 namespace B2B\Providers;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class DecalexServiceProvider extends ServiceProvider
