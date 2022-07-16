@@ -1,9 +1,9 @@
 <?php
 
-namespace System\Http\Middleware;
+namespace ComptechSoft\Decalex\Http\Middleware;
 
 use Closure;
-use Comptech\Helpers\Response;
+use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
 
 class IsAuthenticated {
 
@@ -15,9 +15,10 @@ class IsAuthenticated {
         {
             return $next($request);
         }
+
         if($request->ajax())
         {
-            return response()->json(Response::Error(__('Your request is unauthorized!'), $request->all()));
+            return response()->json(Response::Error(__('Trebuie să fiți utilizator autentificat.'), $request->all()));
         }
 
         return redirect( config('app.url'));

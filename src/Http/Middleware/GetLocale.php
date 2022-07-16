@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Http\Middleware;
+namespace ComptechSoft\Decalex\Http\Middleware;
 
 use Closure;
 

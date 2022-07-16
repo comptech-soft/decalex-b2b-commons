@@ -1,9 +1,9 @@
 <?php
 
-namespace System\Http\Middleware;
+namespace ComptechSoft\Decalex\Http\Middleware;
 
 use Closure;
-use Comptech\Helpers\Response;
+use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
 
 /*
 | Ruta trebuie să fie pentru utilizator neautentificat (visitor)
@@ -34,7 +34,7 @@ class IsUnauthenticated
         */
         if($request->ajax())
         {
-            return response()->json(Response::Error('Your request is unauthorized!', $request->all(), [
+            return response()->json(Response::Error('Requestul este permis dacă nu sunteți autentificat.', $request->all(), [
                 'redirect' => config('app.url')
             ]));
         }
