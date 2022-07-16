@@ -5,7 +5,7 @@ namespace ComptechSoft\Decalex\Http\Controllers\System;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
-use Cartalyst\Models\User;
+use ComptechSoft\Decalex\Models\Cartalyst\User;
 
 class LoginController extends Controller {
 
