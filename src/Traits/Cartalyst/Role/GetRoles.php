@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Traits\Cartalyst\Role;
+namespace B2B\Traits\Cartalyst\Role;
 
 use Comptech\Performers\Datatable\GetItems;
 

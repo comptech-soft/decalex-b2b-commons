@@ -1,8 +1,9 @@
 <?php
 
-namespace ComptechSoft\Decalex\Classes\Comptech\Helpers;
+namespace B2B\Classes\Comptech\Helpers;
 
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Validator;
+use B2B\Classes\Comptech\Helpers\Validator;
+use B2B\Classes\Comptech\Helpers\Response;
 
 class Perform {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Classes\Comptech\Helpers;
+namespace B2B\Classes\Comptech\Helpers;
 
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithStrictNullComparison;

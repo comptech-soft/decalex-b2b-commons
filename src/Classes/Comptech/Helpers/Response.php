@@ -1,8 +1,8 @@
 <?php
 
-namespace ComptechSoft\Decalex\Classes\Comptech\Helpers;
+namespace B2B\Classes\Comptech\Helpers;
 
-use ComptechSoft\Decalex\Models\System\Config;
+use B2B\Models\System\Config;
 
 class Response {
 

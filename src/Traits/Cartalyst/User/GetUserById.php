@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Traits\Cartalyst\User;
+namespace B2B\Traits\Cartalyst\User;
 
 trait GetUserById {
 

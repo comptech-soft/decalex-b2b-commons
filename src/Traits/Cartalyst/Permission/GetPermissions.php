@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Traits\Permission;
+namespace B2B\Traits\Cartalyst\Permission;
 
 use Comptech\Performers\Datatable\GetItems;
 

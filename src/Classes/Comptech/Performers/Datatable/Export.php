@@ -2,8 +2,8 @@
 
 namespace ComptechSoft\Decalex\Classes\Comptech\Performers\Datatable;
 
-use Comptech\Helpers\Perform;
-use Comptech\Helpers\ExcelExport;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\ExcelExport;
 
 /**
  * inregistrarile exportate trebuie sa se gaseasca in input['items']

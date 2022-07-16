@@ -2,7 +2,7 @@
 
 namespace ComptechSoft\Decalex\Classes\Comptech\Performers\Datatable;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 class GetItems extends Perform {
 
