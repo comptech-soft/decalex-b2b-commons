@@ -17,5 +17,9 @@ class DecalexServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/set-locale.php');
         $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/user-session.php');
 
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/configs.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/countries.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/database.php');
+        $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/validation.php');
     }
 }
