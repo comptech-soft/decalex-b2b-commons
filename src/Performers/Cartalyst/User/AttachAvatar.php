@@ -1,16 +1,14 @@
 <?php
 
-namespace ComptechSoft\Decalex\Performers\Cartalyst\User;
+namespace B2B\Performers\Cartalyst\User;
 
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 class AttachAvatar extends Perform {
 
     public function Action() {
 
         $user = \Cartalyst\Models\User::find($this->input['id']);
-
-
 
         $file = $this->input['avatar'];
 

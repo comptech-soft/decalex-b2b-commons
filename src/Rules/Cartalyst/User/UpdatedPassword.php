@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Rules\User;
+namespace B2B\Rules\Cartalyst\User;
 
 use Illuminate\Contracts\Validation\Rule;
 

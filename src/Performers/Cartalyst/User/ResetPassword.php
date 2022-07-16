@@ -1,15 +1,14 @@
 <?php
 
-namespace ComptechSoft\Decalex\Performers\Cartalyst\User;
+namespace B2B\Performers\Cartalyst\User;
 
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 class ResetPassword extends Perform {
 
-
     public function Action() {
 
-        $reminder = \Cartalyst\Models\Reminder::where('code', $this->input['code'])->first();
+        $reminder = \B2B\Models\Cartalyst\Reminder::where('code', $this->input['code'])->first();
 
         if( ! $reminder )
         {

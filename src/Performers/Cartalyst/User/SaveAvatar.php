@@ -1,11 +1,11 @@
 <?php
 
-namespace ComptechSoft\Decalex\Performers\Cartalyst\User;
+namespace B2B\Performers\Cartalyst\User;
 
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
-use Comptech\Models\System\Upload;
-use Comptech\Models\System\Preference;
-use Comptech\Models\Cartalyst\Preference as UserPreference;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\System\Upload;
+use B2B\Models\System\Preference;
+use B2B\Models\Cartalyst\Preference as UserPreference;
 
 /**
  * Salveaza avatarul pentru userul curent
