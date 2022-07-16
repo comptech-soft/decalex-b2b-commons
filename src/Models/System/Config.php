@@ -2,6 +2,10 @@
 
 namespace ComptechSoft\Decalex\Models\System;
 
+use ComptechSoft\Decalex\Models\Decalex\TeamCustomer;
+use ComptechSoft\Decalex\Models\Decalex\UserSetting;
+use ComptechSoft\Decalex\Models\System\Configuration;
+
 class Config {
 
     public static function get() {
@@ -26,12 +30,12 @@ class Config {
 
             if($user->role->slug == 'operator')
             {
-                $user->workingCustomers = \Decalex\Models\TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
+                $user->workingCustomers = TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
             }
 
             \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
 
-            $user->settings = \Decalex\Models\UserSetting::where('user_id', $user->id)->get()->pluck('value', 'code');
+            $user->settings = UserSetting::where('user_id', $user->id)->get()->pluck('value', 'code');
 
             \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
         }
@@ -47,7 +51,7 @@ class Config {
             'shortname' => config('app.shortname'),
             'url' => config('app.url'),
             'env' => config('app.env'),
-            'sysconfig' => \ComptechSoft\Decalex\Models\System\Configuration::all(),
+            'sysconfig' => Configuration::all(),
             'languages' => [
                 'ro' => [
                     'caption' => 'Romanian',
