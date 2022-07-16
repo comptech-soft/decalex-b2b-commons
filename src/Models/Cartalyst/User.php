@@ -4,14 +4,14 @@ namespace ComptechSoft\Decalex\Models\Cartalyst;
 
 use Cartalyst\Sentinel\Users\EloquentUser;
 
-use Cartalyst\Traits\User\Attributes;
-use Cartalyst\Traits\User\Login;
-use Cartalyst\Traits\User\Logout;
-use Cartalyst\Traits\User\ForgotPassword;
-use Cartalyst\Traits\User\ResetPassword;
-use Cartalyst\Traits\User\Actions;
-use Cartalyst\Traits\User\GetUserById;
-use Cartalyst\Traits\User\GetUsers;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\Attributes;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\Login;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\Logout;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\ForgotPassword;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\ResetPassword;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\Actions;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\GetUserById;
+use ComptechSoft\Decalex\Traits\Cartalyst\User\GetUsers;
 
 class User extends EloquentUser {
 

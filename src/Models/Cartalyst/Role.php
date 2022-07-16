@@ -4,8 +4,8 @@ namespace ComptechSoft\Decalex\Models\Cartalyst;
 
 use Cartalyst\Sentinel\Roles\EloquentRole;
 
-use Cartalyst\Traits\Role\GetRoles;
-use Cartalyst\Traits\Role\Actions;
+use ComptechSoft\Decalex\Traits\Cartalyst\Role\GetRoles;
+use ComptechSoft\Decalex\Traits\Cartalyst\Role\Actions;
 
 class Role extends EloquentRole {
 

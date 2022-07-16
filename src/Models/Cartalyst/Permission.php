@@ -5,10 +5,10 @@ namespace ComptechSoft\Decalex\Models\Cartalyst;
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 
-use Cartalyst\Traits\Permission\GetPermissions;
-use Cartalyst\Traits\Permission\Actions;
-use Cartalyst\Traits\Permission\Reorder;
-use Cartalyst\Traits\Permission\DeleteChildren;
+use ComptechSoft\Decalex\Traits\Cartalyst\Permission\GetPermissions;
+use ComptechSoft\Decalex\Traits\Cartalyst\Permission\Actions;
+use ComptechSoft\Decalex\Traits\Cartalyst\Permission\Reorder;
+use ComptechSoft\Decalex\Traits\Cartalyst\Permission\DeleteChildren;
 
 // https://github.com/lazychaser/laravel-nestedset#installation
 
