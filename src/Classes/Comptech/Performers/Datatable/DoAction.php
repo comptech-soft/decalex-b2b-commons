@@ -1,6 +1,6 @@
 <?php
 
-namespace Comptech\Performers\Datatable;
+namespace ComptechSoft\Decalex\Classes\Comptech\Performers\Datatable;
 
 use Comptech\Helpers\Perform;
 

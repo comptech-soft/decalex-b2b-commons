@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Traits\User;
+namespace ComptechSoft\Decalex\Traits\Cartalyst\User;
 
 use Cartalyst\Rules\User\ValidPassword;
 use Cartalyst\Rules\User\UpdatedPassword;
