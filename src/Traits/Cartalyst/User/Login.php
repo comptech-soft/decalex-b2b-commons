@@ -5,7 +5,7 @@ namespace ComptechSoft\Decalex\Traits\Cartalyst\User;
 trait Login {
 
     public static function login($input) {
-        return (new \Cartalyst\Performers\User\Login(
+        return (new \ComptechSoft\Decalex\Performers\Cartalyst\User\Login(
             $input, 
             [
                 'email' => 'required|email',
