@@ -1,6 +1,6 @@
 <?php
 
-namespace Fhsinchy\Inspire\Providers;
+namespace ComptechSoft\Decalex\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
