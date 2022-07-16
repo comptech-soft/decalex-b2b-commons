@@ -12,7 +12,7 @@ class HomeController extends Controller {
 
         $user = \Sentinel::check();
 
-        \Log::ingo(__METHOD__ . ($user ? $user->id : 'No user ...'));
+        \Log::info(__METHOD__ . ($user ? $user->id : 'No user ...'));
 
         return Response::View('~templates.index', asset('apps/login/index.js'));
     }
