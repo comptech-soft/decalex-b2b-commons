@@ -9,6 +9,8 @@ trait Logout {
     public static function logout() {
         try
         {
+            \Log::info('Bye. Bye.');
+
             \Sentinel::logout(null, true);
             \Cache::flush();
             

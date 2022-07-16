@@ -1,7 +1,7 @@
 <?php
 
 /** USERS  **/
-Route::middleware(['is-authenticated'])->prefix('users')->namespace(\Cartalyst\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('users')->namespace(\ComptechSoft\Decalex\Http\Controllers\Cartalyst::class)->group(function(){
 
 
     Route::post('action/{action}', 'UsersController@doAction');
@@ -15,7 +15,7 @@ Route::middleware(['is-authenticated'])->prefix('users')->namespace(\Cartalyst\H
 
 });
 
-Route::middleware(['is-authenticated'])->namespace(\Cartalyst\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->namespace(\ComptechSoft\Decalex\Http\Controllers\Cartalyst::class)->group(function(){
 
     Route::get('my-profile', 'MyProfileController@index');
 

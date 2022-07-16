@@ -15,17 +15,13 @@ class IsUnauthenticated
 
     public function handle($request, Closure $next)
     {
-
        
         $user = \Sentinel::check();
-
 
         if( ! $user )
         {
             return $next($request);
         }
-
-        // dd(__METHOD__);
         /*
         | Daca avem user
         | Daca userul nu are vreun rol asociat
@@ -38,7 +34,7 @@ class IsUnauthenticated
                 'redirect' => config('app.url')
             ]));
         }
-        // Sentinel::logout($user, true);
+
         return redirect( config('app.url'));
     }
 

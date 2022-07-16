@@ -34,6 +34,7 @@ class Login extends Perform {
 
         if( $cnt != 1)
         {
+            \Log::info('BUM BUMM. Logout');
             \Sentinel::logout(null, true);
             \Cache::flush();
             
@@ -45,6 +46,8 @@ class Login extends Perform {
             throw new \Exception('Datele de autentificare nu se potrivesc în înregistrările noastre.');
         }
         
+        \Log::info('Login. OK.');
+
         $this->payload['user'] = $user;
 
     }
