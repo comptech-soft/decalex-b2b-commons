@@ -1,15 +1,14 @@
 <?php
 
-namespace Decalex\Performers\UserSetting;
+namespace B2B\Performers\Decalex\UserSetting;
 
-use Comptech\Helpers\Perform;
-use Decalex\Models\UserSetting;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\UserSetting;
 
 class SaveSetting extends Perform {
 
     public function Action() {
-        
-
+    
         $record = UserSetting::getByUserAndCode($this->input['user_id'], $this->input['code']);
 
         if(! $record)
@@ -22,6 +21,7 @@ class SaveSetting extends Perform {
                 'value' => $this->input['value'],
             ]);
         }
+        
         return $record;
     }
 

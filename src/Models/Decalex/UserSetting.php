@@ -4,12 +4,12 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use ComptechSoft\Decalex\Traits\Decalex\UserSetting\Actions;
-use ComptechSoft\Decalex\Traits\Decalex\UserSetting\GetSettings;
-use ComptechSoft\Decalex\Traits\Decalex\UserSetting\Relations;
+use B2B\Traits\Decalex\UserSetting\Actions;
+use B2B\Traits\Decalex\UserSetting\GetSettings;
 
 class UserSetting extends Model {
-    use Actions, GetSettings, Relations;
+    
+    use Actions, GetSettings;
 
     protected $table = 'users-settings';
 
