@@ -1,9 +1,9 @@
 <?php
 
-namespace ComptechSoft\Decalex\Http\Middleware;
+namespace B2B\Http\Middleware;
 
 use Closure;
-use ComptechSoft\Decalex\Classes\Comptech\Helpers\Response;
+use B2B\Classes\Comptech\Helpers\Response;
 
 /*
 | Ruta trebuie să fie pentru utilizator neautentificat (visitor)

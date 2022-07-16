@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Http\Middleware;
+namespace B2B\Http\Middleware;
 
 use Closure;
 
