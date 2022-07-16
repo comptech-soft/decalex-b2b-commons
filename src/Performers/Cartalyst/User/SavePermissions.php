@@ -2,7 +2,7 @@
 
 namespace Comptech\Performers\Cartalyst\Users;
 
-use Comptech\Helpers\Perform;
+use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
 use Comptech\Models\Cartalyst\User;
 use Comptech\Models\Cartalyst\Permission;
 

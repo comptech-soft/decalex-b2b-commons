@@ -2,14 +2,14 @@
 
 namespace Comptech\Performers\Cartalyst\Users;
 
-use Comptech\Helpers\Perform;
+use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
 
 class Activate extends Perform {
 
 
     public function Action() {
 
-        $message = 'Invalid or expired activation code.';
+        $message = 'Cod invalid sau expirat.';
 
         $activation = \Comptech\Models\Cartalyst\Activation::where('code', $this->input['code'])->first();
 

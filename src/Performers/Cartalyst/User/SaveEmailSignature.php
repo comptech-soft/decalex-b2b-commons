@@ -2,7 +2,7 @@
 
 namespace Cartalyst\Performers\User;
 
-use Comptech\Helpers\Perform;
+use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
 
 class SaveEmailSignature extends Perform {
 
