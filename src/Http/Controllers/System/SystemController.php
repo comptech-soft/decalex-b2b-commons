@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Http\Controllers;
+namespace ComptechSoft\Decalex\Http\Controllers\System;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
