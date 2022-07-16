@@ -1,6 +1,6 @@
 <?php
 
-namespace B2B\Decalex\Http\Middleware;
+namespace B2B\Http\Middleware;
 
 use Closure;
 use B2B\Classes\Comptech\Helpers\Response;
