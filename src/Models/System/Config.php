@@ -10,7 +10,7 @@ class Config {
 
         $user = \Sentinel::check();
 
-        \Log::info(__METHOD__);
+        \Log::info(__METHOD__ . '===>' ($user ? $user->id : 'No user'));
 
         $roles = $user ? $user->roles : NULL;
 
