@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Commons\\": "src/"
+            "B2B\\": "src/"
         }
     }
 }
