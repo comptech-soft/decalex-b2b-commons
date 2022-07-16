@@ -19,3 +19,15 @@ Route::middleware(['is-unauthenticated'])->namespace(\System\Http\Controllers::c
     Route::get('reset-password/{code}', 'ResetPasswordController@index');
     Route::post('reset-password', 'ResetPasswordController@resetPassword');
 });
+
+Route::middleware(['is-authenticated'])->namespace(\System\Http\Controllers::class)->group(function(){
+
+    // Route::get('my-profile', 'UsersController@myProfileIndex');
+
+    // Route::post('my-profile/save-generals', 'UsersController@saveGenerals');
+    // Route::post('my-profile/change-password', 'UsersController@changePassword');
+    // Route::post('my-profile/save-avatar', 'UsersController@saveAvatar');
+
+    Route::post('logout', 'LogoutController@logout');
+
+});
