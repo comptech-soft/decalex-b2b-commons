@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Traits\Configuration;
+namespace ComptechSoft\Decalex\Traits\System\Configuration;
 
 trait Relations {
 }
