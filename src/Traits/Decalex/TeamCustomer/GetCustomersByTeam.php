@@ -1,8 +1,8 @@
 <?php
 
-namespace Decalex\Traits\TeamCustomer;
+namespace B2B\Traits\Decalex\TeamCustomer;
 
-use Decalex\Performers\TeamCustomer\GetCustomersItems;
+use B2B\Performers\Decalex\TeamCustomer\GetCustomersItems;
 
 trait GetCustomersByTeam {
 

@@ -1,18 +1,15 @@
 <?php
 
-namespace Decalex\Models;
+namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
-
-
-use Decalex\Traits\TeamCustomer\GetCustomersByTeam;
-use Decalex\Traits\TeamCustomer\GetUsersByCustomer;
-use Decalex\Traits\TeamCustomer\Actions;
-use Decalex\Traits\TeamCustomer\Relations;
+use B2B\Traits\Decalex\TeamCustomer\GetCustomersByTeam;
+use B2B\Traits\Decalex\TeamCustomer\GetUsersByCustomer;
+use B2B\Traits\Decalex\TeamCustomer\Relations;
 
 class TeamCustomer extends Model {
 
-    use GetCustomersByTeam, GetUsersByCustomer, Actions, Relations;
+    use GetCustomersByTeam, GetUsersByCustomer, Relations;
 
     protected $table = 'team-customers';
 

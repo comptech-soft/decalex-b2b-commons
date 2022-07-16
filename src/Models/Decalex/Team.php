@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Models;
+namespace B2B\Models\Decalex;
 
 use Cartalyst\Models\User;
 

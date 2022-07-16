@@ -2,9 +2,9 @@
 
 namespace B2B\Models\System;
 
-use ComptechSoft\Decalex\Models\Decalex\TeamCustomer;
-use ComptechSoft\Decalex\Models\Decalex\UserSetting;
-use ComptechSoft\Decalex\Models\System\Configuration;
+use B2B\Models\Decalex\TeamCustomer;
+use B2B\Models\Decalex\UserSetting;
+use B2B\Models\System\Configuration;
 
 class Config {
 

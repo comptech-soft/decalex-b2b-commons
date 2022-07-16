@@ -1,15 +1,15 @@
 <?php
 
-namespace Decalex\Traits\TeamCustomer;
+namespace B2B\Traits\Decalex\TeamCustomer;
 
 trait Relations {
 
     public function customer() {
-        return $this->belongsTo(\Decalex\Models\Customer::class, 'customer_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
     }
 
     public function user() {
-        return $this->belongsTo(\Cartalyst\Models\User::class, 'user_id');
+        return $this->belongsTo(\B2B\Models\Cartalyst\User::class, 'user_id');
     }
     
 }

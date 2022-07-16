@@ -3,13 +3,12 @@
 namespace B2B\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
-
-use ComptechSoft\Decalex\Traits\System\Configuration\Actions;
-use ComptechSoft\Decalex\Traits\System\Configuration\GetConfigurations;
-use ComptechSoft\Decalex\Traits\System\Configuration\Relations;
+use B2B\Traits\System\Configuration\Actions;
+use B2B\Traits\System\Configuration\GetConfigurations;
 
 class Configuration extends Model {
-    use Actions, GetConfigurations, Relations;
+
+    use Actions, GetConfigurations;
 
     protected $table = 'sys-config';
 

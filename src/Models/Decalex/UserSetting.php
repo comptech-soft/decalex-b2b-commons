@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Models\Decalex;
+namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 

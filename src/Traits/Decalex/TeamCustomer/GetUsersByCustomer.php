@@ -1,28 +1,13 @@
 <?php
 
-namespace Decalex\Traits\TeamCustomer;
+namespace B2B\Traits\Decalex\TeamCustomer;
 
-use Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
 trait GetUsersByCustomer {
 
-    /**  Get items */
-    public static function getQuery()
-    {
-        return 
-            self::query()
-            // ->leftJoin(
-            //     'customers',
-            //     function($j) {
-            //         $j->on('customers.id', '=', 'team-customers.customer_id');
-            //     }
-            // )
-            // ->select('team-customers.*')
-        ;
-    }
-
     public static function getUsers($input) {
-        return (new GetItems($input, self::getQuery()->with(['user']), __CLASS__))->Perform();
+        return (new GetItems($input, self::query()->with(['user']), __CLASS__))->Perform();
         
     }
 

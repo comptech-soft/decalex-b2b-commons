@@ -1,7 +1,6 @@
 <?php
 
-namespace Decalex\Models;
-
+namespace B2B\Models\Decalex;
 use Illuminate\Database\Eloquent\Model;
 
 use Decalex\Traits\Customer\Actions;
