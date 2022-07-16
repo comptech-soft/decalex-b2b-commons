@@ -2,14 +2,14 @@
 
 namespace B2B\Traits\Cartalyst\User;
 
-use Cartalyst\Rules\User\ValidPassword;
-use Cartalyst\Rules\User\UpdatedPassword;
+use B2B\Rules\Cartalyst\User\ValidPassword;
+use B2B\Rules\Cartalyst\User\UpdatedPassword;
 
 trait ResetPassword {
 
     public static function resetPassword($input) {
 
-        return (new \Cartalyst\Performers\User\ResetPassword(
+        return (new \B2B\Performers\Cartalyst\User\ResetPassword(
             $input, 
             [
                 'password' => new ValidPassword($input['password']),

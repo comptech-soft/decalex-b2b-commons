@@ -5,7 +5,7 @@ namespace B2B\Traits\Cartalyst\User;
 trait ForgotPassword {
 
     public static function forgotPassword($input) {
-        return (new \Cartalyst\Performers\User\ForgotPassword(
+        return (new \B2B\Performers\Cartalyst\User\ForgotPassword(
             $input, 
             [
                 'email' => 'required|email|exists:users,email',

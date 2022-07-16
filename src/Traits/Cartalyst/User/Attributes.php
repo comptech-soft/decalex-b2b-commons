@@ -16,7 +16,7 @@ trait Attributes {
 
     /** Attribute. Active */
     public function getActiveAttribute() {
-        $activation = \ComptechSoft\Decalex\Models\Cartalyst\Activation::where('user_id', $this->id)->first();
+        $activation = \B2B\Models\Cartalyst\Activation::where('user_id', $this->id)->first();
         if( ! $activation )
         {
             \Activation::create($this);
