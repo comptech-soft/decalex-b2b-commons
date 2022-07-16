@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Http\Controllers\System;
+namespace B2B\Http\Controllers\System;
 
 use App\Http\Controllers\Controller;
 use ComptechSoft\Decalex\Models\Cartalyst\Models\User;

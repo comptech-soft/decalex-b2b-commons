@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['is-unauthenticated'])->namespace(\ComptechSoft\Decalex\Http\Controllers\System::class)->group(function(){
+Route::middleware(['is-unauthenticated'])->namespace(\B2B\Http\Controllers\System::class)->group(function(){
 
     Route::get('login', 'LoginController@index');
     Route::post('login', 'LoginController@login');
@@ -20,7 +20,7 @@ Route::middleware(['is-unauthenticated'])->namespace(\ComptechSoft\Decalex\Http\
     Route::post('reset-password', 'ResetPasswordController@resetPassword');
 });
 
-Route::middleware(['is-authenticated'])->namespace(\ComptechSoft\Decalex\Http\Controllers\System::class)->group(function(){
+Route::middleware(['is-authenticated'])->namespace(\B2B\Http\Controllers\System::class)->group(function(){
 
     // Route::get('my-profile', 'UsersController@myProfileIndex');
 

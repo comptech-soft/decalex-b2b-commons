@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Http\Controllers;
+namespace B2B\Http\Controllers\Cartalyst;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;

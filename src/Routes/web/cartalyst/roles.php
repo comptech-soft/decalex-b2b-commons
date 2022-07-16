@@ -3,7 +3,7 @@
 /** 
  * ROLES 
  **/
-Route::middleware(['is-authenticated'])->prefix('roles')->namespace(\Cartalyst\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('roles')->namespace(\B2B\Http\Controllers\Cartalyst::class)->group(function(){
     
     Route::get('/', 'RolesController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'RolesController@getItems');
