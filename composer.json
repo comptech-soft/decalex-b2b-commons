@@ -1,0 +1,19 @@
+{
+    "name": "comptech-soft/decalex-b2b-commons",
+    "description": "Shared code for decalex-b2b-admin and decalex-b2b-client projects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrus Ovidiu",
+            "email": "ovidiu.andrus@comptech.ro"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "ComptechSoft\\Decalex\\": "src/"
+        }
+    },
+    "require": {}
+}
