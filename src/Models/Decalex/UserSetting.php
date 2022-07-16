@@ -1,12 +1,12 @@
 <?php
 
-namespace Decalex\Models;
+namespace ComptechSoft\Decalex\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\UserSetting\Actions;
-use Decalex\Traits\UserSetting\GetSettings;
-use Decalex\Traits\UserSetting\Relations;
+use ComptechSoft\Decalex\Traits\Decalex\UserSetting\Actions;
+use ComptechSoft\Decalex\Traits\Decalex\UserSetting\GetSettings;
+use ComptechSoft\Decalex\Traits\Decalex\UserSetting\Relations;
 
 class UserSetting extends Model {
     use Actions, GetSettings, Relations;
