@@ -1,14 +1,14 @@
 <?php
 
-namespace ComptechSoft\Decalex\Models\Cartalyst;
+namespace B2B\Models\Cartalyst;
 
 use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 
-use ComptechSoft\Decalex\Traits\Cartalyst\Permission\GetPermissions;
-use ComptechSoft\Decalex\Traits\Cartalyst\Permission\Actions;
-use ComptechSoft\Decalex\Traits\Cartalyst\Permission\Reorder;
-use ComptechSoft\Decalex\Traits\Cartalyst\Permission\DeleteChildren;
+use B2B\Traits\Cartalyst\Permission\GetPermissions;
+use B2B\Traits\Cartalyst\Permission\Actions;
+use B2B\Traits\Cartalyst\Permission\Reorder;
+use B2B\Traits\Cartalyst\Permission\DeleteChildren;
 
 // https://github.com/lazychaser/laravel-nestedset#installation
 

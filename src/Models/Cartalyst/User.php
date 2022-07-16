@@ -1,17 +1,17 @@
 <?php
 
-namespace ComptechSoft\Decalex\Models\Cartalyst;
+namespace B2B\Models\Cartalyst;
 
 use Cartalyst\Sentinel\Users\EloquentUser;
 
-use ComptechSoft\Decalex\Traits\Cartalyst\User\Attributes;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\Login;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\Logout;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\ForgotPassword;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\ResetPassword;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\Actions;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\GetUserById;
-use ComptechSoft\Decalex\Traits\Cartalyst\User\GetUsers;
+use B2B\Traits\Cartalyst\User\Attributes;
+use B2B\Traits\Cartalyst\User\Login;
+use B2B\Traits\Cartalyst\User\Logout;
+use B2B\Traits\Cartalyst\User\ForgotPassword;
+use B2B\Traits\Cartalyst\User\ResetPassword;
+use B2B\Traits\Cartalyst\User\Actions;
+use B2B\Traits\Cartalyst\User\GetUserById;
+use B2B\Traits\Cartalyst\User\GetUsers;
 
 class User extends EloquentUser {
 

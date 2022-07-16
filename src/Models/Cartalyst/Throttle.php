@@ -1,6 +1,6 @@
 <?php
 
-namespace ComptechSoft\Decalex\Models\Cartalyst;
+namespace B2B\Models\Cartalyst;
 
 use Cartalyst\Sentinel\Throttling\EloquentThrottle;
 

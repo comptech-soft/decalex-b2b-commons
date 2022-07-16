@@ -1,11 +1,11 @@
 <?php
 
-namespace ComptechSoft\Decalex\Models\Cartalyst;
+namespace B2B\Models\Cartalyst;
 
 use Cartalyst\Sentinel\Roles\EloquentRole;
 
-use ComptechSoft\Decalex\Traits\Cartalyst\Role\GetRoles;
-use ComptechSoft\Decalex\Traits\Cartalyst\Role\Actions;
+use B2B\Traits\Cartalyst\Role\GetRoles;
+use B2B\Traits\Cartalyst\Role\Actions;
 
 class Role extends EloquentRole {
 
