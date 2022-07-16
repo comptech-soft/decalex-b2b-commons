@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Performers\User;
+namespace ComptechSoft\Decalex\Performers\Cartalyst\User;
 
 use ComptechSoft\Decalex\Classes\Comptech\Helpers\Perform;
 
