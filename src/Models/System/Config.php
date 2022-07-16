@@ -21,13 +21,11 @@ class Config {
             $locale = 'en';
         }
 
-        /** Atasez clientii de care raspunde $user */
-        
         if($user)
         {
+            /** Atasez clientii de care raspunde $user */
             /** deocamdata la rolul operator */
             $user->workingCustomers = NULL;
-
             if($user->role->slug == 'operator')
             {
                 $user->workingCustomers = TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
