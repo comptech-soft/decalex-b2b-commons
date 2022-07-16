@@ -1,12 +1,12 @@
 <?php
 
-namespace System\Models;
+namespace ComptechSoft\Decalex\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
 
-use System\Traits\Configuration\Actions;
-use System\Traits\Configuration\GetConfigurations;
-use System\Traits\Configuration\Relations;
+use ComptechSoft\Decalex\Traits\System\Configuration\Actions;
+use ComptechSoft\Decalex\Traits\System\Configuration\GetConfigurations;
+use ComptechSoft\Decalex\Traits\System\Configuration\Relations;
 
 class Configuration extends Model {
     use Actions, GetConfigurations, Relations;
