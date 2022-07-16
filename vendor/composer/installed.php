@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '271b69c10c1185cdf11c7d64f9a1373ce1e299b7',
+        'reference' => 'ab0cc3a8d9472c8520f96f77313b3b40ff48b208',
         'name' => 'comptech-soft/decalex-b2b-commons',
         'dev' => true,
     ),
@@ -34,7 +34,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '271b69c10c1185cdf11c7d64f9a1373ce1e299b7',
+            'reference' => 'ab0cc3a8d9472c8520f96f77313b3b40ff48b208',
             'dev_requirement' => false,
         ),
         'doctrine/inflector' => array(
