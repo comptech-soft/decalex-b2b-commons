@@ -2,11 +2,11 @@
 
 namespace ComptechSoft\Decalex\Traits\Cartalyst\User;
 
-use Comptech\Performers\Datatable\DoAction;
+use ComptechSoft\Decalex\Classes\Comptech\Performers\Datatable\DoAction;
 
-use Cartalyst\Rules\User\ValidPassword;
-use Cartalyst\Rules\User\ValidCredentials;
-use Cartalyst\Rules\User\UpdatedPassword;
+use ComptechSoft\Decalex\Rules\Cartalyst\User\ValidPassword;
+use ComptechSoft\Decalex\Rules\Cartalyst\ValidCredentials;
+use ComptechSoft\Decalex\Rules\Cartalyst\UpdatedPassword;
 
 trait Actions {
 
@@ -50,8 +50,6 @@ trait Actions {
             'email.required' => 'Adresa de email trebuie completată.',
             'email.email' => 'Adresa de email nu pare să fie o adresă de email corectă.',
             'email.unique' => 'Adresa de email este deja folosită de alt utilizator',
-            
-            
         ];
     }
 
@@ -99,10 +97,6 @@ trait Actions {
 
         return $user;
     }
-
-    // public static function doDuplicate($input, $contract) {
-    //     // return self::doInsert($input, $contract);
-    // }
 
     public static function doAction($action, $input) {
         return (new DoAction($action, $input, __CLASS__))->Perform();
