@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Decalex\RegisterColumn;
 
-use Comptech\Performers\Datatable\DoAction;
+use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
 trait Actions {
 

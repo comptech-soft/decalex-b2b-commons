@@ -2,7 +2,7 @@
 
 namespace System\Traits\City;
 
-use Comptech\Performers\Datatable\DoAction;
+use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
 use System\Rules\City\ValidCityName;
 use System\Rules\City\ValidCityPostalCode;

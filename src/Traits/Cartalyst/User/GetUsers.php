@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Cartalyst\User;
 
-use B2B\Comptech\Classes\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
 trait GetUsers {
 

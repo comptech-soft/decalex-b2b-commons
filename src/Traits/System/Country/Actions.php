@@ -2,7 +2,7 @@
 
 namespace System\Traits\Country;
 
-use Comptech\Performers\Datatable\DoAction;
+use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
 trait Actions {
 

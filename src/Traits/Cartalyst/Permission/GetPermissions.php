@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Cartalyst\Permission;
 
-use Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
 trait GetPermissions {
 

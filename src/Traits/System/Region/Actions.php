@@ -2,7 +2,7 @@
 
 namespace System\Traits\Region;
 
-use Comptech\Performers\Datatable\DoAction;
+use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
 use System\Rules\Region\ValidRegionName;
 use System\Rules\Region\ValidRegionCode;

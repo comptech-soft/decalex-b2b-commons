@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Decalex\Centralizator;
 
-use Comptech\Performers\Datatable\DoAction;
+use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
 trait AttachColumns {
 

@@ -2,7 +2,7 @@
 
 namespace System\Traits\City;
 
-use Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
 trait GetCities {
 

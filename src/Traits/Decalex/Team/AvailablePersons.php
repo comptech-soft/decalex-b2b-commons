@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Decalex\Team;
 
-use Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
 trait AvailablePersons {
 
