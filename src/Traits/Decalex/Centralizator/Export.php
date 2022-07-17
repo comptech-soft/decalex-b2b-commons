@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Centralizator;
+namespace B2B\Traits\Decalex\Centralizator;
 
 use Comptech\Performers\Datatable\Export as ExportPerformer;
 

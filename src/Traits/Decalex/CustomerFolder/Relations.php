@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerFolder;
+namespace B2B\Traits\Decalex\CustomerFolder;
 
 trait Relations {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Category;
+namespace B2B\Traits\Decalex\Category;
 
 trait Reorder {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Notification;
+namespace B2B\Traits\Decalex\Notification;
 
 use Comptech\Performers\Datatable\GetItems;
 

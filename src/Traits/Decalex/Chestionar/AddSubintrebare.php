@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Chestionar;
+namespace B2B\Traits\Decalex\Chestionar;
 
 trait AddSubintrebare {
 

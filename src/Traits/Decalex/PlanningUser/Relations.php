@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\PlanningUser;
+namespace B2B\Traits\Decalex\PlanningUser;
 
 trait Relations {
 

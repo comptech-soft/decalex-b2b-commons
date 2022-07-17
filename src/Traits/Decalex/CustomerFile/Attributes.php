@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerFile;
+namespace B2B\Traits\Decalex\CustomerFile;
 
 trait Attributes {
 

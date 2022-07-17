@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerCentralizator;
+namespace B2B\Traits\Decalex\CustomerCentralizator;
 
 use Comptech\Performers\Datatable\GetItems;
 

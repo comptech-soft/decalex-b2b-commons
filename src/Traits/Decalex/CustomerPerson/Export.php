@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerPerson;
+namespace B2B\Traits\Decalex\CustomerPerson;
 
 use Comptech\Performers\Datatable\Export as ExportPerformer;
 

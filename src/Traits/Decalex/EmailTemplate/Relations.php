@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\EmailTemplate;
+namespace B2B\Traits\Decalex\EmailTemplate;
 
 trait Relations {
 

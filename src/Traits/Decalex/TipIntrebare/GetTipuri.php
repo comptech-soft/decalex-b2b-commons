@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\TipIntrebare;
+namespace B2B\Traits\Decalex\TipIntrebare;
 
 use Comptech\Performers\Datatable\GetItems;
 

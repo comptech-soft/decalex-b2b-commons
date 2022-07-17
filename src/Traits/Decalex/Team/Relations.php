@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Team;
+namespace B2B\Traits\Decalex\Team;
 
 trait Relations {
 

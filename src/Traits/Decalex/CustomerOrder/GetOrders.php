@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerOrder;
+namespace B2B\Traits\Decalex\CustomerOrder;
 
 use Comptech\Performers\Datatable\GetItems;
 

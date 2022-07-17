@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Customer;
+namespace B2B\Traits\Decalex\Customer;
 
 trait AttachContract {
 

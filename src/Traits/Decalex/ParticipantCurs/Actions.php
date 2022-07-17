@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\ParticipantCurs;
+namespace B2B\Traits\Decalex\ParticipantCurs;
 
 use Comptech\Performers\Datatable\DoAction;
 

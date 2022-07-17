@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerOrderService;
+namespace B2B\Traits\Decalex\CustomerOrderService;
 
 trait Relations {
 

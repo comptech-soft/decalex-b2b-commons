@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CursFisier;
+namespace B2B\Traits\Decalex\CursFisier;
 
 use Comptech\Performers\Datatable\DoAction;
 

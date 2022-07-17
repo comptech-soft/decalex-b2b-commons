@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Task;
+namespace B2B\Traits\Decalex\Task;
 
 use Comptech\Performers\Datatable\DoAction;
 

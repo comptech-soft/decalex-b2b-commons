@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerChestionar;
+namespace B2B\Traits\Decalex\CustomerChestionar;
 
 trait Relations {
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\ChestionarIntrebare;
+namespace B2B\Traits\Decalex\ChestionarIntrebare;
 
 trait Relations {
 

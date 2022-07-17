@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\IntrebareRaspuns;
+namespace B2B\Traits\Decalex\IntrebareRaspuns;
 
 use Comptech\Performers\Datatable\DoAction;
 

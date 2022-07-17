@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\UserRaspuns;
+namespace B2B\Traits\Decalex\UserRaspuns;
 
 use Comptech\Performers\Datatable\GetItems;
 

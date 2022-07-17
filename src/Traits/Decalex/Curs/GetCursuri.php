@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Curs;
+namespace B2B\Traits\Decalex\Curs;
 
 use Comptech\Performers\Datatable\GetItems;
 

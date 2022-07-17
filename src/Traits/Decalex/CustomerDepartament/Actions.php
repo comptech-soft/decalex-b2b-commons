@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerDepartament;
+namespace B2B\Traits\Decalex\CustomerDepartament;
 
 use Comptech\Performers\Datatable\DoAction;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Registru;
+namespace B2B\Traits\Decalex\Registru;
 
 trait Relations {
 

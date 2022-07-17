@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerCentralizator;
+namespace B2B\Traits\Decalex\CustomerCentralizator;
 
 trait Relations {
 

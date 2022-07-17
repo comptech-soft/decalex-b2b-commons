@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CustomerRegisterRow;
+namespace B2B\Traits\Decalex\CustomerRegisterRow;
 
 trait Relations {
 

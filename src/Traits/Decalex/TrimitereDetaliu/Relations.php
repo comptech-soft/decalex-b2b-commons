@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\TrimitereDetaliu;
+namespace B2B\Traits\Decalex\TrimitereDetaliu;
 
 trait Relations {
 

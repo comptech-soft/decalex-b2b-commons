@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\CentralizatorColumn;
+namespace B2B\Traits\Decalex\CentralizatorColumn;
 
 trait Relations {
     

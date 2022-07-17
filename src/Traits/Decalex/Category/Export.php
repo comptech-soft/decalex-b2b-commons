@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\Category;
+namespace B2B\Traits\Decalex\Category;
 
 use Comptech\Performers\Datatable\Export as ExportPerformer;
 

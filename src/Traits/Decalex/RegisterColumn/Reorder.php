@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Traits\RegisterColumn;
+namespace B2B\Traits\Decalex\RegisterColumn;
 
 trait Reorder {
 
