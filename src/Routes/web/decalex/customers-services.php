@@ -3,7 +3,7 @@
 /** 
  * CUSTOMERS SERVICES. Ce servicii exista in orders - contracts - customers
  **/
-Route::middleware(['is-authenticated'])->prefix('customers-services')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-services')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'CustomersServicesController@index'); //->middleware(['has-permission:roles']);
 

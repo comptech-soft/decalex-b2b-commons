@@ -1,7 +1,7 @@
 <?php
 
 /** PLANNING **/
-Route::middleware(['is-authenticated'])->prefix('planning')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('planning')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'PlanningController@index'); 
     Route::post('items', 'PlanningController@getItems');
@@ -13,7 +13,7 @@ Route::middleware(['is-authenticated'])->prefix('planning')->namespace(\Decalex\
 /** 
  * PROJECT MANAGEMENT
  **/
-Route::middleware(['is-authenticated'])->prefix('project-management')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('project-management')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'ProjectManagementController@index');
 
@@ -21,7 +21,7 @@ Route::middleware(['is-authenticated'])->prefix('project-management')->namespace
 });
 
 /** PLANNING **/
-Route::middleware(['is-authenticated'])->prefix('timesheet')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('timesheet')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'TimesheetController@index');
 

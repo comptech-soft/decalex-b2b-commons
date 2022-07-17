@@ -1,7 +1,7 @@
 <?php
 
 /** ORDERS **/
-Route::middleware(['is-authenticated'])->prefix('orders')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('orders')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'OrdersController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'OrdersController@getItems');

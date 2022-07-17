@@ -1,7 +1,7 @@
 <?php
 
 /** CENTRALIZATOARE **/
-Route::middleware(['is-authenticated'])->prefix('centralizatoare')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('centralizatoare')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'CentralizatoareController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'CentralizatoareController@getItems');
@@ -16,7 +16,7 @@ Route::middleware(['is-authenticated'])->prefix('centralizatoare')->namespace(\D
 });
 
 /**  CENTRALIZATOARE **/
-Route::middleware(['is-authenticated'])->prefix('centralizatoare-coloane')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('centralizatoare-coloane')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::post('action/{action}', 'CentralizatoareColoaneController@doAction');
 

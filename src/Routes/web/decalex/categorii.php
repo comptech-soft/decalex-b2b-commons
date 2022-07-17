@@ -1,7 +1,7 @@
 <?php
 
 /** CATEGORII CHESTIONARE **/
-Route::middleware(['is-authenticated'])->prefix('categorii-chestionare')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('categorii-chestionare')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'CategoriiChestionareController@index'); 
     Route::post('items', 'CategoriiChestionareController@getItems');
@@ -10,7 +10,7 @@ Route::middleware(['is-authenticated'])->prefix('categorii-chestionare')->namesp
 });
 
 /** CATEGORII CENTRALIZATOARE **/
-Route::middleware(['is-authenticated'])->prefix('categorii-centralizatoare')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('categorii-centralizatoare')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'CategoriiCentralizatoareController@index'); 
     Route::post('items', 'CategoriiCentralizatoareController@getItems');
@@ -19,7 +19,7 @@ Route::middleware(['is-authenticated'])->prefix('categorii-centralizatoare')->na
 });
 
 /** CATEGORII CURSURI **/
-Route::middleware(['is-authenticated'])->prefix('categorii-cursuri')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('categorii-cursuri')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'CategoriiCursuriController@index'); 
     Route::post('items', 'CategoriiCursuriController@getItems');

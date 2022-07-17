@@ -1,7 +1,7 @@
 <?php
 
 /** NOMENCLATOR TASKS **/
-Route::middleware(['is-authenticated'])->prefix('tasks')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('tasks')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'TasksController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'TasksController@getItems');

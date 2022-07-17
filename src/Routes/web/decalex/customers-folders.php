@@ -1,7 +1,7 @@
 <?php
 
 /** CUSTOMERS FOLDERS **/
-Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::post('items', 'CustomersFoldersController@getItems');
     Route::post('action/{action}', 'CustomersFoldersController@doAction');
@@ -9,7 +9,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(
 });
 
 /** CUSTOMERS FILES **/
-Route::middleware(['is-authenticated'])->prefix('customers-files')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-files')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::post('items', 'CustomersFilesController@getItems');
     Route::post('change-status', 'CustomersFilesController@changeStatus');

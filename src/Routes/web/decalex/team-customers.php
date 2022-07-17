@@ -4,7 +4,7 @@
  * DECALEX TEAM - CUSTOMERS
  * Clientii unui operator
  **/
-Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     // Route::get('/', 'TeamCustomersController@index'); //->middleware(['has-permission:roles']);
 

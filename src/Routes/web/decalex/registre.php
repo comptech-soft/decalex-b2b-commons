@@ -3,7 +3,7 @@
 /** 
  * REGISTRE. Ce registre sunt in aplicatie
  **/
-Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::get('/', 'RegistreController@index'); 
     Route::post('items', 'RegistreController@getItems');
@@ -23,7 +23,7 @@ Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\Decalex\
 /** 
  * REGISTRE. Coloanele asociate la un registru
  **/
-Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
     
     Route::post('items', 'RegistreColoaneController@getItems');
     Route::post('action/{action}', 'RegistreColoaneController@doAction');
