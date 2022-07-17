@@ -3,6 +3,7 @@
 namespace B2B\Rules\Decalex\CustomerOrderService;
 
 use Illuminate\Contracts\Validation\Rule;
+use B2B\Models\Decalex\CustomerOrderService;
 
 class Unique implements Rule {
 
@@ -16,7 +17,7 @@ class Unique implements Rule {
 
     public function passes($attribute, $value)
     {   
-        $q = \B2B\Models\Decalex\CustomerOrderService::where('order_id', $this->input['order_id'])->where('service_id', $this->input['service_id']);
+        $q = CustomerOrderService::where('order_id', $this->input['order_id'])->where('service_id', $this->input['service_id']);
 
         if($this->input['id'])
         {

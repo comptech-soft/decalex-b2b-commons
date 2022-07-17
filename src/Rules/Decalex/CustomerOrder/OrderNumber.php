@@ -3,6 +3,7 @@
 namespace B2B\Rules\Decalex\CustomerOrder;
 
 use Illuminate\Contracts\Validation\Rule;
+use B2B\Models\Decalex\CustomerOrder;
 
 class OrderNumber implements Rule {
 
@@ -17,7 +18,7 @@ class OrderNumber implements Rule {
     public function passes($attribute, $value)
     {   
 
-        $q = \B2B\Models\Decalex\CustomerOrder::where('number', $this->input['number'])->where('contract_id', $this->input['contract_id']);
+        $q = CustomerOrder::where('number', $this->input['number'])->where('contract_id', $this->input['contract_id']);
 
         if($this->input['id'])
         {
