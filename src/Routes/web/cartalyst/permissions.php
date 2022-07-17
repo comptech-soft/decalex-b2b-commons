@@ -1,8 +1,9 @@
 <?php
 
-/** PERMISSIONS **/
+use B2B\Http\Controllers\Cartalyst;
 
-Route::middleware(['is-authenticated'])->prefix('permissions')->namespace(\B2B\Http\Controllers\Cartalyst::class)->group(function(){
+/** PERMISSIONS **/
+Route::middleware(['is-authenticated'])->prefix('permissions')->namespace(Cartalyst::class)->group(function(){
     
     Route::get('/', 'PermissionsController@index'); //->middleware(['has-permission:roles']);
 

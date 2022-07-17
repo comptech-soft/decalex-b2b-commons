@@ -1,7 +1,9 @@
 <?php
 
+use B2B\Http\Controllers\Decalex;
+
 /** ACCOUNTs - conturile clientilor **/
-Route::middleware(['is-authenticated'])->prefix('customers-persons')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-persons')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'PersonsController@index'); 
     Route::post('items', 'PersonsController@getItems');

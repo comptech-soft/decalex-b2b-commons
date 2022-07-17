@@ -1,14 +1,12 @@
 <?php
 
+use B2B\Http\Controllers\Decalex;
+
 /** EMAIL TEMPLATES **/
-Route::middleware(['is-authenticated'])->prefix('email-templates')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('email-templates')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'EmailTemplatesController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'EmailTemplatesController@getItems');
     Route::post('action/{action}', 'EmailTemplatesController@doAction');
-    // Route::post('reorder', 'ServicesController@reorderServices');
-    // Route::post('export', 'ServicesController@export');
-
-    // Route::get('export-preview', 'ServicesController@exportPreview');
-
+    
 });

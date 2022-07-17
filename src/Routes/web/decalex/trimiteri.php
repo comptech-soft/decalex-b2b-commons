@@ -6,5 +6,4 @@ Route::middleware(['is-authenticated'])->prefix('trimiteri')->namespace(Decalex:
     
     Route::post('items', 'TrimiteriController@getItems');
 
-    
 });

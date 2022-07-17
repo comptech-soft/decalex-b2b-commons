@@ -1,9 +1,9 @@
 <?php
 
-/** 
- * REGISTRE. Ce registre sunt in aplicatie
- **/
-Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+use B2B\Http\Controllers\Decalex;
+
+/** REGISTRE. Ce registre sunt in aplicatie **/
+Route::middleware(['is-authenticated'])->prefix('registre')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'RegistreController@index'); 
     Route::post('items', 'RegistreController@getItems');
@@ -20,10 +20,8 @@ Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\B2B\Http
     Route::post('copy-to-customer', 'RegistreController@copyToCustomer');
 });
 
-/** 
- * REGISTRE. Coloanele asociate la un registru
- **/
-Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+/** REGISTRE. Coloanele asociate la un registru **/
+Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(Decalex::class)->group(function(){
     
     Route::post('items', 'RegistreColoaneController@getItems');
     Route::post('action/{action}', 'RegistreColoaneController@doAction');

@@ -1,9 +1,9 @@
 <?php
 
-/** 
- * DECALEX TEAM 
- **/
-Route::middleware(['is-authenticated'])->prefix('team')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+use B2B\Http\Controllers\Decalex;
+
+/** DECALEX TEAM  **/
+Route::middleware(['is-authenticated'])->prefix('team')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'TeamController@index'); 
     Route::post('items', 'TeamController@getItems');

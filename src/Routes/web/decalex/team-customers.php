@@ -1,10 +1,12 @@
 <?php
 
+use B2B\Http\Controllers\Decalex;
+
 /** 
  * DECALEX TEAM - CUSTOMERS
  * Clientii unui operator
  **/
-Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(Decalex::class)->group(function(){
     
     // Route::get('/', 'TeamCustomersController@index'); //->middleware(['has-permission:roles']);
 
@@ -13,10 +15,5 @@ Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(\B2
     
     /** Ce useri decalex are un client */
     Route::post('users', 'TeamCustomersController@getUsers');
-
-    // /** Ce roluri au useri si cati*/
-    // Route::post('users-roles-items', 'RolesController@getUsersRolesItems');
-    // Route::post('action/{action}', 'TeamController@doAction');
-    // Route::post('export', 'RolesController@Export');
 
 });

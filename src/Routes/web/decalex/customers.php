@@ -1,7 +1,9 @@
 <?php
 
+use B2B\Http\Controllers\Decalex;
+
 /** CUSTOMERS **/
-Route::middleware(['is-authenticated'])->prefix('customers')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'CustomersController@index'); //->middleware(['has-permission:roles']);
 

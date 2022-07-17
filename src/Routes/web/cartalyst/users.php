@@ -1,7 +1,9 @@
 <?php
 
+use B2B\Http\Controllers\Cartalyst;
+
 /** USERS  **/
-Route::middleware(['is-authenticated'])->prefix('users')->namespace(\B2B\Http\Controllers\Cartalyst::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('users')->namespace(Cartalyst::class)->group(function(){
 
     Route::post('action/{action}', 'UsersController@doAction');
     Route::post('get-user-by-id', 'UsersController@getUserById');
@@ -13,7 +15,7 @@ Route::middleware(['is-authenticated'])->prefix('users')->namespace(\B2B\Http\Co
     
 });
 
-Route::middleware(['is-authenticated'])->namespace(\B2B\Http\Controllers\Cartalyst::class)->group(function(){
+Route::middleware(['is-authenticated'])->namespace(Cartalyst::class)->group(function(){
 
     Route::get('my-profile', 'MyProfileController@index');
 

@@ -1,5 +1,9 @@
 <?php
 
-Route::middleware(['is-authenticated'])->prefix('customers-centralizatoare')->namespace(\B2B\Http\Controllers\Decalex::class)->group(function(){
+use B2B\Http\Controllers\Decalex;
+
+Route::middleware(['is-authenticated'])->prefix('customers-centralizatoare')->namespace(Decalex::class)->group(function(){
+
     Route::post('items', 'CustomersCentralizatoareController@getItems');
+
 });
