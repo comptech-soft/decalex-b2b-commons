@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Http\Controllers;
+namespace B2B\Http\Controllers\Decalex;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
