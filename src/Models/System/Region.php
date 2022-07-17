@@ -4,9 +4,9 @@ namespace B2B\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
 
-use System\Traits\Region\Actions;
-use System\Traits\Region\GetRegions;
-use System\Traits\Region\Relations;
+use B2B\Traits\System\Region\Actions;
+use B2B\Traits\System\Region\GetRegions;
+use B2B\Traits\System\Region\Relations;
 
 class Region extends Model {
 

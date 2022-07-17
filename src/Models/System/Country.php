@@ -4,9 +4,9 @@ namespace B2B\Models\System;
 
 use Illuminate\Database\Eloquent\Model;
 
-use System\Traits\Country\Actions;
-use System\Traits\Country\GetCountries;
-use System\Traits\Country\Relations;
+use B2B\Traits\System\Country\Actions;
+use B2B\Traits\System\Country\GetCountries;
+use B2B\Traits\System\Country\Relations;
 
 class Country extends Model {
     use Actions, GetCountries, Relations;
