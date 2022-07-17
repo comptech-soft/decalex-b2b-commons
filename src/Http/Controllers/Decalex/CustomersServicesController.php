@@ -4,8 +4,8 @@ namespace B2B\Http\Controllers\Decalex;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Comptech\Helpers\Response;
-use Decalex\Models\CustomerOrderService;
+use B2B\Classes\Comptech\Helpers\Response;
+use B2B\Models\Decalex\CustomerOrderService;
 
 class CustomersServicesController extends Controller {
     

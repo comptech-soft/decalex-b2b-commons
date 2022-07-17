@@ -4,7 +4,7 @@ namespace B2B\Http\Controllers\Decalex;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Decalex\Models\ChestionarIntrebare;
+use B2B\Models\Decalex\ChestionarIntrebare;
 
 class ChestionareIntrebariController extends Controller {
     
