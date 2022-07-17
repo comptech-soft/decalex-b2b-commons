@@ -8,6 +8,7 @@ use B2B\Traits\Decalex\CustomerContract\Actions;
 use B2B\Traits\Decalex\CustomerContract\GetContracts;
 use B2B\Traits\Decalex\CustomerContract\Export;
 use B2B\Traits\Decalex\CustomerContract\Relations;
+use B2B\Models\Decalex\CustomerOrder;
 
 class CustomerContract extends Model {
 
@@ -37,12 +38,11 @@ class CustomerContract extends Model {
         'updated_by'
     ];
 
-
     public function attachOrder($input){
 
         $collectionInput = collect($input);
 
-        $order = \B2B\Models\Decalex\CustomerOrder::create([
+        $order = CustomerOrder::create([
             ...$collectionInput->only(['number', 'date', 'date_to', 'prelungire_automata'])->toArray(),
             'contract_id' => $this->id, 
             'customer_id' => $this->customer_id,

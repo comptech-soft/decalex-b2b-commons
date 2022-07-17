@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Rules\Region;
+namespace B2B\Rules\System\Region;
 
 use Illuminate\Contracts\Validation\Rule;
 use B2B\Models\System\Region;

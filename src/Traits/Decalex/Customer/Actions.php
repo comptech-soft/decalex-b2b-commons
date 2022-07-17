@@ -3,6 +3,8 @@
 namespace B2B\Traits\Decalex\Customer;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerContract\ContractNumber;
+use B2B\Rules\Cartalyst\User\ValidPassword;
 
 trait Actions {
 
@@ -32,7 +34,7 @@ trait Actions {
                 'required', 
                 'min:8', 
                 'confirmed',
-                new \Cartalyst\Rules\User\ValidPassword($input['user']['password']),
+                new ValidPassword($input['user']['password']),
             ];
             $result['user.person.department'] = 'required';
         }
@@ -48,7 +50,7 @@ trait Actions {
             $result['contract.number'] = [
                 'required',
                 'max:16',
-                new \B2B\Rules\Decalex\CustomerContract\ContractNumber($input['contract']),
+                new ContractNumber($input['contract']),
             ];
         }
 

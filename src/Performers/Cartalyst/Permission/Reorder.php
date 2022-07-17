@@ -1,8 +1,8 @@
 <?php
 
-namespace Cartalyst\Performers\Permission;
+namespace B2B\Performers\Cartalyst\Permission;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 use B2B\Models\Cartalyst\Permission;
 
 class Reorder extends Perform {

@@ -3,12 +3,13 @@
 namespace B2B\Performers\Cartalyst\User;
 
 use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Cartalyst\User;
 
 class AttachAvatar extends Perform {
 
     public function Action() {
 
-        $user = \B2B\Models\Cartalyst\User::find($this->input['id']);
+        $user = User::find($this->input['id']);
 
         $file = $this->input['avatar'];
 

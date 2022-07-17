@@ -2,7 +2,8 @@
 
 namespace B2B\Performers\Decalex\RegisterRow;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\RegisterRow;
 
 class SaveRegister extends Perform {
 
@@ -10,7 +11,7 @@ class SaveRegister extends Perform {
 
         foreach($this->input['rows'] as $i => $item)
         {
-            $row = \B2B\Models\Decalex\RegisterRow::find($item['id']);
+            $row = RegisterRow::find($item['id']);
 
             $row->status = $item['status'];
 

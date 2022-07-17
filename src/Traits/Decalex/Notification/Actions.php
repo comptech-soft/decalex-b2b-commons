@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Notification;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\Notification\UniqueNotification;
 
 trait Actions {
 
@@ -24,7 +25,7 @@ trait Actions {
         $result = [
             'entity' => [
                 'required',
-                new \B2B\Rules\Decalex\Notification\UniqueNotification($input),
+                new UniqueNotification($input),
             ],
             'action' => 'required',
             'props.title' => 'required',

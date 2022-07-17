@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerContract;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerContract\ContractNumber;
 
 trait Actions {
 
@@ -21,8 +22,7 @@ trait Actions {
             'number' => [
                 'required',
                 'max:16',
-                // 'unique:customers-contracts,number'
-                new \B2B\Rules\Decalex\CustomerContract\ContractNumber($input),
+                new ContractNumber($input),
             ],
             'status' => 'required',
             'date_from' => 'required|date',
@@ -44,13 +44,6 @@ trait Actions {
             $result['order.services'] = 'required|array|min:1';
             $result['order.services.*.tarif'] = 'required|numeric|min:0.01';
         }
-
-        // if($action == 'update')
-        // {
-        //     $result['number'][2] .= (',' . $input['number']);
-        // }
-
-        // dd($result);
 
         return $result;
     }

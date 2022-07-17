@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Decalex\CustomerRegister;
 
-use Comptech\Performers\Datatable\Export as ExportPerformer;
+use B2B\Classes\Comptech\Performers\Datatable\Export as ExportPerformer;
 
 trait Export {
 

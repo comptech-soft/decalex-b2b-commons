@@ -2,7 +2,9 @@
 
 namespace B2B\Performers\Decalex\RegisterRow;
 
-use \Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Models\Decalex\RegisterColumn;
+use B2B\Models\Decalex\RegisterRow;
 
 class GetRegisterRowItems extends GetItems {
 
@@ -11,7 +13,7 @@ class GetRegisterRowItems extends GetItems {
         /**
          * toate coloanele registrului ROPA definite
          */
-        $columns = \B2B\Models\Decalex\RegisterColumn::where('register_id', $this->input['register_id'])
+        $columns = RegisterColumn::where('register_id', $this->input['register_id'])
             ->orderBy('order_no')
             ->get()
             ->toArray();
@@ -19,13 +21,11 @@ class GetRegisterRowItems extends GetItems {
         /**
          * randurile existente (deja completate) in ROPA
          */
-        $rows = \B2B\Models\Decalex\RegisterRow::with('values')
+        $rows = RegisterRow::with('values')
             ->where('register_id', $this->input['register_id'])
             ->where('customer_id', $this->input['customer_id'])
             ->get()
             ->toArray();
-
-        // dd($rows);
 
         foreach($rows as $i => $row)
         {

@@ -3,6 +3,9 @@
 namespace B2B\Traits\Decalex\CustomerFile;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Performers\Decalex\CustomerFile\ChangeStatus;
+use B2B\Performers\Decalex\CustomerFile\ChangeFilesStatus;
+use B2B\B2B\Performers\Decalex\CustomerFile\AttachRegisterFiles;
 
 trait Actions {
 
@@ -73,19 +76,19 @@ trait Actions {
     }
 
     public static function changeStatus($input) {
-        return (new \B2B\Performers\Decalex\CustomerFile\ChangeStatus($input))
+        return (new ChangeStatus($input))
             ->SetSuccessMessage('Schimbare status cu success!')
             ->Perform();
     }  
 
     public static function changeFilesStatus($input) {
-        return (new \B2B\Performers\Decalex\CustomerFile\ChangeFilesStatus($input))
+        return (new ChangeFilesStatus($input))
             ->SetSuccessMessage('Schimbare status cu success!')
             ->Perform();
     } 
 
     public static function attachRegisterFiles($input) {
-        return (new \B2B\Performers\Decalex\CustomerFile\AttachRegisterFiles($input))
+        return (new AttachRegisterFiles($input))
             ->SetSuccessMessage('Operație cu success!')
             ->Perform();
 

@@ -3,6 +3,9 @@
 namespace B2B\Traits\Decalex\CustomerPerson;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Cartalyst\User\ValidPassword;
+use B2B\Rules\Decalex\CustomerPerson\CustomerPerson;
+use B2B\Models\Cartalyst\User;
 
 trait Actions {
 
@@ -31,7 +34,7 @@ trait Actions {
                     'required', 
                     'min:8', 
                     'confirmed',
-                    new \Cartalyst\Rules\User\ValidPassword($input['user']['password']),
+                    new ValidPassword($input['user']['password']),
                 ];
             }
         }
@@ -40,7 +43,7 @@ trait Actions {
         {
             $result['user.id'] = [
                 'required',
-                new \B2B\Rules\Decalex\CustomerPerson\CustomerPerson($input),
+                new CustomerPerson($input),
             ];
         }
         
@@ -103,9 +106,9 @@ trait Actions {
 
         $collectionInput = collect($input);
 
-        $user = \B2B\Models\Cartalyst\User::find($input['user']['id']);
+        $user = User::find($input['user']['id']);
 
-        \B2B\Models\Cartalyst\User::doUpdate($collectionInput->only(['user'])->toArray()['user'], $user);
+        User::doUpdate($collectionInput->only(['user'])->toArray()['user'], $user);
 
         $person->update([
             ...$collectionInput->except(['user']),  

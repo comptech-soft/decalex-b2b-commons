@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Rules\City;
+namespace B2B\Rules\System\City;
 
 use Illuminate\Contracts\Validation\Rule;
 use B2B\Models\System\City;

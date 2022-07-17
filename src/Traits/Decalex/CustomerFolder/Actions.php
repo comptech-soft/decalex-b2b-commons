@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerFolder;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerFolder\ValidName;
 
 trait Actions {
 
@@ -16,7 +17,7 @@ trait Actions {
             'customer_id' => 'required|exists:customers,id',
             'name' => [
                 'required',
-                new \B2B\Rules\Decalex\CustomerFolder\ValidName($input),
+                new ValidName($input),
             ],
            
         ];

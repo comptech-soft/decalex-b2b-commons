@@ -2,13 +2,16 @@
 
 namespace B2B\Performers\Decalex\Trimitere;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 use B2B\Models\Decalex\Trimitere;
 use B2B\Models\Decalex\TrimitereDetaliu;
 use B2B\Models\Decalex\CustomerChestionar;
 use B2B\Models\Decalex\CustomerCentralizator;
 use B2B\Models\Decalex\CustomerCurs;
+use B2B\Jobs\Chestionare\TrimiteEmailChestionarClientJob;
+use B2B\Jobs\Centralizatoare\TrimiteEmailCentralizatorClientJob;
+use B2B\Jobs\Cursuri\TrimiteEmailCursuriClientJob;
 
 class Trimite extends Perform {
 
@@ -71,17 +74,17 @@ class Trimite extends Perform {
 
         if($trimitere->type == 'chestionare')
         {
-            dispatch(new \B2B\Jobs\Chestionare\TrimiteEmailChestionarClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new TrimiteEmailChestionarClientJob($customer_id, $users, $chestionare, $records));
         }
 
         if($trimitere->type == 'centralizatoare')
         {
-            dispatch(new \B2B\Jobs\Centralizatoare\TrimiteEmailCentralizatorClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new TrimiteEmailCentralizatorClientJob($customer_id, $users, $chestionare, $records));
         }
 
         if($trimitere->type == 'cursuri')
         {
-            dispatch(new \B2B\Jobs\Cursuri\TrimiteEmailCursuriClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new TrimiteEmailCursuriClientJob($customer_id, $users, $chestionare, $records));
         }
 
         foreach($records as $i => $record) 

@@ -3,18 +3,22 @@
 namespace B2B\Traits\Decalex\Registru;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Performers\Decalex\Registru\AddColumn;
+use B2B\Performers\Decalex\Registru\AddGroup;
+use B2B\Performers\Decalex\Registru\XlsImport;
+use B2B\Performers\Decalex\Registru\CopyToCustomer;
 
 trait Actions {
 
     public static function addColumn($input) {
-        return (new \B2B\Performers\Decalex\Registru\AddColumn($input))
+        return (new AddColumn($input))
             ->SetSuccessMessage('Actualizare efectuată cu succes!')
             ->Perform();
     }
 
 
     public static function addGroup($input) {
-        return (new \B2B\Performers\Decalex\Registru\AddGroup($input))
+        return (new AddGroup($input))
             ->SetSuccessMessage('Actualizare efectuată cu succes!')
             ->Perform();
     }
@@ -30,13 +34,13 @@ trait Actions {
     }
 
     public static function xlsImport($input) {
-        return (new \B2B\Performers\Decalex\Registru\XlsImport($input))
+        return (new XlsImport($input))
             ->SetSuccessMessage('Import realizat cu success!')
             ->Perform();
     }
 
     public static function copyToCustomer($input) {
-        return (new \B2B\Performers\Decalex\Registru\CopyToCustomer($input))
+        return (new CopyToCustomer($input))
             ->SetSuccessMessage('Copiere realizată cu success!')
             ->Perform();
     }

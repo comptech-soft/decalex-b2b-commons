@@ -2,26 +2,31 @@
 
 namespace B2B\Performers\Decalex\Customer;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\Customer;
+use B2B\Models\System\Country;
+use B2B\Models\System\Region;
+use B2B\Models\System\City;
+use B2B\Imports\CustomerImport;
 
 class XlsImport extends Perform {
 
     public static function CreateCustomer($input) {
 
-        $customer = \B2B\Models\Decalex\Customer::where('name', $input['name'])->first();
+        $customer = Customer::where('name', $input['name'])->first();
 
         if(! $customer)
         {
             $city = NULL;
             if($input['country'])
             {
-                $country = \B2B\Models\System\Country::findByNameOrCreate($input['country']);
+                $country = Country::findByNameOrCreate($input['country']);
                 if($input['region'])
                 {
-                    $region = \B2B\Models\System\Region::findByNameOrCreate($country, $input['region']);
+                    $region = Region::findByNameOrCreate($country, $input['region']);
                     if($input['city'])
                     {
-                        $city = \B2B\Models\System\City::findByNameOrCreate($region, $input['city']);
+                        $city = City::findByNameOrCreate($region, $input['city']);
                     }
                 }
             }
@@ -31,7 +36,7 @@ class XlsImport extends Perform {
                 $input['status'] = 'active';
             }
 
-            \B2B\Models\Decalex\Customer::create([
+            Customer::create([
                 ...$input,
                 'city_id' => $city ? $city->id : NULL,
             ]);   
@@ -40,7 +45,7 @@ class XlsImport extends Perform {
 
     public function Action() {
 
-        $importer = new \B2B\Imports\CustomerImport();
+        $importer = CustomerImport();
 
         \Excel::import($importer, $this->input['file']);
 

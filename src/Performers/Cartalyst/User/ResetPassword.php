@@ -3,12 +3,13 @@
 namespace B2B\Performers\Cartalyst\User;
 
 use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Cartalyst\Reminder;
 
 class ResetPassword extends Perform {
 
     public function Action() {
 
-        $reminder = \B2B\Models\Cartalyst\Reminder::where('code', $this->input['code'])->first();
+        $reminder = Reminder::where('code', $this->input['code'])->first();
 
         if( ! $reminder )
         {

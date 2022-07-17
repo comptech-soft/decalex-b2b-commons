@@ -31,10 +31,11 @@ class CentralizatoareController extends Controller {
     
     public function exportPreview($id) {
 
-        $centralizator = \B2B\Models\Decalex\Centralizator::where('id', $id)->with(['columns'])->first();
+        $centralizator = Centralizator::where('id', $id)->with(['columns'])->first();
         return view('exports.centralizator.xls-export', [
            'records' => $centralizator->columns,
         ]);
+        
     }
 
     public function xlsImport(Request $r) {

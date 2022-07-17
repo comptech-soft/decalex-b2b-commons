@@ -1,9 +1,8 @@
 <?php
 
-namespace System\Performers\Database;
+namespace B2B\Performers\System\Database;
 
-use Comptech\Helpers\Perform;
-// use B2B\Models\Cartalyst\Permission;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 class UpdateField extends Perform {
 

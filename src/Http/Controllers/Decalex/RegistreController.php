@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use B2B\Classes\Comptech\Helpers\Response;
 use B2B\Models\Decalex\Registru;
+use B2B\Models\Decalex\CustomerRegister;
+use B2B\Models\Decalex\RegisterColumn;
+use B2B\Models\Decalex\CustomerRegisterRow;
 
 class RegistreController extends Controller {
     
@@ -43,13 +46,10 @@ class RegistreController extends Controller {
     
     public function exportPreview($id) {
 
-        $registru = \B2B\Models\Decalex\CustomerRegister::where('id', $id)->with('register')->first();
-
-        $header = \B2B\Models\Decalex\RegisterColumn::getHeaderByRegister($registru->register_id);
-
-        $columns = \B2B\Models\Decalex\RegisterColumn::getColumnsFromHeader($header);
-
-        $rows = \B2B\Models\Decalex\CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
+        $registru = CustomerRegister::where('id', $id)->with('register')->first();
+        $header = RegisterColumn::getHeaderByRegister($registru->register_id);
+        $columns = RegisterColumn::getColumnsFromHeader($header);
+        $rows = CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
 
         return view('exports.registru.xls-export', [
            'records' => [

@@ -4,8 +4,8 @@ namespace B2B\Traits\System\Region;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
-use System\Rules\Region\ValidRegionName;
-use System\Rules\Region\ValidRegionCode;
+use B2B\Rules\System\Region\ValidRegionName;
+use B2B\Rules\System\Region\ValidRegionCode;
 
 trait Actions {
 

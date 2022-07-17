@@ -3,11 +3,18 @@
 namespace B2B\Traits\Decalex\CustomerRegisterRow;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Models\Decalex\CustomerRegisterRowValue;
+use B2B\Performers\Decalex\CustomerRegisterRow\ChangeStatus;
 
 trait Actions {
 
     public static function getNextOrderNo($customer_register_id) {
-        $records = \DB::select("SELECT MAX(CAST(`order_no` AS UNSIGNED)) as max_order_no FROM `customers-registers-rows` WHERE (customer_register_id=" . $customer_register_id . ') AND ( (deleted = 0) OR (deleted IS NULL))');
+        $records = \DB::select("
+            SELECT 
+                MAX(CAST(`order_no` AS UNSIGNED)) as max_order_no 
+                FROM `customers-registers-rows` 
+                WHERE (customer_register_id=" . $customer_register_id . ') AND ( (deleted = 0) OR (deleted IS NULL))
+        ');
         return number_format(1 + $records[0]->max_order_no, 0, '', '');
     }
 
@@ -17,9 +24,7 @@ trait Actions {
         {
             return NULL;
         }
-        $result = [
-            
-        ];
+        $result = [];
         return $result;
     }
 
@@ -35,7 +40,7 @@ trait Actions {
                 'updated_by' => \Sentinel::check()->id,
             ];
 
-            $exists = \B2B\Models\Decalex\CustomerRegisterRowValue::where('row_id', $this->id)
+            $exists = CustomerRegisterRowValue::where('row_id', $this->id)
                 ->where('column_id', $item['column_id'])
                 ->first();
 
@@ -45,7 +50,7 @@ trait Actions {
             }
             else
             {
-                \B2B\Models\Decalex\CustomerRegisterRowValue::create($input);
+                CustomerRegisterRowValue::create($input);
             }
         }
     }
@@ -92,7 +97,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $row) {
-        \B2B\Models\Decalex\CustomerRegisterRowValue::where('row_id', $row->id)->delete();
+        CustomerRegisterRowValue::where('row_id', $row->id)->delete();
         $row->delete();
         return $row;
     }
@@ -102,7 +107,7 @@ trait Actions {
     }
 
     public static function changeStatus($input) {
-        return (new \B2B\Performers\Decalex\CustomerRegisterRow\ChangeStatus($input))
+        return (new ChangeStatus($input))
             ->SetSuccessMessage('Schimbare status cu success.')
             ->Perform();
     }

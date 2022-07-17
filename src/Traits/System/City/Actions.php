@@ -4,8 +4,8 @@ namespace B2B\Traits\System\City;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 
-use System\Rules\City\ValidCityName;
-use System\Rules\City\ValidCityPostalCode;
+use B2B\Rules\System\City\ValidCityName;
+use B2B\Rules\System\City\ValidCityPostalCode;
 
 trait Actions {
 

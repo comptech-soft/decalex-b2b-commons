@@ -2,7 +2,7 @@
 
 namespace B2B\Performers\Decalex\RegisterColumn;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 use B2B\Models\Decalex\RegisterColumn;
 
 class Reorder extends Perform {

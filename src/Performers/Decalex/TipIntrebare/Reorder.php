@@ -2,7 +2,7 @@
 
 namespace B2B\Performers\Decalex\TipIntrebare;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 use B2B\Models\Decalex\TipIntrebare;
 
 class Reorder extends Perform {

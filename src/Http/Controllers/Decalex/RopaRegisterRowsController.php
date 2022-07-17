@@ -6,10 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use B2B\Classes\Comptech\Helpers\Response;
 use B2B\Models\Decalex\RegisterRow;
+use B2B\Models\Decalex\RegisterColumn;
 
 class RopaRegisterRowsController extends Controller {
     
-   
     public function getItems(Request $r) {
         return RegisterRow::getItems($r->all());
     }
@@ -36,10 +36,9 @@ class RopaRegisterRowsController extends Controller {
             'register_id' => 1,
             'customer_id' => 71,
         ]);
-
         
         return view('exports.ropa-register.xls-export', [
-            'columns' => \B2B\Models\Decalex\RegisterColumn::where('register_id', 1)->orderBy('order_no')->get()->toArray(),
+            'columns' => RegisterColumn::where('register_id', 1)->orderBy('order_no')->get()->toArray(),
             'records' => $records['payload']['rows'],
         ]);
     }

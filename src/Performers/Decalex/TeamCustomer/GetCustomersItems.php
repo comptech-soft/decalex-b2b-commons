@@ -2,7 +2,8 @@
 
 namespace B2B\Performers\Decalex\TeamCustomer;
 
-use \Comptech\Performers\Datatable\GetItems;
+use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Models\Decalex\TeamCustomer;
 
 class GetCustomersItems extends GetItems {
 
@@ -18,7 +19,7 @@ class GetCustomersItems extends GetItems {
 
         else
         {
-            $records = \B2B\Models\Decalex\TeamCustomer::where('user_id', $this->input['user_id'])->with(['customer'])->get();
+            $records = TeamCustomer::where('user_id', $this->input['user_id'])->with(['customer'])->get();
 
             $result = $records->map(function($record){
                 return $record->customer;

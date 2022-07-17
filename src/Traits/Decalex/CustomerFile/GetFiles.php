@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerFile;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Performers\Decalex\CustomerFile\GetRegisterRowFiles;
 
 trait GetFiles {
 
@@ -16,7 +17,7 @@ trait GetFiles {
     }
 
     public static function getRegisterRowFiles($input) {
-        return (new \B2B\Performers\Decalex\CustomerFile\GetRegisterRowFiles($input))
+        return (new GetRegisterRowFiles($input))
             ->SetSuccessMessage('Operație cu success!')
             ->Perform();
 

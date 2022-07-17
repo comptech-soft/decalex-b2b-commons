@@ -2,9 +2,11 @@
 
 namespace B2B\Performers\Decalex\CustomerFile;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
 
 use B2B\Models\Decalex\CustomerFile;
+use B2B\Models\Decalex\Customer;
+use B2B\Models\Decalex\Notification;
 
 class ChangeFilesStatus extends Perform {
 
@@ -18,9 +20,9 @@ class ChangeFilesStatus extends Perform {
 
             if( ($this->input['status'] == 'public') && ($record->status == 'protected'))
             {
-                $customer = \B2B\Models\Decalex\Customer::where('id', $record->customer_id)->with(['persons'])->first();
+                $customer = Customer::where('id', $record->customer_id)->with(['persons'])->first();
 
-                $notificare = \B2B\Models\Decalex\Notification::getByEntityAndAction('document', 'trimitere');
+                $notificare = Notification::getByEntityAndAction('document', 'trimitere');
 
                 foreach($customer->persons as $person)
                 {

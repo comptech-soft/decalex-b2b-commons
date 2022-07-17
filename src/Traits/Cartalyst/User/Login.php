@@ -2,10 +2,12 @@
 
 namespace B2B\Traits\Cartalyst\User;
 
+use B2B\Performers\Cartalyst\User\Login as UserLogin;
+
 trait Login {
 
     public static function login($input) {
-        return (new \B2B\Performers\Cartalyst\User\Login(
+        return (new UserLogin(
             $input, 
             [
                 'email' => 'required|email',

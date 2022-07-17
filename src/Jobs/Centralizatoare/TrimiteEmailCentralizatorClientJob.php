@@ -8,6 +8,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use B2B\Mails\Decalex\Centralizatoare\TrimiteEmailCentralizatorClient;
+use B2B\Models\Decalex\Customer;
+use B2B\Models\Decalex\CustomerPerson;
+use B2B\Models\Decalex\Centralizator;
+use B2B\Models\Decalex\Notification;
 
 class TrimiteEmailCentralizatorClientJob implements ShouldQueue {
 
@@ -25,27 +30,24 @@ class TrimiteEmailCentralizatorClientJob implements ShouldQueue {
 
         $this->chestionare_ids = $chestionare;
 
-        $this->customer = \B2B\Models\Decalex\Customer::find($customer_id);
+        $this->customer = Customer::find($customer_id);
         
         $this->users = collect($users)->map( function($id) {
-            return \B2B\Models\Decalex\CustomerPerson::find($id)->user;
+            return CustomerPerson::find($id)->user;
         });
 
         $this->centralizatoare = collect($chestionare)->map( function($id) {
-            return \B2B\Models\Decalex\Centralizator::find($id);
+            return Centralizator::find($id);
         });
 
         $this->customerchestionare = $customerchestionare;
 
-        $this->email = new \B2B\Mails\Decalex\Centralizatoare\TrimiteEmailCentralizatorClient(
-            $this->customer,
-            $this->centralizatoare,
-        );
+        $this->email = TrimiteEmailCentralizatorClient($this->customer, $this->centralizatoare);
     }
 
     public function CreateNotifications() {
 
-        $notificare = \B2B\Models\Decalex\Notification::getByEntityAndAction('centralizator', 'trimitere');
+        $notificare = Notification::getByEntityAndAction('centralizator', 'trimitere');
 
         foreach($this->users as $user)
         {

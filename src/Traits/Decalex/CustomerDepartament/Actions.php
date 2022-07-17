@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerDepartament;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerDepartment\UniqueName;
 
 trait Actions {
 
@@ -20,7 +21,7 @@ trait Actions {
         $result = [
             'departament' => [
                 'required', 
-                new \B2B\Rules\Decalex\CustomerDepartment\UniqueName($input),
+                new UniqueName($input),
             ],
             'customer_id' => 'exists:customers,id',
         ];

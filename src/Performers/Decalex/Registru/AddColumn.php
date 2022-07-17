@@ -2,7 +2,8 @@
 
 namespace B2B\Performers\Decalex\Registru;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\RegisterColumn;
 
 class AddColumn extends Perform {
 
@@ -10,7 +11,7 @@ class AddColumn extends Perform {
 
         $slug = \Str::slug($this->input['caption']);
         
-        $record = \B2B\Models\Decalex\RegisterColumn::where('slug', $slug)
+        $record = RegisterColumn::where('slug', $slug)
             ->where('register_id', $this->input['register_id'])
             ->where('deleted', 1)
             ->first();
@@ -22,11 +23,11 @@ class AddColumn extends Perform {
         }
         else
         {
-            \B2B\Models\Decalex\RegisterColumn::create([
+            RegisterColumn::create([
                 ...$this->input,
                 'order_no' => $this->input['group_id'] 
-                    ? \B2B\Models\Decalex\RegisterColumn::getNextGroupOrderNo($this->input['group_id']) 
-                    : \B2B\Models\Decalex\RegisterColumn::getNextOrderNo($this->input['register_id']),
+                    ? RegisterColumn::getNextGroupOrderNo($this->input['group_id']) 
+                    : RegisterColumn::getNextOrderNo($this->input['register_id']),
                 'slug' => \Str::slug($this->input['caption']),
             ]);
         }

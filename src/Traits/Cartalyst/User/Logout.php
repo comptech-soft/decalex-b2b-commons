@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Cartalyst\User;
 
-use Comptech\Helpers\Response;
+use B2B\Classes\Comptech\Helpers\Response;
 
 trait Logout {
 

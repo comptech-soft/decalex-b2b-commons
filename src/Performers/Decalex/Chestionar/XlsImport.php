@@ -2,7 +2,12 @@
 
 namespace B2B\Performers\Decalex\Chestionar;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\TipIntrebare;
+use B2B\Models\Decalex\Intrebare;
+use B2B\Models\Decalex\IntrebareRaspuns;
+use B2B\Imports\ChestionarImport;
+use B2B\Models\Decalex\ChestionarIntrebare;
 
 class XlsImport extends Perform {
 
@@ -15,11 +20,11 @@ class XlsImport extends Perform {
             'Fals' => 0,
         ];
 
-        $tip = \B2B\Models\Decalex\TipIntrebare::where('name', $input['question_type'])->first();
+        $tip = TipIntrebare::where('name', $input['question_type'])->first();
 
         if(! $parent_id)
         {
-            $intrebare = new \B2B\Models\Decalex\Intrebare([
+            $intrebare = new Intrebare([
                 'tip_intrebare' => $tip->id,
                 'question' => $input['question'],
                 'created_by' => \Sentinel::check()->id,
@@ -28,7 +33,7 @@ class XlsImport extends Perform {
         }
         else
         {
-            $parent = \B2B\Models\Decalex\Intrebare::find($parent_id);
+            $parent = Intrebare::find($parent_id);
             $parent->activate_on_answer_id = $input['parent_activate_on_answer_id'];
             $parent->save();
 
@@ -44,7 +49,7 @@ class XlsImport extends Perform {
             $parent_activate_on_answer_id = NULL;
             foreach($input['raspunsuri'] as $i => $raspuns)
             {                
-                $answer = \B2B\Models\Decalex\IntrebareRaspuns::create([
+                $answer = IntrebareRaspuns::create([
                     'intrebare_id' => $intrebare->id,
                     'answer' => $raspuns['answer'],
                     'order_no' => 1 + $i,
@@ -73,31 +78,22 @@ class XlsImport extends Perform {
 
     public function Action() {
 
-        if(false)
+        $importer = new ChestionarImport($this->input['chestionar_id']);
+
+        \Excel::import($importer, $this->input['file']);
+
+        foreach($importer->questions as $i => $rowIntrebare)
         {
-            $importer = new \B2B\Imports\ChestionarImportAdvanced($this->input['chestionar_id']);
-            \Excel::import($importer, $this->input['file'], NULL,  \Maatwebsite\Excel\Excel::XLSX);
 
-        }
-        else
-        {
-            $importer = new \B2B\Imports\ChestionarImport($this->input['chestionar_id']);
-
-            \Excel::import($importer, $this->input['file']);
-
-            foreach($importer->questions as $i => $rowIntrebare)
-            {
-
-                $intrebare = $this->addIntrebare($rowIntrebare, NULL);
-            
-                \B2B\Models\Decalex\ChestionarIntrebare::create([
-                    'chestionar_id' => $this->input['chestionar_id'],
-                    'intrebare_id' => $intrebare->id,
-                    'order_no' => $rowIntrebare['order_no'],
-                    'deleted' => 0,
-                    'created_by' => \Sentinel::check()->id,
-                ]);
-            }
+            $intrebare = $this->addIntrebare($rowIntrebare, NULL);
+        
+            ChestionarIntrebare::create([
+                'chestionar_id' => $this->input['chestionar_id'],
+                'intrebare_id' => $intrebare->id,
+                'order_no' => $rowIntrebare['order_no'],
+                'deleted' => 0,
+                'created_by' => \Sentinel::check()->id,
+            ]);
         }
     }
 

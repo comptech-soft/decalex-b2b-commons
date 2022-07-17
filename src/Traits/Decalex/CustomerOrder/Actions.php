@@ -3,6 +3,8 @@
 namespace B2B\Traits\Decalex\CustomerOrder;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerOrder\OrderNumber;
+use B2B\Models\Decalex\CustomerOrderService;
 
 trait Actions {
 
@@ -22,7 +24,7 @@ trait Actions {
             'number' => [
                 'required',
                 'max:16',
-                new \B2B\Rules\Decalex\CustomerOrder\OrderNumber($input),
+                new OrderNumber($input),
             ],
 
             'date' => 'required|date',
@@ -88,7 +90,7 @@ trait Actions {
     public function attachService($input) {
         $collectionInput = collect($input);
 
-        \B2B\Models\Decalex\CustomerOrderService::create([
+        CustomerOrderService::create([
             ...$collectionInput->except(['id'])->toArray(),
             'service_id' => $input['id'],
             'order_id' => $this->id,
@@ -98,7 +100,7 @@ trait Actions {
 
     public function attachServices($input) {
 
-        \B2B\Models\Decalex\CustomerOrderService::where('order_id', $this->id)->delete();
+        CustomerOrderService::where('order_id', $this->id)->delete();
 
         foreach($input as $i => $service)
         {

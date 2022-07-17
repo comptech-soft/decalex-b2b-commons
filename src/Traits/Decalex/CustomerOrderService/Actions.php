@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerOrderService;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\CustomerOrderService\Unique;
 
 trait Actions {
 
@@ -22,7 +23,7 @@ trait Actions {
             'service_id' => [
                 'required',
                 'exists:services,id',
-                new \B2B\Rules\Decalex\CustomerOrderService\Unique($input),
+                new Unique($input),
             ],
         ];
         return $result;

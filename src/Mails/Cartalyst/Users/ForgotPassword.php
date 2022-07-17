@@ -1,6 +1,6 @@
 <?php
 
-namespace Cartalyst\Mails\Users;
+namespace B2B\Mails\Cartalyst\Users;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

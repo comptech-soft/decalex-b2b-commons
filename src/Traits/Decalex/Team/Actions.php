@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Team;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Cartalyst\User\ValidPassword;
 
 trait Actions {
 
@@ -26,7 +27,7 @@ trait Actions {
                 'required', 
                 'min:8', 
                 'confirmed',
-                new \Cartalyst\Rules\User\ValidPassword($input['password']),
+                new ValidPassword($input['password']),
             ];
         }
         if($action == 'update')

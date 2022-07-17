@@ -2,16 +2,18 @@
 
 namespace B2B\Performers\Decalex\Registru;
 
-use Comptech\Helpers\Perform;
+use B2B\Classes\Comptech\Helpers\Perform;
+use B2B\Models\Decalex\CustomerRegister;
+use B2B\Models\Decalex\CustomerRegisterRow;
+use B2B\Models\Decalex\CustomerRegisterRowValue;
 
 class CopyToCustomer extends Perform {
 
     public function Action() {
 
-        $sursa = \B2B\Models\Decalex\CustomerRegister::where('id', $this->input['customer_register_id'])->with(['rows'])->first();
+        $sursa = CustomerRegister::where('id', $this->input['customer_register_id'])->with(['rows'])->first();
 
-
-        $dest = \B2B\Models\Decalex\CustomerRegister::create([
+        $dest = CustomerRegister::create([
             ...$this->input,
             'props' => $sursa->props,
             'created_by' => \Sentinel::check()->id,
@@ -21,7 +23,7 @@ class CopyToCustomer extends Perform {
         {
             if($row->deleted == 0)
             {
-                $newrow = \B2B\Models\Decalex\CustomerRegisterRow::create([
+                $newrow = CustomerRegisterRow::create([
                     'customer_register_id' => $dest->id,
                     'customer_id' => $this->input['customer_id'],
                     'register_id' => $this->input['register_id'],
@@ -34,11 +36,11 @@ class CopyToCustomer extends Perform {
                     'created_by' => \Sentinel::check()->id,
                 ]);
 
-                $values = \B2B\Models\Decalex\CustomerRegisterRowValue::where('row_id', $row->id)->get();
+                $values = CustomerRegisterRowValue::where('row_id', $row->id)->get();
 
                 foreach($values as $i => $record)
                 {
-                    \B2B\Models\Decalex\CustomerRegisterRowValue::create([
+                    CustomerRegisterRowValue::create([
                         'row_id' => $newrow->id,
                         'column_id' => $record->column_id,
                         'deleted' => $record->deleted,

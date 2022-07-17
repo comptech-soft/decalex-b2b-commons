@@ -3,10 +3,12 @@
 namespace B2B\Traits\Cartalyst\User;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
-
 use B2B\Rules\Cartalyst\User\ValidPassword;
 use B2B\Rules\Cartalyst\User\ValidCredentials;
 use B2B\Rules\Cartalyst\User\UpdatedPassword;
+use B2B\Performers\Cartalyst\User\ChangePassword;
+use B2B\Performers\Cartalyst\User\AttachAvatar;
+use B2B\Performers\Cartalyst\User\SaveEmailSignature;
 
 trait Actions {
 
@@ -101,7 +103,7 @@ trait Actions {
     }
 
     public static function changePassword($input) {
-        return (new \B2B\Performers\Cartalyst\User\ChangePassword($input, 
+        return (new ChangePassword($input, 
             [
                 'old_password' => [
                     'required',
@@ -129,7 +131,7 @@ trait Actions {
     }
 
     public static function changeAvatar($input) {
-        return (new \Cartalyst\Performers\User\AttachAvatar($input))
+        return (new AttachAvatar($input))
             ->SetSuccessMessage('Salvare cu succes.')
             ->SetExceptionMessage([
                 \Exception::class => NULL
@@ -138,15 +140,12 @@ trait Actions {
     }
 
     public static function saveEmailSignature($input) {
-        return (new \Cartalyst\Performers\User\SaveEmailSignature($input))
+        return (new SaveEmailSignature($input))
             ->SetSuccessMessage('Salvare cu succes.')
             ->SetExceptionMessage([
                 \Exception::class => NULL
             ])
             ->Perform();
     }
-
-    
-    
 
 }
