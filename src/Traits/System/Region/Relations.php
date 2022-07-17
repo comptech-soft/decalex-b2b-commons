@@ -6,12 +6,12 @@ trait Relations {
 
     /** region->country  */
     public function country() {
-        return $this->belongsTo(\System\Models\Country::class, 'country_id');
+        return $this->belongsTo(\B2B\Models\System\Country::class, 'country_id');
     }
 
     /** region->cities */
     function cities() {
-        return $this->hasMany(\System\Models\City::class, 'region_id');
+        return $this->hasMany(\B2B\Models\System\City::class, 'region_id');
     }
 
 }

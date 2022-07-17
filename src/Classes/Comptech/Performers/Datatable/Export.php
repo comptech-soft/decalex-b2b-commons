@@ -40,7 +40,7 @@ class Export extends Perform {
                 
         \Excel::store($export, $filename, NULL, NULL, ['visibility' => 'public']);
 
-        \System\Models\Export::create([
+        \B2B\Models\System\Export::create([
             'card_id' => NULL,
             'user_id' => \Sentinel::check()->id,
             'customer_id' => NULL,

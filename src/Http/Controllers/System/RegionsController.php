@@ -5,7 +5,7 @@ namespace B2B\Http\Controllers\System;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use B2B\Classes\Comptech\Helpers\Response;
-use System\Models\Region;
+use B2B\Models\System\Region;
 
 class RegionsController extends Controller {
     

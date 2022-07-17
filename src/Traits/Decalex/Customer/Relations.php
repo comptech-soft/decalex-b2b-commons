@@ -6,7 +6,7 @@ trait Relations {
 
     /** customer->city  */
     public function city() {
-        return $this->belongsTo(\System\Models\City::class, 'city_id');
+        return $this->belongsTo(\B2B\Models\System\City::class, 'city_id');
     }
 
     /** customer->contracts */

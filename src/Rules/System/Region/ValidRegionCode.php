@@ -3,7 +3,7 @@
 namespace System\Rules\Region;
 
 use Illuminate\Contracts\Validation\Rule;
-use System\Models\Region;
+use B2B\Models\System\Region;
 
 class ValidRegionCode implements Rule {
 

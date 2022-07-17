@@ -6,7 +6,7 @@ trait Relations {
 
     /** country->regions */
     function regions() {
-        return $this->hasMany(\System\Models\Region::class, 'country_id');
+        return $this->hasMany(\B2B\Models\System\Region::class, 'country_id');
     }
 
 }

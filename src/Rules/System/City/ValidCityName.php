@@ -3,7 +3,7 @@
 namespace System\Rules\City;
 
 use Illuminate\Contracts\Validation\Rule;
-use System\Models\City;
+use B2B\Models\System\City;
 
 class ValidCityName implements Rule {
 

@@ -15,13 +15,13 @@ class XlsImport extends Perform {
             $city = NULL;
             if($input['country'])
             {
-                $country = \System\Models\Country::findByNameOrCreate($input['country']);
+                $country = \B2B\Models\System\Country::findByNameOrCreate($input['country']);
                 if($input['region'])
                 {
-                    $region = \System\Models\Region::findByNameOrCreate($country, $input['region']);
+                    $region = \B2B\Models\System\Region::findByNameOrCreate($country, $input['region']);
                     if($input['city'])
                     {
-                        $city = \System\Models\City::findByNameOrCreate($region, $input['city']);
+                        $city = \B2B\Models\System\City::findByNameOrCreate($region, $input['city']);
                     }
                 }
             }

@@ -6,7 +6,7 @@ trait Relations {
 
     /** city->region  */
     public function region() {
-        return $this->belongsTo(\System\Models\Region::class, 'region_id');
+        return $this->belongsTo(\B2B\Models\System\Region::class, 'region_id');
     }
 
     
