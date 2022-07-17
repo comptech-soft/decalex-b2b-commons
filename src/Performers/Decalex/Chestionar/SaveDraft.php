@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Chestionar;
+namespace B2B\Performers\Decalex\Chestionar;
 
 use Comptech\Helpers\Perform;
 use B2B\Models\Decalex\Chestionar;

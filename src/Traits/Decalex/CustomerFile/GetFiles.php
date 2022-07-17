@@ -16,7 +16,7 @@ trait GetFiles {
     }
 
     public static function getRegisterRowFiles($input) {
-        return (new \Decalex\Performers\CustomerFile\GetRegisterRowFiles($input))
+        return (new \B2B\Performers\Decalex\CustomerFile\GetRegisterRowFiles($input))
             ->SetSuccessMessage('Operație cu success!')
             ->Perform();
 

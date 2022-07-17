@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Rules\Notification;
+namespace B2B\Rules\Decalex\Notification;
 
 use Illuminate\Contracts\Validation\Rule;
 use B2B\Models\Decalex\Notification;

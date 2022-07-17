@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\CustomerFile;
+namespace B2B\Performers\Decalex\CustomerFile;
 
 use Comptech\Helpers\Perform;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Centralizator;
+namespace B2B\Performers\Decalex\Centralizator;
 
 use Comptech\Helpers\Perform;
 use B2B\Models\Decalex\CentralizatorColumn;

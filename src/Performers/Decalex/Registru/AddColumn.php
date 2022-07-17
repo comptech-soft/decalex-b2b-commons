@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Registru;
+namespace B2B\Performers\Decalex\Registru;
 
 use Comptech\Helpers\Perform;
 

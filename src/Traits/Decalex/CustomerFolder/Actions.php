@@ -16,7 +16,7 @@ trait Actions {
             'customer_id' => 'required|exists:customers,id',
             'name' => [
                 'required',
-                new \Decalex\Rules\CustomerFolder\ValidName($input),
+                new \B2B\Rules\Decalex\CustomerFolder\ValidName($input),
             ],
            
         ];

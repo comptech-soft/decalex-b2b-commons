@@ -7,14 +7,14 @@ use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 trait Actions {
 
     public static function addColumn($input) {
-        return (new \Decalex\Performers\Registru\AddColumn($input))
+        return (new \B2B\Performers\Decalex\Registru\AddColumn($input))
             ->SetSuccessMessage('Actualizare efectuată cu succes!')
             ->Perform();
     }
 
 
     public static function addGroup($input) {
-        return (new \Decalex\Performers\Registru\AddGroup($input))
+        return (new \B2B\Performers\Decalex\Registru\AddGroup($input))
             ->SetSuccessMessage('Actualizare efectuată cu succes!')
             ->Perform();
     }
@@ -30,13 +30,13 @@ trait Actions {
     }
 
     public static function xlsImport($input) {
-        return (new \Decalex\Performers\Registru\XlsImport($input))
+        return (new \B2B\Performers\Decalex\Registru\XlsImport($input))
             ->SetSuccessMessage('Import realizat cu success!')
             ->Perform();
     }
 
     public static function copyToCustomer($input) {
-        return (new \Decalex\Performers\Registru\CopyToCustomer($input))
+        return (new \B2B\Performers\Decalex\Registru\CopyToCustomer($input))
             ->SetSuccessMessage('Copiere realizată cu success!')
             ->Perform();
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Mail\Chestionare;
+namespace B2b\Mails\Decalex\Chestionare;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\TeamCustomer;
+namespace B2B\Performers\Decalex\TeamCustomer;
 
 use \Comptech\Performers\Datatable\GetItems;
 

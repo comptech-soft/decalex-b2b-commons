@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Mail\Cursuri;
+namespace B2b\Mails\Decalex\Cursuri;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

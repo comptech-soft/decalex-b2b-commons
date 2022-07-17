@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Rules\CustomerFolder;
+namespace B2B\Rules\Decalex\CustomerFolder;
 
 use Illuminate\Contracts\Validation\Rule;
 use B2B\Models\Decalex\CustomerFolder;

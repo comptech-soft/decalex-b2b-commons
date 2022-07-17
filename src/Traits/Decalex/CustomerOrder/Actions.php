@@ -22,7 +22,7 @@ trait Actions {
             'number' => [
                 'required',
                 'max:16',
-                new \Decalex\Rules\CustomerOrder\OrderNumber($input),
+                new \B2B\Rules\Decalex\CustomerOrder\OrderNumber($input),
             ],
 
             'date' => 'required|date',

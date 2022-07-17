@@ -24,7 +24,7 @@ trait Actions {
         $result = [
             'entity' => [
                 'required',
-                new \Decalex\Rules\Notification\UniqueNotification($input),
+                new \B2B\Rules\Decalex\Notification\UniqueNotification($input),
             ],
             'action' => 'required',
             'props.title' => 'required',

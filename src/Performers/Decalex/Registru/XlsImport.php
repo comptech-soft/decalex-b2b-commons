@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Registru;
+namespace B2B\Performers\Decalex\Registru;
 
 use Comptech\Helpers\Perform;
 
@@ -13,7 +13,7 @@ class XlsImport extends Perform {
         $header = \B2B\Models\Decalex\RegisterColumn::getHeaderByRegister($this->input['register_id']);
         $columns = \B2B\Models\Decalex\RegisterColumn::getColumnsFromHeader($header);
 
-        $importer = new \Decalex\Imports\RegistruImport($header, $columns, $registru);
+        $importer = new \B2B\Imports\RegistruImport($header, $columns, $registru);
 
         \Excel::import($importer, $this->input['file']);
 

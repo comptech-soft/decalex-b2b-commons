@@ -73,19 +73,19 @@ trait Actions {
     }
 
     public static function changeStatus($input) {
-        return (new \Decalex\Performers\CustomerFile\ChangeStatus($input))
+        return (new \B2B\Performers\Decalex\CustomerFile\ChangeStatus($input))
             ->SetSuccessMessage('Schimbare status cu success!')
             ->Perform();
     }  
 
     public static function changeFilesStatus($input) {
-        return (new \Decalex\Performers\CustomerFile\ChangeFilesStatus($input))
+        return (new \B2B\Performers\Decalex\CustomerFile\ChangeFilesStatus($input))
             ->SetSuccessMessage('Schimbare status cu success!')
             ->Perform();
     } 
 
     public static function attachRegisterFiles($input) {
-        return (new \Decalex\Performers\CustomerFile\AttachRegisterFiles($input))
+        return (new \B2B\Performers\Decalex\CustomerFile\AttachRegisterFiles($input))
             ->SetSuccessMessage('Operație cu success!')
             ->Perform();
 

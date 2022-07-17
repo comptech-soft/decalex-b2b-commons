@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Customer;
+namespace B2B\Performers\Decalex\Customer;
 
 use Comptech\Helpers\Perform;
 
@@ -40,7 +40,7 @@ class XlsImport extends Perform {
 
     public function Action() {
 
-        $importer = new \Decalex\Imports\CustomerImport();
+        $importer = new \B2B\Imports\CustomerImport();
 
         \Excel::import($importer, $this->input['file']);
 

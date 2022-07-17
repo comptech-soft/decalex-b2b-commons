@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Jobs\Centralizatoare;
+namespace B2B\Jobs\Centralizatoare;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -37,7 +37,7 @@ class TrimiteEmailCentralizatorClientJob implements ShouldQueue {
 
         $this->customerchestionare = $customerchestionare;
 
-        $this->email = new \Decalex\Mail\Centralizatoare\TrimiteEmailCentralizatorClient(
+        $this->email = new \B2B\Mails\Decalex\Centralizatoare\TrimiteEmailCentralizatorClient(
             $this->customer,
             $this->centralizatoare,
         );

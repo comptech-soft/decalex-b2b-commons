@@ -20,7 +20,7 @@ trait Actions {
         $result = [
             'departament' => [
                 'required', 
-                new \Decalex\Rules\CustomerDepartment\UniqueName($input),
+                new \B2B\Rules\Decalex\CustomerDepartment\UniqueName($input),
             ],
             'customer_id' => 'exists:customers,id',
         ];

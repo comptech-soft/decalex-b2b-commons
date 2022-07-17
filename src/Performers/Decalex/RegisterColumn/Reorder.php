@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\RegisterColumn;
+namespace B2B\Performers\Decalex\RegisterColumn;
 
 use Comptech\Helpers\Perform;
 use B2B\Models\Decalex\RegisterColumn;

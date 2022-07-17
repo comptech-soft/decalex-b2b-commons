@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\CustomerRegisterRow;
+namespace B2B\Performers\Decalex\CustomerRegisterRow;
 
 use Comptech\Helpers\Perform;
 

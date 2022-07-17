@@ -22,7 +22,7 @@ trait Actions {
                 'required',
                 'max:16',
                 // 'unique:customers-contracts,number'
-                new \Decalex\Rules\CustomerContract\ContractNumber($input),
+                new \B2B\Rules\Decalex\CustomerContract\ContractNumber($input),
             ],
             'status' => 'required',
             'date_from' => 'required|date',
@@ -37,7 +37,6 @@ trait Actions {
                 /**
                  * am un contract nou => comanda este noua => nu trebuie validate numeraul comenzii
                  */
-                // new \Decalex\Rules\CustomerOrder\OrderNumber($input['order'] + ['contract_id' => '???']),
             ];
 
             $result['order.date'] = 'required|date';

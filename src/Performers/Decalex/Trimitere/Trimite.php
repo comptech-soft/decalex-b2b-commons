@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Trimitere;
+namespace B2B\Performers\Decalex\Trimitere;
 
 use Comptech\Helpers\Perform;
 
@@ -71,17 +71,17 @@ class Trimite extends Perform {
 
         if($trimitere->type == 'chestionare')
         {
-            dispatch(new \Decalex\Jobs\Chestionare\TrimiteEmailChestionarClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new \B2B\Jobs\Chestionare\TrimiteEmailChestionarClientJob($customer_id, $users, $chestionare, $records));
         }
 
         if($trimitere->type == 'centralizatoare')
         {
-            dispatch(new \Decalex\Jobs\Centralizatoare\TrimiteEmailCentralizatorClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new \B2B\Jobs\Centralizatoare\TrimiteEmailCentralizatorClientJob($customer_id, $users, $chestionare, $records));
         }
 
         if($trimitere->type == 'cursuri')
         {
-            dispatch(new \Decalex\Jobs\Cursuri\TrimiteEmailCursuriClientJob($customer_id, $users, $chestionare, $records));
+            dispatch(new \B2B\Jobs\Cursuri\TrimiteEmailCursuriClientJob($customer_id, $users, $chestionare, $records));
         }
 
         foreach($records as $i => $record) 

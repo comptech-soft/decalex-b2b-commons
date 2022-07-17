@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Rules\CustomerOrder;
+namespace B2B\Rules\Decalex\CustomerOrder;
 
 use Illuminate\Contracts\Validation\Rule;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Mail\Centralizatoare;
+namespace B2b\Mails\Decalex\Centralizatoare;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;

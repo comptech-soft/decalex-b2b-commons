@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Chestionar;
+namespace B2B\Performers\Decalex\Chestionar;
 
 use Comptech\Helpers\Perform;
 
@@ -75,13 +75,13 @@ class XlsImport extends Perform {
 
         if(false)
         {
-            $importer = new \Decalex\Imports\ChestionarImportAdvanced($this->input['chestionar_id']);
+            $importer = new \B2B\Imports\ChestionarImportAdvanced($this->input['chestionar_id']);
             \Excel::import($importer, $this->input['file'], NULL,  \Maatwebsite\Excel\Excel::XLSX);
 
         }
         else
         {
-            $importer = new \Decalex\Imports\ChestionarImport($this->input['chestionar_id']);
+            $importer = new \B2B\Imports\ChestionarImport($this->input['chestionar_id']);
 
             \Excel::import($importer, $this->input['file']);
 

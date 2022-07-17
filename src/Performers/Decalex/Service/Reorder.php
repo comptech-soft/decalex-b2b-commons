@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Service;
+namespace B2B\Performers\Decalex\Service;
 
 use Comptech\Helpers\Perform;
 use B2B\Models\Decalex\Service;

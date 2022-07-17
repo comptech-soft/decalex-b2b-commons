@@ -102,7 +102,7 @@ trait Actions {
     }
 
     public static function changeStatus($input) {
-        return (new \Decalex\Performers\CustomerRegisterRow\ChangeStatus($input))
+        return (new \B2B\Performers\Decalex\CustomerRegisterRow\ChangeStatus($input))
             ->SetSuccessMessage('Schimbare status cu success.')
             ->Perform();
     }

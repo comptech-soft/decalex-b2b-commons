@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\RegisterRow;
+namespace B2B\Performers\Decalex\RegisterRow;
 
 use \Comptech\Performers\Datatable\GetItems;
 

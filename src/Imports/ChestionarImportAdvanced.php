@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Imports;
+namespace B2B\Imports;
 
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToModel;

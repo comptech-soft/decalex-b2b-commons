@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Planning;
+namespace B2B\Performers\Decalex\Planning;
 
 use Comptech\Helpers\Perform;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Rules\CustomerPerson;
+namespace B2B\Rules\Decalex\CustomerPerson;
 
 use Illuminate\Contracts\Validation\Rule;
 

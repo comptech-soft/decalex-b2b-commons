@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Jobs\Cursuri;
+namespace B2B\Jobs\Cursuri;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -36,7 +36,7 @@ class TrimiteEmailCursuriClientJob implements ShouldQueue {
 
         $this->customercursuri = $customercursuri;
 
-        $this->email = new \Decalex\Mail\Cursuri\TrimiteEmailCursClient(
+        $this->email = new \B2B\Mails\Decalex\Cursuri\TrimiteEmailCursClient(
             $this->customer,
             $this->cursuri,
         );

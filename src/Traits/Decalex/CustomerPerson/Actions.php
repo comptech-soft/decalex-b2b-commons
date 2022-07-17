@@ -40,7 +40,7 @@ trait Actions {
         {
             $result['user.id'] = [
                 'required',
-                new \Decalex\Rules\CustomerPerson\CustomerPerson($input),
+                new \B2B\Rules\Decalex\CustomerPerson\CustomerPerson($input),
             ];
         }
         

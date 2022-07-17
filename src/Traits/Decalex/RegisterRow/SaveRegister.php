@@ -6,7 +6,7 @@ trait SaveRegister {
 
     public static function SaveRegister($input) {
 
-        return (new \Decalex\Performers\RegisterRow\SaveRegister($input))
+        return (new \B2B\Performers\Decalex\RegisterRow\SaveRegister($input))
             ->SetSuccessMessage('Save register successfully!')
             ->Perform();
 

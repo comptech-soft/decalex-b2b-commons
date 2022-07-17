@@ -22,7 +22,7 @@ trait Actions {
             'service_id' => [
                 'required',
                 'exists:services,id',
-                new \Decalex\Rules\CustomerOrderService\Unique($input),
+                new \B2B\Rules\Decalex\CustomerOrderService\Unique($input),
             ],
         ];
         return $result;

@@ -48,7 +48,7 @@ trait Actions {
             $result['contract.number'] = [
                 'required',
                 'max:16',
-                new \Decalex\Rules\CustomerContract\ContractNumber($input['contract']),
+                new \B2B\Rules\Decalex\CustomerContract\ContractNumber($input['contract']),
             ];
         }
 

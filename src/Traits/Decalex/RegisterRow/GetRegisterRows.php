@@ -2,7 +2,7 @@
 
 namespace B2B\Traits\Decalex\RegisterRow;
 
-use Decalex\Performers\RegisterRow\GetRegisterRowItems;
+use B2B\Performers\Decalex\RegisterRow\GetRegisterRowItems;
 
 trait GetRegisterRows {
 

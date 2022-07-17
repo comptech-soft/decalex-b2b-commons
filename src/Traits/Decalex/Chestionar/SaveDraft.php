@@ -16,7 +16,7 @@ trait SaveDraft {
             'category_id.required' => 'Selectați categoria chestionarului',
         ];
 
-        return (new \Decalex\Performers\Chestionar\SaveDraft($input, $rules, $messages))
+        return (new \B2B\Performers\Decalex\Chestionar\SaveDraft($input, $rules, $messages))
             ->SetSuccessMessage('Salvare cu success!')
             ->Perform();
     }

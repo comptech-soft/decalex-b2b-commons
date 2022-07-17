@@ -1,6 +1,6 @@
 <?php
 
-namespace Decalex\Performers\Centralizator;
+namespace B2B\Performers\Decalex\Centralizator;
 
 use Comptech\Helpers\Perform;
 
@@ -8,7 +8,7 @@ class XlsImport extends Perform {
 
     public function Action() {
 
-        $importer = new \Decalex\Imports\CentralizatorImport($this->input['centralizator_id']);
+        $importer = new \B2B\Imports\CentralizatorImport($this->input['centralizator_id']);
 
         \Excel::import($importer, $this->input['file']);
 
