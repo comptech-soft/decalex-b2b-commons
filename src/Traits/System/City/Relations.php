@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Traits\City;
+namespace B2B\Traits\System\City;
 
 trait Relations {
 

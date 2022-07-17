@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Traits\Country;
+namespace B2B\Traits\System\Country;
 
 trait Relations {
 

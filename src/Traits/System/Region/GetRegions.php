@@ -1,6 +1,6 @@
 <?php
 
-namespace System\Traits\Region;
+namespace B2B\Traits\System\Region;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 
