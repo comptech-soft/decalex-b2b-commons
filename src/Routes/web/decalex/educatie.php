@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * EDUCATIE
- **/
+/**  EDUCATIE **/
 Route::middleware(['is-authenticated'])->prefix('educatie')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'EducatieController@index'); 

@@ -21,7 +21,7 @@ Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\Decalex\
 });
 
 /** 
- * REGISTRE. Coloanele asociate la la un registru
+ * REGISTRE. Coloanele asociate la un registru
  **/
 Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     

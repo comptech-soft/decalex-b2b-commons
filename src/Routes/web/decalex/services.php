@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * CUSTOMERS
- **/
+/** SERVICES **/
 Route::middleware(['is-authenticated'])->prefix('services')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'ServicesController@index'); //->middleware(['has-permission:roles']);

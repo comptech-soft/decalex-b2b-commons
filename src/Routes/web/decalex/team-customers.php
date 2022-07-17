@@ -8,14 +8,10 @@ Route::middleware(['is-authenticated'])->prefix('team-customers')->namespace(\De
     
     // Route::get('/', 'TeamCustomersController@index'); //->middleware(['has-permission:roles']);
 
-    /**
-     * Ce clienti are un user Decalex
-     */
+    /** Ce clienti are un user Decalex */
     Route::post('items', 'TeamCustomersController@getItems');
     
-    /**
-     * Ce useri decalex are un client
-     */
+    /** Ce useri decalex are un client */
     Route::post('users', 'TeamCustomersController@getUsers');
 
     // /** Ce roluri au useri si cati*/

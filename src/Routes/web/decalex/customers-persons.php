@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * ACCOUNTs - conturile clientilor
- **/
+/** ACCOUNTs - conturile clientilor **/
 Route::middleware(['is-authenticated'])->prefix('customers-persons')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'PersonsController@index'); 

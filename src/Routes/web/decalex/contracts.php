@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * CONTRACTS
- **/
+/** CONTRACTS **/
 Route::middleware(['is-authenticated'])->prefix('contracts')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'ContractsController@index'); //->middleware(['has-permission:roles']);

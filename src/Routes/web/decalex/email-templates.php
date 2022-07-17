@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * EMAIL TEMPLATES
- **/
+/** EMAIL TEMPLATES **/
 Route::middleware(['is-authenticated'])->prefix('email-templates')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'EmailTemplatesController@index'); //->middleware(['has-permission:roles']);

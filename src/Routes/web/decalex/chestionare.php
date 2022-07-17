@@ -1,8 +1,48 @@
 <?php
 
 /** 
- * CHESTIONARE
+ * TIPURI INTREBARI
  **/
+Route::middleware(['is-authenticated'])->prefix('tipuri-intrebari')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+    
+    Route::get('/', 'TipuriIntrebariController@index'); 
+    Route::post('items', 'TipuriIntrebariController@getItems');
+    Route::post('action/{action}', 'TipuriIntrebariController@doAction');
+    Route::post('reorder', 'TipuriIntrebariController@reorderRecords');
+
+});
+
+
+/** CHESTIONARE INTREBARI **/
+Route::middleware(['is-authenticated'])->prefix('chestionare-intrebari')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+    
+    Route::get('/', 'ChestionareIntrebariController@index'); //->middleware(['has-permission:roles']);
+    Route::post('items', 'ChestionareIntrebariController@getItems');
+    Route::post('action/{action}', 'ChestionareIntrebariController@doAction');
+    // Route::post('reorder', 'ServicesController@reorderServices');
+    // Route::post('export', 'ServicesController@export');
+
+    // Route::get('export-preview', 'ServicesController@exportPreview');
+
+});
+
+/** 
+ * COLECTIA DE INTREBARI
+ **/
+Route::middleware(['is-authenticated'])->prefix('intrebari')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+    
+    Route::get('/', 'IntrebariController@index'); //->middleware(['has-permission:roles']);
+    Route::post('items', 'IntrebariController@getItems');
+    Route::post('action/{action}', 'IntrebariController@doAction');
+    // Route::post('reorder', 'ServicesController@reorderServices');
+    // Route::post('export', 'ServicesController@export');
+
+    // Route::get('export-preview', 'ServicesController@exportPreview');
+
+});
+
+
+/** CHESTIONARE **/
 Route::middleware(['is-authenticated'])->prefix('chestionare')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'ChestionareController@index'); 
@@ -33,9 +73,7 @@ Route::middleware(['is-authenticated'])->prefix('chestionare')->namespace(\Decal
     Route::get('export-preview/{id}', 'ChestionareController@exportPreview');
 });
 
-/** 
- * CHESTIONARE TRIMITERI
- **/
+/** CHESTIONARE TRIMITERI **/
 Route::middleware(['is-authenticated'])->prefix('chestionare-trimiteri')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::post('action/{action}', 'ChestionareTrimiteriController@doAction');

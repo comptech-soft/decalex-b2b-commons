@@ -1,8 +1,7 @@
 <?php
 
 /** 
- * CUSTOMERS SERVICES
- * Ce servicii exista in orders - contracts - customers
+ * CUSTOMERS SERVICES. Ce servicii exista in orders - contracts - customers
  **/
 Route::middleware(['is-authenticated'])->prefix('customers-services')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     

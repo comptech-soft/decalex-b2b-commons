@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * NOTIFICATIONS
- **/
+/** NOTIFICATIONS **/
 Route::middleware(['is-authenticated'])->prefix('notifications')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'NotificationsController@index'); 

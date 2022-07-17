@@ -16,8 +16,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-files')->namespace(\D
     Route::post('change-files-status', 'CustomersFilesController@changeFilesStatus');
     Route::post('attach-register-files', 'CustomersFilesController@attachRegisterFiles');
     Route::post('get-register-row-files', 'CustomersFilesController@getRegisterRowFiles');
-    
-    
+
     Route::post('action/{action}', 'CustomersFilesController@doAction');
 
 });

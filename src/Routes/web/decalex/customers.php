@@ -18,4 +18,5 @@ Route::middleware(['is-authenticated'])->prefix('customers')->namespace(\Decalex
     Route::get('export-preview', 'CustomersController@exportPreview');
 
     Route::post('xls-import', 'CustomersController@xlsImport');
+    
 });

@@ -15,7 +15,6 @@ Route::middleware(['is-authenticated'])->prefix('centralizatoare')->namespace(\D
 
 });
 
-
 /**  CENTRALIZATOARE **/
 Route::middleware(['is-authenticated'])->prefix('centralizatoare-coloane')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     

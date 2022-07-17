@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * NOMENCLATOR TASKS
- **/
+/** NOMENCLATOR TASKS **/
 Route::middleware(['is-authenticated'])->prefix('tasks')->namespace(\Decalex\Http\Controllers::class)->group(function(){
     
     Route::get('/', 'TasksController@index'); //->middleware(['has-permission:roles']);
