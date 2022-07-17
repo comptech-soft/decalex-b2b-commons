@@ -103,9 +103,9 @@ trait Actions {
 
         $collectionInput = collect($input);
 
-        $user = \Cartalyst\Models\User::find($input['user']['id']);
+        $user = \B2B\Models\Cartalyst\User::find($input['user']['id']);
 
-        \Cartalyst\Models\User::doUpdate($collectionInput->only(['user'])->toArray()['user'], $user);
+        \B2B\Models\Cartalyst\User::doUpdate($collectionInput->only(['user'])->toArray()['user'], $user);
 
         $person->update([
             ...$collectionInput->except(['user']),  

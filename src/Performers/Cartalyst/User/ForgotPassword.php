@@ -21,7 +21,7 @@ class ForgotPassword extends Perform {
 
         if($reminder === true)
         {
-            $reminder = \Cartalyst\Models\Reminder::where('user_id', $user->id)->first();
+            $reminder = \B2B\Models\Cartalyst\Reminder::where('user_id', $user->id)->first();
         }
 
         \Mail::to($this->input['email'])->send(new \Cartalyst\Mails\Users\ForgotPassword($user, $reminder));

@@ -37,7 +37,7 @@ trait AttachContactPerson {
 
     public function attachExistentContactPerson($input) {
 
-        $user = \Cartalyst\Models\User::find($input['id']);
+        $user = \B2B\Models\Cartalyst\User::find($input['id']);
         $collectionInput = collect($input);
         $this->attachUserToPersons($user, $collectionInput->only(['person'])->toArray()['person']);
     }

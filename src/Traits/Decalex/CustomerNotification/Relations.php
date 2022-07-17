@@ -5,7 +5,7 @@ namespace B2B\Traits\Decalex\CustomerNotification;
 trait Relations {
 
     public function sender() {
-        return $this->belongsTo(\Cartalyst\Models\User::class, 'sender_id');
+        return $this->belongsTo(\B2B\Models\Cartalyst\User::class, 'sender_id');
     }
     
     public function type() {

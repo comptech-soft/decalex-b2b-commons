@@ -5,7 +5,7 @@ namespace B2B\Http\Controllers\Cartalyst;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Comptech\Helpers\Response;
-use Cartalyst\Models\Role;
+use B2B\Models\Cartalyst\Role;
 
 class RolesController extends Controller {
     

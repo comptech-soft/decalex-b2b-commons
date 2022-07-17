@@ -6,7 +6,7 @@ trait Relations {
 
     /** person-user */
     public function user() {
-        return $this->belongsTo(\Cartalyst\Models\User::class, 'user_id');
+        return $this->belongsTo(\B2B\Models\Cartalyst\User::class, 'user_id');
     }
 
     /** contract->customer */

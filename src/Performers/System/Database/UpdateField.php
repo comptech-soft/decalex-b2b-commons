@@ -3,7 +3,7 @@
 namespace System\Performers\Database;
 
 use Comptech\Helpers\Perform;
-// use Cartalyst\Models\Permission;
+// use B2B\Models\Cartalyst\Permission;
 
 class UpdateField extends Perform {
 

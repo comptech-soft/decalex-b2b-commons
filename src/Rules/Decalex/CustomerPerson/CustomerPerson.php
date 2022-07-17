@@ -17,7 +17,7 @@ class CustomerPerson implements Rule {
 
     public function passes($attribute, $value)
     {   
-        $q = \Cartalyst\Models\User::where('id', $this->input['user']['id'])->where('type', 'b2b')->first();
+        $q = \B2B\Models\Cartalyst\User::where('id', $this->input['user']['id'])->where('type', 'b2b')->first();
 
         // if($this->input['id'])
         // {

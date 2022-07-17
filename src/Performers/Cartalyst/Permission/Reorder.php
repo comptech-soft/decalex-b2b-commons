@@ -3,7 +3,7 @@
 namespace Cartalyst\Performers\Permission;
 
 use Comptech\Helpers\Perform;
-use Cartalyst\Models\Permission;
+use B2B\Models\Cartalyst\Permission;
 
 class Reorder extends Perform {
 

@@ -2,7 +2,7 @@
 
 namespace B2B\Models\Decalex;
 
-use Cartalyst\Models\User;
+use B2B\Models\Cartalyst\User;
 
 use B2B\Traits\Decalex\Team\GetTeam;
 use B2B\Traits\Decalex\Team\AvailablePersons;

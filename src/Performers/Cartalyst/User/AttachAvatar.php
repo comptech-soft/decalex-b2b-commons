@@ -8,7 +8,7 @@ class AttachAvatar extends Perform {
 
     public function Action() {
 
-        $user = \Cartalyst\Models\User::find($this->input['id']);
+        $user = \B2B\Models\Cartalyst\User::find($this->input['id']);
 
         $file = $this->input['avatar'];
 

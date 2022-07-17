@@ -8,7 +8,7 @@ class ChangePassword extends Perform {
 
     public function Action() {
 
-        $user = \Cartalyst\Models\User::find($this->input['id']);
+        $user = \B2B\Models\Cartalyst\User::find($this->input['id']);
 
         \Sentinel::update($user, [
             'password' => $this->input['password']
