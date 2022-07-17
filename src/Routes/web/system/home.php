@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use B2B\Http\Controllers\System;
 
-Route::namespace(\B2B\Http\Controllers\System::class)->group(function(){
+Route::namespace(System::class)->group(function(){
     Route::get('/', 'HomeController@index');
 });

@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use B2B\Http\Controllers\System;
 
-Route::namespace(\B2B\Http\Controllers\System::class)->prefix('system')->group(function(){
+Route::namespace(System::class)->prefix('system')->group(function(){
     Route::post('get-config', 'SystemController@getConfig');
 });
