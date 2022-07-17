@@ -8,16 +8,16 @@ class XlsImport extends Perform {
 
     public function Action() {
 
-        $registru = \Decalex\Models\Registru::where('id', $this->input['register_id'])->first();
+        $registru = \B2B\Models\Decalex\Registru::where('id', $this->input['register_id'])->first();
         
-        $header = \Decalex\Models\RegisterColumn::getHeaderByRegister($this->input['register_id']);
-        $columns = \Decalex\Models\RegisterColumn::getColumnsFromHeader($header);
+        $header = \B2B\Models\Decalex\RegisterColumn::getHeaderByRegister($this->input['register_id']);
+        $columns = \B2B\Models\Decalex\RegisterColumn::getColumnsFromHeader($header);
 
         $importer = new \Decalex\Imports\RegistruImport($header, $columns, $registru);
 
         \Excel::import($importer, $this->input['file']);
 
-        $customerRegister = \Decalex\Models\CustomerRegister::create([
+        $customerRegister = \B2B\Models\Decalex\CustomerRegister::create([
             ...$importer->antet,
             'customer_id' => $this->input['customer_id'],
             'register_id' => $this->input['register_id'],
@@ -32,10 +32,10 @@ class XlsImport extends Perform {
             $departament = NULL;
             if(array_key_exists('departament', $line))
             {
-                $departament = \Decalex\Models\CustomerDepartament::getOrCreate($line['departament'], $this->input['customer_id']);
+                $departament = \B2B\Models\Decalex\CustomerDepartament::getOrCreate($line['departament'], $this->input['customer_id']);
             }
 
-            $row = \Decalex\Models\CustomerRegisterRow::create([
+            $row = \B2B\Models\Decalex\CustomerRegisterRow::create([
                 'customer_register_id' => $customerRegister->id,
                 'customer_id' => $this->input['customer_id'],
                 'register_id' => $this->input['register_id'],
@@ -53,7 +53,7 @@ class XlsImport extends Perform {
                     /**
                      * Daca nu-i # ==> nu-i coloana definita
                      */
-                    \Decalex\Models\CustomerRegisterRowValue::create([
+                    \B2B\Models\Decalex\CustomerRegisterRowValue::create([
                         'row_id' => $row->id,
                         'column_id' => substr($key, 1),
                         'deleted' => 0,

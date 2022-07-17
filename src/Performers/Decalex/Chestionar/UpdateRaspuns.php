@@ -4,7 +4,7 @@ namespace Decalex\Performers\Chestionar;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\IntrebareRaspuns;
+use B2B\Models\Decalex\IntrebareRaspuns;
 
 class UpdateRaspuns extends Perform {
 

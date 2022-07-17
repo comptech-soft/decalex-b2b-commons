@@ -3,7 +3,7 @@
 namespace Decalex\Rules\Notification;
 
 use Illuminate\Contracts\Validation\Rule;
-use Decalex\Models\Notification;
+use B2B\Models\Decalex\Notification;
 
 class UniqueNotification implements Rule {
 

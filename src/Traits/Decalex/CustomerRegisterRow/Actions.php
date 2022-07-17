@@ -35,7 +35,7 @@ trait Actions {
                 'updated_by' => \Sentinel::check()->id,
             ];
 
-            $exists = \Decalex\Models\CustomerRegisterRowValue::where('row_id', $this->id)
+            $exists = \B2B\Models\Decalex\CustomerRegisterRowValue::where('row_id', $this->id)
                 ->where('column_id', $item['column_id'])
                 ->first();
 
@@ -45,7 +45,7 @@ trait Actions {
             }
             else
             {
-                \Decalex\Models\CustomerRegisterRowValue::create($input);
+                \B2B\Models\Decalex\CustomerRegisterRowValue::create($input);
             }
         }
     }
@@ -92,7 +92,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $row) {
-        \Decalex\Models\CustomerRegisterRowValue::where('row_id', $row->id)->delete();
+        \B2B\Models\Decalex\CustomerRegisterRowValue::where('row_id', $row->id)->delete();
         $row->delete();
         return $row;
     }

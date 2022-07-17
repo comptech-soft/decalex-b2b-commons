@@ -8,7 +8,7 @@ class XlsImport extends Perform {
 
     public static function CreateCustomer($input) {
 
-        $customer = \Decalex\Models\Customer::where('name', $input['name'])->first();
+        $customer = \B2B\Models\Decalex\Customer::where('name', $input['name'])->first();
 
         if(! $customer)
         {
@@ -31,7 +31,7 @@ class XlsImport extends Perform {
                 $input['status'] = 'active';
             }
 
-            \Decalex\Models\Customer::create([
+            \B2B\Models\Decalex\Customer::create([
                 ...$input,
                 'city_id' => $city ? $city->id : NULL,
             ]);   

@@ -3,7 +3,7 @@
 namespace Decalex\Performers\Centralizator;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\CentralizatorColumn;
+use B2B\Models\Decalex\CentralizatorColumn;
 
 class ReorderColumns extends Perform {
 

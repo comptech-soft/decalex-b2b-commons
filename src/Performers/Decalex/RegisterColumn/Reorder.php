@@ -3,7 +3,7 @@
 namespace Decalex\Performers\RegisterColumn;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\RegisterColumn;
+use B2B\Models\Decalex\RegisterColumn;
 
 class Reorder extends Perform {
 

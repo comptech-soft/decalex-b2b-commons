@@ -28,7 +28,7 @@ trait GetNotifications {
 
     public function Notify($input) {
 
-        \Decalex\Models\CustomerNotification::create([
+        \B2B\Models\Decalex\CustomerNotification::create([
             ...$input,
             'type_id' => $this->id,
             'message' => $this->message,

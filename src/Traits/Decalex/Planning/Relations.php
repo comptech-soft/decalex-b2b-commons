@@ -6,37 +6,37 @@ trait Relations {
 
     /** planning->customer */
     public function customer() {
-        return $this->belongsTo(\Decalex\Models\Customer::class, 'customer_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
     }
 
     /** planning->task */
     public function task() {
-        return $this->belongsTo(\Decalex\Models\Task::class, 'task_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Task::class, 'task_id');
     }
 
     /** planning->assignedTo */
     public function assignedto() {
-        return $this->belongsTo(\Decalex\Models\Team::class, 'assigned_to');
+        return $this->belongsTo(\B2B\Models\Decalex\Team::class, 'assigned_to');
     }
 
     /** planning->service */
     public function service() {
-        return $this->belongsTo(\Decalex\Models\Service::class, 'service_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Service::class, 'service_id');
     }
 
     /** planning->contract */
     public function contract() {
-        return $this->belongsTo(\Decalex\Models\CustomerContract::class, 'contract_id');
+        return $this->belongsTo(\B2B\Models\Decalex\CustomerContract::class, 'contract_id');
     }
 
     /** planning->order */
     public function order() {
-        return $this->belongsTo(\Decalex\Models\CustomerOrder::class, 'order_id');
+        return $this->belongsTo(\B2B\Models\Decalex\CustomerOrder::class, 'order_id');
     }
 
     /** planning->users */
     public function users() {
-        return $this->hasMany(\Decalex\Models\PlanningUser::class, 'task_id');
+        return $this->hasMany(\B2B\Models\Decalex\PlanningUser::class, 'task_id');
     }
     
 }

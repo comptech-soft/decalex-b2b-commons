@@ -4,7 +4,7 @@ namespace Decalex\Performers\CustomerRegisterRow;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\CustomerRegisterRow;
+use B2B\Models\Decalex\CustomerRegisterRow;
 
 class ChangeStatus extends Perform {
 

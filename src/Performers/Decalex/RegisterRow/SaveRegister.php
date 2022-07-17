@@ -10,7 +10,7 @@ class SaveRegister extends Perform {
 
         foreach($this->input['rows'] as $i => $item)
         {
-            $row = \Decalex\Models\RegisterRow::find($item['id']);
+            $row = \B2B\Models\Decalex\RegisterRow::find($item['id']);
 
             $row->status = $item['status'];
 

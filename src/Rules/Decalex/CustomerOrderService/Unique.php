@@ -16,7 +16,7 @@ class Unique implements Rule {
 
     public function passes($attribute, $value)
     {   
-        $q = \Decalex\Models\CustomerOrderService::where('order_id', $this->input['order_id'])->where('service_id', $this->input['service_id']);
+        $q = \B2B\Models\Decalex\CustomerOrderService::where('order_id', $this->input['order_id'])->where('service_id', $this->input['service_id']);
 
         if($this->input['id'])
         {

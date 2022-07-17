@@ -66,7 +66,7 @@ trait Actions {
     public function attachUsers($input) {
         foreach($input as $i => $user_id)
         {
-            \Decalex\Models\PlanningUser::create([
+            \B2B\Models\Decalex\PlanningUser::create([
                 'task_id' => $this->id,
                 'user_id' => $user_id,
                 'created_by' => \Sentinel::check()->id,
@@ -76,11 +76,11 @@ trait Actions {
 
     public function syncUsers($input) {
 
-        \Decalex\Models\PlanningUser::where('task_id', $this->id)->delete();
+        \B2B\Models\Decalex\PlanningUser::where('task_id', $this->id)->delete();
 
         foreach($input as $i => $user_id)
         {
-            \Decalex\Models\PlanningUser::create([
+            \B2B\Models\Decalex\PlanningUser::create([
                 'task_id' => $this->id,
                 'user_id' => $user_id,
                 'created_by' => \Sentinel::check()->id,
@@ -122,7 +122,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $task) {
-        \Decalex\Models\PlanningUser::where('task_id', $task->id)->delete();
+        \B2B\Models\Decalex\PlanningUser::where('task_id', $task->id)->delete();
         $task->delete();
         return $task;
     }

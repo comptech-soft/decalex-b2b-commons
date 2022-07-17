@@ -4,7 +4,7 @@ namespace Decalex\Performers\CustomerFile;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\CustomerFile;
+use B2B\Models\Decalex\CustomerFile;
 
 class ChangeStatus extends Perform {
 
@@ -18,9 +18,9 @@ class ChangeStatus extends Perform {
 
         if($this->input['status'] == 'public')
         {
-            $customer = \Decalex\Models\Customer::where('id', $this->input['customer_id'])->with(['persons'])->first();
+            $customer = \B2B\Models\Decalex\Customer::where('id', $this->input['customer_id'])->with(['persons'])->first();
 
-            $notificare = \Decalex\Models\Notification::getByEntityAndAction('document', 'trimitere');
+            $notificare = \B2B\Models\Decalex\Notification::getByEntityAndAction('document', 'trimitere');
 
             foreach($customer->persons as $person)
             {

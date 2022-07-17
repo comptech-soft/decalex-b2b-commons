@@ -11,7 +11,7 @@ trait GetActiveServices {
 
         $today = \Carbon\Carbon::today()->format('Y-m-d');
 
-        $activeContracts = \Decalex\Models\CustomerContract::where('customer_id', $customer_id)
+        $activeContracts = \B2B\Models\Decalex\CustomerContract::where('customer_id', $customer_id)
             ->whereDate('date_to', '>=', $today);
 
         if($activeContracts->get()->count() == 0)
@@ -21,7 +21,7 @@ trait GetActiveServices {
 
         $whereRaw = "( (`date_to` IS NULL) OR (`date_to`>='" . $today . "') ) AND (`contract_id` IN (" . $activeContracts->pluck('id')->implode(',') . "))";
 
-        $activeOrders = \Decalex\Models\CustomerOrder::where('customer_id', $customer_id)
+        $activeOrders = \B2B\Models\Decalex\CustomerOrder::where('customer_id', $customer_id)
             ->whereRaw($whereRaw);
 
         if($activeOrders->get()->count() == 0)
@@ -30,7 +30,7 @@ trait GetActiveServices {
         }
         $whereRaw = "(`order_id` IN (" . $activeOrders->pluck('id')->implode(',') . "))";
 
-        $services = \Decalex\Models\CustomerOrderService::whereRaw($whereRaw)->with(['service', 'order.contract'])->get()->toArray();
+        $services = \B2B\Models\Decalex\CustomerOrderService::whereRaw($whereRaw)->with(['service', 'order.contract'])->get()->toArray();
 
         return $services;
     }

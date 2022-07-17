@@ -15,11 +15,11 @@ class XlsImport extends Perform {
             'Fals' => 0,
         ];
 
-        $tip = \Decalex\Models\TipIntrebare::where('name', $input['question_type'])->first();
+        $tip = \B2B\Models\Decalex\TipIntrebare::where('name', $input['question_type'])->first();
 
         if(! $parent_id)
         {
-            $intrebare = new \Decalex\Models\Intrebare([
+            $intrebare = new \B2B\Models\Decalex\Intrebare([
                 'tip_intrebare' => $tip->id,
                 'question' => $input['question'],
                 'created_by' => \Sentinel::check()->id,
@@ -28,7 +28,7 @@ class XlsImport extends Perform {
         }
         else
         {
-            $parent = \Decalex\Models\Intrebare::find($parent_id);
+            $parent = \B2B\Models\Decalex\Intrebare::find($parent_id);
             $parent->activate_on_answer_id = $input['parent_activate_on_answer_id'];
             $parent->save();
 
@@ -44,7 +44,7 @@ class XlsImport extends Perform {
             $parent_activate_on_answer_id = NULL;
             foreach($input['raspunsuri'] as $i => $raspuns)
             {                
-                $answer = \Decalex\Models\IntrebareRaspuns::create([
+                $answer = \B2B\Models\Decalex\IntrebareRaspuns::create([
                     'intrebare_id' => $intrebare->id,
                     'answer' => $raspuns['answer'],
                     'order_no' => 1 + $i,
@@ -90,7 +90,7 @@ class XlsImport extends Perform {
 
                 $intrebare = $this->addIntrebare($rowIntrebare, NULL);
             
-                \Decalex\Models\ChestionarIntrebare::create([
+                \B2B\Models\Decalex\ChestionarIntrebare::create([
                     'chestionar_id' => $this->input['chestionar_id'],
                     'intrebare_id' => $intrebare->id,
                     'order_no' => $rowIntrebare['order_no'],

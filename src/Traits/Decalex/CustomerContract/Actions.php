@@ -57,7 +57,7 @@ trait Actions {
     }
 
     public static function doInsert($input, $contract) {
-        $customer = \Decalex\Models\Customer::find($input['customer_id']);
+        $customer = \B2B\Models\Decalex\Customer::find($input['customer_id']);
 
         $contract = $customer->attachContract($input);
 

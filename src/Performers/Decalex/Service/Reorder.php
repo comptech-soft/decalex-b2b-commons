@@ -3,7 +3,7 @@
 namespace Decalex\Performers\Service;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\Service;
+use B2B\Models\Decalex\Service;
 
 class Reorder extends Perform {
 

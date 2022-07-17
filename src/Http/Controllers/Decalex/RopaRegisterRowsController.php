@@ -39,7 +39,7 @@ class RopaRegisterRowsController extends Controller {
 
         
         return view('exports.ropa-register.xls-export', [
-            'columns' => \Decalex\Models\RegisterColumn::where('register_id', 1)->orderBy('order_no')->get()->toArray(),
+            'columns' => \B2B\Models\Decalex\RegisterColumn::where('register_id', 1)->orderBy('order_no')->get()->toArray(),
             'records' => $records['payload']['rows'],
         ]);
     }

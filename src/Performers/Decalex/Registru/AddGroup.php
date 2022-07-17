@@ -8,9 +8,9 @@ class AddGroup extends Perform {
 
     public function Action() {
         
-        \Decalex\Models\RegisterColumn::create([
+        \B2B\Models\Decalex\RegisterColumn::create([
             ...$this->input,
-            'order_no' => \Decalex\Models\RegisterColumn::getNextOrderNo($this->input['register_id']),
+            'order_no' => \B2B\Models\Decalex\RegisterColumn::getNextOrderNo($this->input['register_id']),
             'slug' => \Str::slug($this->input['caption']),
         ]);
     }

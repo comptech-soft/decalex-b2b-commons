@@ -9,10 +9,10 @@ trait Relations {
     }
     
     public function type() {
-        return $this->belongsTo(\Decalex\Models\Notification::class, 'type_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Notification::class, 'type_id');
     }
     
     public function customer() {
-        return $this->belongsTo(\Decalex\Models\Customer::class, 'customer_id');
+        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
     }
 }

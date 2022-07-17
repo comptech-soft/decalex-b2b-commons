@@ -6,17 +6,17 @@ trait Relations {
 
     // /** order->services */
     // function services() {
-    //     return $this->hasMany(\Decalex\Models\CustomerOrderService::class, 'order_id');
+    //     return $this->hasMany(\B2B\Models\Decalex\CustomerOrderService::class, 'order_id');
     // }
     
     // /** order->customer */
     // public function customer() {
-    //     return $this->belongsTo(\Decalex\Models\Customer::class, 'customer_id');
+    //     return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
     // }
 
     // /** order->contract */
     // public function contract() {
-    //     return $this->belongsTo(\Decalex\Models\CustomerContract::class, 'contract_id');
+    //     return $this->belongsTo(\B2B\Models\Decalex\CustomerContract::class, 'contract_id');
     // }
     
 }

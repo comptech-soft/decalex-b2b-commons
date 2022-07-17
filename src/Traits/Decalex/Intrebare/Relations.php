@@ -6,12 +6,12 @@ trait Relations {
 
     /** intrebare->raspunsuri */
     function raspunsuri() {
-        return $this->hasMany(\Decalex\Models\IntrebareRaspuns::class, 'intrebare_id')->where('deleted', 0);
+        return $this->hasMany(\B2B\Models\Decalex\IntrebareRaspuns::class, 'intrebare_id')->where('deleted', 0);
     }
     
     /** intrebare->tip */
     public function tip() {
-        return $this->belongsTo(\Decalex\Models\TipIntrebare::class, 'tip_intrebare');
+        return $this->belongsTo(\B2B\Models\Decalex\TipIntrebare::class, 'tip_intrebare');
     }
     
 }

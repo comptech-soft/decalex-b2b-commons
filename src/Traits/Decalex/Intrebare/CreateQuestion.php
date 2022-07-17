@@ -10,11 +10,11 @@ trait CreateQuestion {
             $input = [
                 ...$raspuns,
                 'intrebare_id' => $this->id,
-                'order_no' => $raspuns['order_no'] ? $raspuns['order_no'] : \Decalex\Models\IntrebareRaspuns::getNextOrderNo($this->id),
+                'order_no' => $raspuns['order_no'] ? $raspuns['order_no'] : \B2B\Models\Decalex\IntrebareRaspuns::getNextOrderNo($this->id),
                 'created_by' => \Sentinel::check()->id,
                 'updated_by' => \Sentinel::check()->id,
             ];
-            $answer = \Decalex\Models\IntrebareRaspuns::create($input);
+            $answer = \B2B\Models\Decalex\IntrebareRaspuns::create($input);
         }
         return $answer;
     }
@@ -32,7 +32,7 @@ trait CreateQuestion {
     // public function attachAnswer($raspuns) {
 
     //     $input = collect($raspuns)->except(['id'])->toArray();
-    //     $answer = \Decalex\Models\IntrebareRaspuns::create([
+    //     $answer = \B2B\Models\Decalex\IntrebareRaspuns::create([
     //         ...$input,
     //         'intrebare_id' => $this->id,
     //         'props' => [

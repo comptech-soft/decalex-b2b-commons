@@ -31,7 +31,7 @@ class CentralizatoareController extends Controller {
     
     public function exportPreview($id) {
 
-        $centralizator = \Decalex\Models\Centralizator::where('id', $id)->with(['columns'])->first();
+        $centralizator = \B2B\Models\Decalex\Centralizator::where('id', $id)->with(['columns'])->first();
         return view('exports.centralizator.xls-export', [
            'records' => $centralizator->columns,
         ]);

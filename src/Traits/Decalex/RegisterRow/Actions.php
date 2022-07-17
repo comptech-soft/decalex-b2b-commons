@@ -23,11 +23,11 @@ trait Actions {
 
         foreach($input as $i => $column)
         {
-            $rowValue = \Decalex\Models\RegisterRowValue::where('row_id', $this->id)->where('column_id', $column['id'])->first();
+            $rowValue = \B2B\Models\Decalex\RegisterRowValue::where('row_id', $this->id)->where('column_id', $column['id'])->first();
 
             if(! $rowValue )
             {
-                $rowValue = \Decalex\Models\RegisterRowValue::create([
+                $rowValue = \B2B\Models\Decalex\RegisterRowValue::create([
                     'register_id' => $this->register_id,
                     'customer_id' => $this->customer_id,
                     'row_id'=> $this->id,
@@ -44,7 +44,7 @@ trait Actions {
     public function attachValues($input) {
         foreach($input as $i => $column)
         {
-            \Decalex\Models\RegisterRowValue::create([
+            \B2B\Models\Decalex\RegisterRowValue::create([
                 'customer_id' => $this->customer_id,
                 'register_id' => $this->register_id,
                 'column_id' => $column['id'],
@@ -75,7 +75,7 @@ trait Actions {
 
 
     public static function doDelete($input, $row) {
-        \Decalex\Models\RegisterRowValue::where('row_id', $input['id'])->delete();
+        \B2B\Models\Decalex\RegisterRowValue::where('row_id', $input['id'])->delete();
         $row->delete();
         return $row;
     }

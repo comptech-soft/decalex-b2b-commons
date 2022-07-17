@@ -33,10 +33,10 @@ trait Actions {
             if( strlen($row_ids) > 0)
             {
                 $whereRaw = "(`customers-registers-rows-values`.`row_id` IN (" . $row_ids .  "))";
-                \Decalex\Models\CustomerRegisterRowValue::whereRaw($whereRaw)->delete();
+                \B2B\Models\Decalex\CustomerRegisterRowValue::whereRaw($whereRaw)->delete();
             }
 
-            \Decalex\Models\CustomerRegisterRow::where('customer_register_id', $register->id)->delete();
+            \B2B\Models\Decalex\CustomerRegisterRow::where('customer_register_id', $register->id)->delete();
         }
         
         $register->delete();

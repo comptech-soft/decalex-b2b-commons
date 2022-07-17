@@ -10,7 +10,7 @@ class AddColumn extends Perform {
 
         $slug = \Str::slug($this->input['caption']);
         
-        $record = \Decalex\Models\RegisterColumn::where('slug', $slug)
+        $record = \B2B\Models\Decalex\RegisterColumn::where('slug', $slug)
             ->where('register_id', $this->input['register_id'])
             ->where('deleted', 1)
             ->first();
@@ -22,11 +22,11 @@ class AddColumn extends Perform {
         }
         else
         {
-            \Decalex\Models\RegisterColumn::create([
+            \B2B\Models\Decalex\RegisterColumn::create([
                 ...$this->input,
                 'order_no' => $this->input['group_id'] 
-                    ? \Decalex\Models\RegisterColumn::getNextGroupOrderNo($this->input['group_id']) 
-                    : \Decalex\Models\RegisterColumn::getNextOrderNo($this->input['register_id']),
+                    ? \B2B\Models\Decalex\RegisterColumn::getNextGroupOrderNo($this->input['group_id']) 
+                    : \B2B\Models\Decalex\RegisterColumn::getNextOrderNo($this->input['register_id']),
                 'slug' => \Str::slug($this->input['caption']),
             ]);
         }

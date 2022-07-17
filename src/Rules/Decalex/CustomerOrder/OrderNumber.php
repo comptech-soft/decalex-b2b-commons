@@ -17,7 +17,7 @@ class OrderNumber implements Rule {
     public function passes($attribute, $value)
     {   
 
-        $q = \Decalex\Models\CustomerOrder::where('number', $this->input['number'])->where('contract_id', $this->input['contract_id']);
+        $q = \B2B\Models\Decalex\CustomerOrder::where('number', $this->input['number'])->where('contract_id', $this->input['contract_id']);
 
         if($this->input['id'])
         {

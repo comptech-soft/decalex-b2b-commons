@@ -11,17 +11,17 @@ trait Relations {
 
     /** customer->contracts */
     function contracts() {
-        return $this->hasMany(\Decalex\Models\CustomerContract::class, 'customer_id')->orderBy('date_to', 'desc');
+        return $this->hasMany(\B2B\Models\Decalex\CustomerContract::class, 'customer_id')->orderBy('date_to', 'desc');
     }
 
     /** customer->persons */
     function persons() {
-        return $this->hasMany(\Decalex\Models\CustomerPerson::class, 'customer_id');
+        return $this->hasMany(\B2B\Models\Decalex\CustomerPerson::class, 'customer_id');
     }
 
     /** customer->departamente */
     function departments() {
-        return $this->hasMany(\Decalex\Models\CustomerDepartament::class, 'customer_id');
+        return $this->hasMany(\B2B\Models\Decalex\CustomerDepartament::class, 'customer_id');
     }
 
 }

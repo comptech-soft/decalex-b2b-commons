@@ -3,7 +3,7 @@
 namespace Decalex\Rules\CustomerFolder;
 
 use Illuminate\Contracts\Validation\Rule;
-use Decalex\Models\CustomerFolder;
+use B2B\Models\Decalex\CustomerFolder;
 
 class ValidName implements Rule {
 

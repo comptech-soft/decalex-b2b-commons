@@ -3,7 +3,7 @@
 namespace Decalex\Performers\Chestionar;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\Intrebare;
+use B2B\Models\Decalex\Intrebare;
 
 class AddSubintrebare extends Perform {
 

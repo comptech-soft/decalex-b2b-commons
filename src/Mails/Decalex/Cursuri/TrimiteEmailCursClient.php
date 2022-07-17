@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Decalex\Models\CustomerUser;
+use B2B\Models\Decalex\CustomerUser;
 
 class TrimiteEmailCursClient extends Mailable
 {

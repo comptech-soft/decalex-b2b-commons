@@ -4,7 +4,7 @@ namespace Decalex\Performers\Planning;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\Planning;
+use B2B\Models\Decalex\Planning;
 
 class UpdateTaskStatus extends Perform {
 

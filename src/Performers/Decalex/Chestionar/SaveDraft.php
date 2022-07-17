@@ -3,7 +3,7 @@
 namespace Decalex\Performers\Chestionar;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\Chestionar;
+use B2B\Models\Decalex\Chestionar;
 
 class SaveDraft extends Perform {
 

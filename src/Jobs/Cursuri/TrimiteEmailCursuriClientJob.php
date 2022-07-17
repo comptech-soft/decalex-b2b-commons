@@ -24,14 +24,14 @@ class TrimiteEmailCursuriClientJob implements ShouldQueue {
 
         $this->cursuri_ids = $chestionare;
 
-        $this->customer = \Decalex\Models\Customer::find($customer_id);
+        $this->customer = \B2B\Models\Decalex\Customer::find($customer_id);
         
         $this->users = collect($users)->map( function($id) {
-            return \Decalex\Models\CustomerPerson::find($id)->user;
+            return \B2B\Models\Decalex\CustomerPerson::find($id)->user;
         });
 
         $this->cursuri = collect($chestionare)->map( function($id) {
-            return \Decalex\Models\Curs::find($id);
+            return \B2B\Models\Decalex\Curs::find($id);
         });
 
         $this->customercursuri = $customercursuri;
@@ -44,7 +44,7 @@ class TrimiteEmailCursuriClientJob implements ShouldQueue {
 
     public function CreateNotifications() {
 
-        $notificare = \Decalex\Models\Notification::getByEntityAndAction('curs', 'trimitere');
+        $notificare = \B2B\Models\Decalex\Notification::getByEntityAndAction('curs', 'trimitere');
 
         foreach($this->users as $user)
         {

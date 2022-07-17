@@ -4,11 +4,11 @@ namespace Decalex\Performers\Trimitere;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\Trimitere;
-use Decalex\Models\TrimitereDetaliu;
-use Decalex\Models\CustomerChestionar;
-use Decalex\Models\CustomerCentralizator;
-use Decalex\Models\CustomerCurs;
+use B2B\Models\Decalex\Trimitere;
+use B2B\Models\Decalex\TrimitereDetaliu;
+use B2B\Models\Decalex\CustomerChestionar;
+use B2B\Models\Decalex\CustomerCentralizator;
+use B2B\Models\Decalex\CustomerCurs;
 
 class Trimite extends Perform {
 

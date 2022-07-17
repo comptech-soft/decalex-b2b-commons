@@ -6,7 +6,7 @@ trait Relations {
 
     /** row->row-values */
     function values() {
-        return $this->hasMany(\Decalex\Models\RegisterRowValue::class, 'row_id');
+        return $this->hasMany(\B2B\Models\Decalex\RegisterRowValue::class, 'row_id');
     }
     
 }

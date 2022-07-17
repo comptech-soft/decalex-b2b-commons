@@ -3,7 +3,7 @@
 namespace Decalex\Rules\CustomerContract;
 
 use Illuminate\Contracts\Validation\Rule;
-use Decalex\Models\CustomerContract;
+use B2B\Models\Decalex\CustomerContract;
 
 class ContractNumber implements Rule {
 

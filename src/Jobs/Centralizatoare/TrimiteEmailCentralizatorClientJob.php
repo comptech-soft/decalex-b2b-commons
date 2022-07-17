@@ -25,14 +25,14 @@ class TrimiteEmailCentralizatorClientJob implements ShouldQueue {
 
         $this->chestionare_ids = $chestionare;
 
-        $this->customer = \Decalex\Models\Customer::find($customer_id);
+        $this->customer = \B2B\Models\Decalex\Customer::find($customer_id);
         
         $this->users = collect($users)->map( function($id) {
-            return \Decalex\Models\CustomerPerson::find($id)->user;
+            return \B2B\Models\Decalex\CustomerPerson::find($id)->user;
         });
 
         $this->centralizatoare = collect($chestionare)->map( function($id) {
-            return \Decalex\Models\Centralizator::find($id);
+            return \B2B\Models\Decalex\Centralizator::find($id);
         });
 
         $this->customerchestionare = $customerchestionare;
@@ -45,7 +45,7 @@ class TrimiteEmailCentralizatorClientJob implements ShouldQueue {
 
     public function CreateNotifications() {
 
-        $notificare = \Decalex\Models\Notification::getByEntityAndAction('centralizator', 'trimitere');
+        $notificare = \B2B\Models\Decalex\Notification::getByEntityAndAction('centralizator', 'trimitere');
 
         foreach($this->users as $user)
         {

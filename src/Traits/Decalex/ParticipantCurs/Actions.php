@@ -26,7 +26,7 @@ trait Actions {
 
     public static function doInsert($input, $participant) {
 
-        $customerCurs = \Decalex\Models\CustomerCurs::where('customer_id', $input['customer_id'])
+        $customerCurs = \B2B\Models\Decalex\CustomerCurs::where('customer_id', $input['customer_id'])
             ->where('curs_id', $input['curs_id'])
             ->where('trimitere_id', $input['trimitere_id'])
             ->first();

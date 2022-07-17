@@ -18,7 +18,7 @@ class GetCustomersItems extends GetItems {
 
         else
         {
-            $records = \Decalex\Models\TeamCustomer::where('user_id', $this->input['user_id'])->with(['customer'])->get();
+            $records = \B2B\Models\Decalex\TeamCustomer::where('user_id', $this->input['user_id'])->with(['customer'])->get();
 
             $result = $records->map(function($record){
                 return $record->customer;

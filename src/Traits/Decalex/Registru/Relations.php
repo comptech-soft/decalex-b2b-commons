@@ -6,7 +6,7 @@ trait Relations {
 
     /** coloanele registrului */
     function columns() {
-        return $this->hasMany(\Decalex\Models\RegisterColumn::class, 'register_id');
+        return $this->hasMany(\B2B\Models\Decalex\RegisterColumn::class, 'register_id');
     }
     
 }

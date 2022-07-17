@@ -3,7 +3,7 @@
 namespace Decalex\Performers\TipIntrebare;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\TipIntrebare;
+use B2B\Models\Decalex\TipIntrebare;
 
 class Reorder extends Perform {
 

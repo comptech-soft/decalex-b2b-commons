@@ -32,7 +32,7 @@ class CustomerPerson implements Rule {
             return FALSE;
         }
 
-        $person = \Decalex\Models\CustomerPerson::where('user_id', $this->input['user']['id'])->where('customer_id', $this->input['customer_id'])->first();
+        $person = \B2B\Models\Decalex\CustomerPerson::where('user_id', $this->input['user']['id'])->where('customer_id', $this->input['customer_id'])->first();
 
         if($person)
         {

@@ -3,7 +3,7 @@
 namespace Decalex\Performers\Chestionar;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\ChestionarIntrebare;
+use B2B\Models\Decalex\ChestionarIntrebare;
 
 class ReorderIntrebari extends Perform {
 

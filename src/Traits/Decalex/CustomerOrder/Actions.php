@@ -88,7 +88,7 @@ trait Actions {
     public function attachService($input) {
         $collectionInput = collect($input);
 
-        \Decalex\Models\CustomerOrderService::create([
+        \B2B\Models\Decalex\CustomerOrderService::create([
             ...$collectionInput->except(['id'])->toArray(),
             'service_id' => $input['id'],
             'order_id' => $this->id,
@@ -98,7 +98,7 @@ trait Actions {
 
     public function attachServices($input) {
 
-        \Decalex\Models\CustomerOrderService::where('order_id', $this->id)->delete();
+        \B2B\Models\Decalex\CustomerOrderService::where('order_id', $this->id)->delete();
 
         foreach($input as $i => $service)
         {

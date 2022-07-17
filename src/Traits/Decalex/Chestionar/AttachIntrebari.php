@@ -7,9 +7,9 @@ trait AttachIntrebari {
 
     public function attachIntrebare($input) {
 
-        $question = \Decalex\Models\Intrebare::createQuestion($input, NULL);
+        $question = \B2B\Models\Decalex\Intrebare::createQuestion($input, NULL);
 
-        \Decalex\Models\ChestionarIntrebare::create([
+        \B2B\Models\Decalex\ChestionarIntrebare::create([
             'chestionar_id' => $this->id,
             'intrebare_id' => $question->id,
             'order_no' => $input['order_no'],

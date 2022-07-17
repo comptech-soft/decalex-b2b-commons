@@ -42,7 +42,7 @@ class CustomerContract extends Model {
 
         $collectionInput = collect($input);
 
-        $order = \Decalex\Models\CustomerOrder::create([
+        $order = \B2B\Models\Decalex\CustomerOrder::create([
             ...$collectionInput->only(['number', 'date', 'date_to', 'prelungire_automata'])->toArray(),
             'contract_id' => $this->id, 
             'customer_id' => $this->customer_id,

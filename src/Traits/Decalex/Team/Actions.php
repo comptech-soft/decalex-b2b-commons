@@ -90,7 +90,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $member) {
-        $record = \Decalex\Models\CustomerPerson::find($input['id']);
+        $record = \B2B\Models\Decalex\CustomerPerson::find($input['id']);
         $record->delete();
         return $member;
     }

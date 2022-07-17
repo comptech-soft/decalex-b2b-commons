@@ -16,13 +16,13 @@ trait Export {
 
         $id = $input['customer_registru_id'];
 
-        $registru = \Decalex\Models\CustomerRegister::where('id', $id)->with('register')->first();
+        $registru = \B2B\Models\Decalex\CustomerRegister::where('id', $id)->with('register')->first();
 
-        $header = \Decalex\Models\RegisterColumn::getHeaderByRegister($registru->register_id);
+        $header = \B2B\Models\Decalex\RegisterColumn::getHeaderByRegister($registru->register_id);
 
-        $columns = \Decalex\Models\RegisterColumn::getColumnsFromHeader($header);
+        $columns = \B2B\Models\Decalex\RegisterColumn::getColumnsFromHeader($header);
 
-        $rows = \Decalex\Models\CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
+        $rows = \B2B\Models\Decalex\CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
 
         return (new ExportPerformer(
             [

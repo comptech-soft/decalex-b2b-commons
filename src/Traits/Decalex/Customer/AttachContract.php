@@ -8,7 +8,7 @@ trait AttachContract {
         
         $collectionInput = collect($input);
 
-        $contract = \Decalex\Models\CustomerContract::create([
+        $contract = \B2B\Models\Decalex\CustomerContract::create([
             ...$collectionInput->only(['number', 'date_from', 'date_to', 'prelungire_automata'])->toArray(), 
             'created_by' => \Sentinel::check()->id, 
             'status' => 'active',

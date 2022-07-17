@@ -3,7 +3,7 @@
 namespace Decalex\Rules\CustomerDepartment;
 
 use Illuminate\Contracts\Validation\Rule;
-use Decalex\Models\CustomerDepartament;
+use B2B\Models\Decalex\CustomerDepartament;
 
 class UniqueName implements Rule {
 

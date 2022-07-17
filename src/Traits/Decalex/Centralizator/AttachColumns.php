@@ -10,7 +10,7 @@ trait AttachColumns {
     public function attachColumn($input, $index) {
         if($input['id'] < 0)
         {
-            \Decalex\Models\CentralizatorColumn::create([
+            \B2B\Models\Decalex\CentralizatorColumn::create([
                 ...$input,
                 'deleted' => 0,
                 'centralizator_id' => $this->id,
@@ -20,7 +20,7 @@ trait AttachColumns {
         }
         else
         {   
-            $column = \Decalex\Models\CentralizatorColumn::find($input['id']);
+            $column = \B2B\Models\Decalex\CentralizatorColumn::find($input['id']);
             $column->update([
                 ...$input,
                 'deleted' => 0,
@@ -31,14 +31,14 @@ trait AttachColumns {
 
     public function attachColumns($input) {
 
-        \Decalex\Models\CentralizatorColumn::where('centralizator_id', $this->id)->update(['deleted' => 1]);
+        \B2B\Models\Decalex\CentralizatorColumn::where('centralizator_id', $this->id)->update(['deleted' => 1]);
 
         foreach($input as $i => $col) 
         {
             $this->attachColumn($col, 1 + $i);
         }
 
-        \Decalex\Models\CentralizatorColumn::where('deleted', 1)->delete();
+        \B2B\Models\Decalex\CentralizatorColumn::where('deleted', 1)->delete();
 
     }
 

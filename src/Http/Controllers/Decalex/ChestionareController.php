@@ -79,7 +79,7 @@ class ChestionareController extends Controller {
     
     public function exportPreview($id) {
 
-        $chestionar = \Decalex\Models\Chestionar::where('id', $id)->with(['intrebari.intrebare.tip'])->first();
+        $chestionar = \B2B\Models\Decalex\Chestionar::where('id', $id)->with(['intrebari.intrebare.tip'])->first();
 
         return view('exports.chestionar.xls-export', [
            'records' => $chestionar->intrebari,

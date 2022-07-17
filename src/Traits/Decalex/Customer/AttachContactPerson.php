@@ -5,7 +5,7 @@ namespace B2B\Traits\Decalex\Customer;
 trait AttachContactPerson {
 
     public function attachUserToPersons($user, $input) {
-        \Decalex\Models\CustomerPerson::create([
+        \B2B\Models\Decalex\CustomerPerson::create([
             ...$input, 
             'user_id' => $user->id, 
             'customer_id' => $this->id, 

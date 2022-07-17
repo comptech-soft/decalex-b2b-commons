@@ -4,8 +4,8 @@ namespace Decalex\Performers\CustomerFile;
 
 use Comptech\Helpers\Perform;
 
-use Decalex\Models\CustomerFile;
-use Decalex\Models\CustomerFolder;
+use B2B\Models\Decalex\CustomerFile;
+use B2B\Models\Decalex\CustomerFolder;
 
 class AttachRegisterFiles extends Perform {
 

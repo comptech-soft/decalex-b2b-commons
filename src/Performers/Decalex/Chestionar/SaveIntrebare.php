@@ -3,8 +3,8 @@
 namespace Decalex\Performers\Chestionar;
 
 use Comptech\Helpers\Perform;
-use Decalex\Models\Intrebare;
-use Decalex\Models\ChestionarIntrebare;
+use B2B\Models\Decalex\Intrebare;
+use B2B\Models\Decalex\ChestionarIntrebare;
 
 class SaveIntrebare extends Perform {
 
