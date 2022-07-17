@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Team;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Models\Decalex\CustomerPerson;
 
 trait AvailablePersons {
 
@@ -11,7 +12,7 @@ trait AvailablePersons {
      */
     public static function getAvailablePersons($input) {
 
-        $exitent_users = \B2B\Models\Decalex\CustomerPerson::where('customer_id', $input['customer_id'])->get()->pluck('user_id')->toArray();
+        $exitent_users = CustomerPerson::where('customer_id', $input['customer_id'])->get()->pluck('user_id')->toArray();
 
         if(count($exitent_users))
         {

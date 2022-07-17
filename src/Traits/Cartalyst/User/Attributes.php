@@ -2,6 +2,8 @@
 
 namespace B2B\Traits\Cartalyst\User;
 
+use B2B\Models\Cartalyst\Activation;
+
 trait Attributes {
 
     /** Attributes. Full name */
@@ -16,7 +18,7 @@ trait Attributes {
 
     /** Attribute. Active */
     public function getActiveAttribute() {
-        $activation = \B2B\Models\Cartalyst\Activation::where('user_id', $this->id)->first();
+        $activation = Activation::where('user_id', $this->id)->first();
         if( ! $activation )
         {
             \Activation::create($this);

@@ -4,6 +4,7 @@ namespace B2B\Traits\Decalex\Team;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 use B2B\Rules\Cartalyst\User\ValidPassword;
+use B2B\Models\Decalex\CustomerPerson;
 
 trait Actions {
 
@@ -91,7 +92,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $member) {
-        $record = \B2B\Models\Decalex\CustomerPerson::find($input['id']);
+        $record = CustomerPerson::find($input['id']);
         $record->delete();
         return $member;
     }

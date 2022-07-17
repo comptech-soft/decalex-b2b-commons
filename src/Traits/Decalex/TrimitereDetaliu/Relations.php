@@ -2,9 +2,11 @@
 
 namespace B2B\Traits\Decalex\TrimitereDetaliu;
 
+use B2B\Models\Decalex\Customer;
+
 trait Relations {
 
     public function customer() {
-        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
+        return $this->belongsTo(Customer::class, 'customer_id');
     }
 }

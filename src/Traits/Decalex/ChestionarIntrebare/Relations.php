@@ -2,10 +2,12 @@
 
 namespace B2B\Traits\Decalex\ChestionarIntrebare;
 
+use B2B\Models\Decalex\Intrebare;
+
 trait Relations {
 
     function intrebare() {
-        return $this->belongsTo(\B2B\Models\Decalex\Intrebare::class, 'intrebare_id');
+        return $this->belongsTo(Intrebare::class, 'intrebare_id');
     }
     
    

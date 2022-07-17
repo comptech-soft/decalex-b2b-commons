@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Planning;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Models\Decalex\PlanningUser;
 
 trait Actions {
 
@@ -66,7 +67,7 @@ trait Actions {
     public function attachUsers($input) {
         foreach($input as $i => $user_id)
         {
-            \B2B\Models\Decalex\PlanningUser::create([
+            PlanningUser::create([
                 'task_id' => $this->id,
                 'user_id' => $user_id,
                 'created_by' => \Sentinel::check()->id,
@@ -76,11 +77,11 @@ trait Actions {
 
     public function syncUsers($input) {
 
-        \B2B\Models\Decalex\PlanningUser::where('task_id', $this->id)->delete();
+        PlanningUser::where('task_id', $this->id)->delete();
 
         foreach($input as $i => $user_id)
         {
-            \B2B\Models\Decalex\PlanningUser::create([
+            PlanningUser::create([
                 'task_id' => $this->id,
                 'user_id' => $user_id,
                 'created_by' => \Sentinel::check()->id,
@@ -122,7 +123,7 @@ trait Actions {
     }
 
     public static function doDelete($input, $task) {
-        \B2B\Models\Decalex\PlanningUser::where('task_id', $task->id)->delete();
+        PlanningUser::where('task_id', $task->id)->delete();
         $task->delete();
         return $task;
     }

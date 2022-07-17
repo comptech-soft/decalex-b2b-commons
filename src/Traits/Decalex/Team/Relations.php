@@ -2,6 +2,8 @@
 
 namespace B2B\Traits\Decalex\Team;
 
+use B2B\Models\Decalex\Customer;
+
 trait Relations {
 
     /** 
@@ -10,7 +12,7 @@ trait Relations {
      **/
     public function customers() {
         return $this
-            ->belongsToMany(\B2B\Models\Decalex\Customer::class, 'team-customers', 'user_id', 'customer_id')
+            ->belongsToMany(Customer::class, 'team-customers', 'user_id', 'customer_id')
             ->withPivot('id', 'created_by', 'updated_by')
             ->withTimestamps();
     }

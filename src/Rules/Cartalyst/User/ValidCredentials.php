@@ -3,6 +3,7 @@
 namespace B2B\Rules\Cartalyst\User;
 
 use Illuminate\Contracts\Validation\Rule;
+use B2B\Models\Cartalyst\User;
 
 class ValidCredentials implements Rule {
 
@@ -24,7 +25,7 @@ class ValidCredentials implements Rule {
         }
         else
         {
-            $user = \B2B\Models\Cartalyst\User::find($this->user_id);
+            $user = User::find($this->user_id);
         }
         
         $credentials = [

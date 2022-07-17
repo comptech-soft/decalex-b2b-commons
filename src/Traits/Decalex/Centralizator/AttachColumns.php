@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Centralizator;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Models\Decalex\CentralizatorColumn;
 
 trait AttachColumns {
 
@@ -10,7 +11,7 @@ trait AttachColumns {
     public function attachColumn($input, $index) {
         if($input['id'] < 0)
         {
-            \B2B\Models\Decalex\CentralizatorColumn::create([
+            CentralizatorColumn::create([
                 ...$input,
                 'deleted' => 0,
                 'centralizator_id' => $this->id,
@@ -20,7 +21,7 @@ trait AttachColumns {
         }
         else
         {   
-            $column = \B2B\Models\Decalex\CentralizatorColumn::find($input['id']);
+            $column = CentralizatorColumn::find($input['id']);
             $column->update([
                 ...$input,
                 'deleted' => 0,
@@ -31,14 +32,14 @@ trait AttachColumns {
 
     public function attachColumns($input) {
 
-        \B2B\Models\Decalex\CentralizatorColumn::where('centralizator_id', $this->id)->update(['deleted' => 1]);
+        CentralizatorColumn::where('centralizator_id', $this->id)->update(['deleted' => 1]);
 
         foreach($input as $i => $col) 
         {
             $this->attachColumn($col, 1 + $i);
         }
 
-        \B2B\Models\Decalex\CentralizatorColumn::where('deleted', 1)->delete();
+        CentralizatorColumn::where('deleted', 1)->delete();
 
     }
 

@@ -2,14 +2,17 @@
 
 namespace B2B\Traits\Decalex\CustomerCentralizator;
 
+use B2B\Models\Decalex\Centralizator;
+use B2B\Models\Decalex\Trimitere;
+
 trait Relations {
 
     public function centralizator() {
-        return $this->belongsTo(\B2B\Models\Decalex\Centralizator::class, 'centralizator_id');
+        return $this->belongsTo(Centralizator::class, 'centralizator_id');
     }
 
     public function trimitere() {
-        return $this->belongsTo(\B2B\Models\Decalex\Trimitere::class, 'trimitere_id');
+        return $this->belongsTo(Trimitere::class, 'trimitere_id');
     }
     
 }

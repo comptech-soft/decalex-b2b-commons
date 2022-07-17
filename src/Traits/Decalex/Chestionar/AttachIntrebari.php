@@ -2,14 +2,17 @@
 
 namespace B2B\Traits\Decalex\Chestionar;
 
+use B2B\Models\Decalex\Intrebare;
+use B2B\Models\Decalex\ChestionarIntrebare;
+
 trait AttachIntrebari {
 
 
     public function attachIntrebare($input) {
 
-        $question = \B2B\Models\Decalex\Intrebare::createQuestion($input, NULL);
+        $question = Intrebare::createQuestion($input, NULL);
 
-        \B2B\Models\Decalex\ChestionarIntrebare::create([
+        ChestionarIntrebare::create([
             'chestionar_id' => $this->id,
             'intrebare_id' => $question->id,
             'order_no' => $input['order_no'],

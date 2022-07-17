@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Notification;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Models\Decalex\CustomerNotification;
 
 trait GetNotifications {
 
@@ -28,7 +29,7 @@ trait GetNotifications {
 
     public function Notify($input) {
 
-        \B2B\Models\Decalex\CustomerNotification::create([
+        CustomerNotification::create([
             ...$input,
             'type_id' => $this->id,
             'message' => $this->message,

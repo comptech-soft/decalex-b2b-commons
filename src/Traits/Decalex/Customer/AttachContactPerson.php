@@ -2,10 +2,13 @@
 
 namespace B2B\Traits\Decalex\Customer;
 
+use B2B\Models\Cartalyst\User;
+use B2B\Models\Decalex\CustomerPerson;
+
 trait AttachContactPerson {
 
     public function attachUserToPersons($user, $input) {
-        \B2B\Models\Decalex\CustomerPerson::create([
+        CustomerPerson::create([
             ...$input, 
             'user_id' => $user->id, 
             'customer_id' => $this->id, 
@@ -37,7 +40,7 @@ trait AttachContactPerson {
 
     public function attachExistentContactPerson($input) {
 
-        $user = \B2B\Models\Cartalyst\User::find($input['id']);
+        $user = User::find($input['id']);
         $collectionInput = collect($input);
         $this->attachUserToPersons($user, $collectionInput->only(['person'])->toArray()['person']);
     }

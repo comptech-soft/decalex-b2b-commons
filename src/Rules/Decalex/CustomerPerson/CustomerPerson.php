@@ -3,6 +3,8 @@
 namespace B2B\Rules\Decalex\CustomerPerson;
 
 use Illuminate\Contracts\Validation\Rule;
+use B2B\Models\Cartalyst\User;
+use B2B\Models\Decalex\CustomerPerson as Person;
 
 class CustomerPerson implements Rule {
 
@@ -17,12 +19,7 @@ class CustomerPerson implements Rule {
 
     public function passes($attribute, $value)
     {   
-        $q = \B2B\Models\Cartalyst\User::where('id', $this->input['user']['id'])->where('type', 'b2b')->first();
-
-        // if($this->input['id'])
-        // {
-        //     $q->where('id', '<>', $this->input['id']);
-        // }
+        $q = User::where('id', $this->input['user']['id'])->where('type', 'b2b')->first();
 
         $this->user = $q->first();
 
@@ -32,7 +29,7 @@ class CustomerPerson implements Rule {
             return FALSE;
         }
 
-        $person = \B2B\Models\Decalex\CustomerPerson::where('user_id', $this->input['user']['id'])->where('customer_id', $this->input['customer_id'])->first();
+        $person = Person::where('user_id', $this->input['user']['id'])->where('customer_id', $this->input['customer_id'])->first();
 
         if($person)
         {
@@ -40,7 +37,6 @@ class CustomerPerson implements Rule {
             return FALSE;
         }
 
-        
         return TRUE;
     }
 

@@ -2,11 +2,12 @@
 
 namespace B2B\Traits\Decalex\Registru;
 
+use B2B\Models\Decalex\RegisterColumn;
+
 trait Relations {
 
-    /** coloanele registrului */
     function columns() {
-        return $this->hasMany(\B2B\Models\Decalex\RegisterColumn::class, 'register_id');
+        return $this->hasMany(RegisterColumn::class, 'register_id');
     }
     
 }

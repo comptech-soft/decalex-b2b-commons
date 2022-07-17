@@ -2,17 +2,17 @@
 
 namespace B2B\Traits\Decalex\CustomerPerson;
 
+use B2B\Models\Cartalyst\User;
+use B2B\Models\Decalex\Customer;
+
 trait Relations {
 
-    /** person-user */
     public function user() {
-        return $this->belongsTo(\B2B\Models\Cartalyst\User::class, 'user_id');
+        return $this->belongsTo(User::class, 'user_id');
     }
 
-    /** contract->customer */
     public function customer() {
-        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
+        return $this->belongsTo(Customer::class, 'customer_id');
     }
-    
-    
+        
 }

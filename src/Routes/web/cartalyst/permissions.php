@@ -1,8 +1,6 @@
 <?php
 
-/** 
- * PERMISSIONS 
- **/
+/** PERMISSIONS **/
 
 Route::middleware(['is-authenticated'])->prefix('permissions')->namespace(\B2B\Http\Controllers\Cartalyst::class)->group(function(){
     

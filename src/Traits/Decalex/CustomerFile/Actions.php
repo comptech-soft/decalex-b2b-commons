@@ -5,7 +5,7 @@ namespace B2B\Traits\Decalex\CustomerFile;
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 use B2B\Performers\Decalex\CustomerFile\ChangeStatus;
 use B2B\Performers\Decalex\CustomerFile\ChangeFilesStatus;
-use B2B\B2B\Performers\Decalex\CustomerFile\AttachRegisterFiles;
+use B2B\Performers\Decalex\CustomerFile\AttachRegisterFiles;
 
 trait Actions {
 

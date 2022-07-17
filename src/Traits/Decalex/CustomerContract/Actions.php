@@ -4,6 +4,7 @@ namespace B2B\Traits\Decalex\CustomerContract;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
 use B2B\Rules\Decalex\CustomerContract\ContractNumber;
+use B2B\Models\Decalex\Customer;
 
 trait Actions {
 
@@ -49,7 +50,7 @@ trait Actions {
     }
 
     public static function doInsert($input, $contract) {
-        $customer = \B2B\Models\Decalex\Customer::find($input['customer_id']);
+        $customer = Customer::find($input['customer_id']);
 
         $contract = $customer->attachContract($input);
 

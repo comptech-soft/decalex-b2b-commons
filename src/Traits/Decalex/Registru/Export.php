@@ -3,6 +3,9 @@
 namespace B2B\Traits\Decalex\Registru;
 
 use B2B\Classes\Comptech\Performers\Datatable\Export as ExportPerformer;
+use B2B\Models\Decalex\CustomerRegister;
+use B2B\Models\Decalex\RegisterColumn;
+use B2B\Models\Decalex\CustomerRegisterRow;
 
 trait Export {
 
@@ -16,13 +19,13 @@ trait Export {
 
         $id = $input['customer_registru_id'];
 
-        $registru = \B2B\Models\Decalex\CustomerRegister::where('id', $id)->with('register')->first();
+        $registru = CustomerRegister::where('id', $id)->with('register')->first();
 
-        $header = \B2B\Models\Decalex\RegisterColumn::getHeaderByRegister($registru->register_id);
+        $header = RegisterColumn::getHeaderByRegister($registru->register_id);
 
-        $columns = \B2B\Models\Decalex\RegisterColumn::getColumnsFromHeader($header);
+        $columns = RegisterColumn::getColumnsFromHeader($header);
 
-        $rows = \B2B\Models\Decalex\CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
+        $rows = CustomerRegisterRow::prepareRowsByCustomerRegister($id, $columns);
 
         return (new ExportPerformer(
             [

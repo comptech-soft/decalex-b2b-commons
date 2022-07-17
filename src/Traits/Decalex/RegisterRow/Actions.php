@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\RegisterRow;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Models\Decalex\RegisterRowValue;
 
 trait Actions {
 
@@ -23,11 +24,11 @@ trait Actions {
 
         foreach($input as $i => $column)
         {
-            $rowValue = \B2B\Models\Decalex\RegisterRowValue::where('row_id', $this->id)->where('column_id', $column['id'])->first();
+            $rowValue = RegisterRowValue::where('row_id', $this->id)->where('column_id', $column['id'])->first();
 
             if(! $rowValue )
             {
-                $rowValue = \B2B\Models\Decalex\RegisterRowValue::create([
+                $rowValue = RegisterRowValue::create([
                     'register_id' => $this->register_id,
                     'customer_id' => $this->customer_id,
                     'row_id'=> $this->id,
@@ -44,7 +45,7 @@ trait Actions {
     public function attachValues($input) {
         foreach($input as $i => $column)
         {
-            \B2B\Models\Decalex\RegisterRowValue::create([
+            RegisterRowValue::create([
                 'customer_id' => $this->customer_id,
                 'register_id' => $this->register_id,
                 'column_id' => $column['id'],
@@ -56,7 +57,6 @@ trait Actions {
             ]);
         }
     }
-
     
     public static function doInsert($input, $row) {
         $collectionInput = collect($input);
@@ -68,14 +68,12 @@ trait Actions {
         return $row;
     }
 
-
     public static function doDuplicate($input, $row) {
         return self::doInsert($input, $row);
     }
 
-
     public static function doDelete($input, $row) {
-        \B2B\Models\Decalex\RegisterRowValue::where('row_id', $input['id'])->delete();
+        RegisterRowValue::where('row_id', $input['id'])->delete();
         $row->delete();
         return $row;
     }

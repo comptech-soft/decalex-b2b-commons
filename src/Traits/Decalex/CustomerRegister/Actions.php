@@ -3,6 +3,8 @@
 namespace B2B\Traits\Decalex\CustomerRegister;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Models\Decalex\CustomerRegisterRowValue;
+use B2B\Models\Decalex\CustomerRegisterRow;
 
 trait Actions {
 
@@ -33,10 +35,10 @@ trait Actions {
             if( strlen($row_ids) > 0)
             {
                 $whereRaw = "(`customers-registers-rows-values`.`row_id` IN (" . $row_ids .  "))";
-                \B2B\Models\Decalex\CustomerRegisterRowValue::whereRaw($whereRaw)->delete();
+                CustomerRegisterRowValue::whereRaw($whereRaw)->delete();
             }
 
-            \B2B\Models\Decalex\CustomerRegisterRow::where('customer_register_id', $register->id)->delete();
+            CustomerRegisterRow::where('customer_register_id', $register->id)->delete();
         }
         
         $register->delete();

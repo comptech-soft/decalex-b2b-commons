@@ -2,16 +2,17 @@
 
 namespace B2B\Traits\Decalex\CustomerContract;
 
+use B2B\Models\Decalex\Customer;
+use B2B\Models\Decalex\CustomerOrder;
+
 trait Relations {
 
-    /** contracts->orders */
     function orders() {
-        return $this->hasMany(\B2B\Models\Decalex\CustomerOrder::class, 'contract_id')->orderBy('date', 'desc');
+        return $this->hasMany(CustomerOrder::class, 'contract_id')->orderBy('date', 'desc');
     }
     
-    /** contract->customer */
     public function customer() {
-        return $this->belongsTo(\B2B\Models\Decalex\Customer::class, 'customer_id');
+        return $this->belongsTo(Customer::class, 'customer_id');
     }
     
 }

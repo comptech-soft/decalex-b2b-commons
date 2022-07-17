@@ -2,13 +2,12 @@
 
 namespace B2B\Traits\Decalex\UserRaspuns;
 
+use B2B\Models\Decalex\UserRaspunsValue;
+
 trait Relations {
 
-
     function values() {
-        return $this->hasMany(\B2B\Models\Decalex\UserRaspunsValue::class, 'raspuns_id');
+        return $this->hasMany(UserRaspunsValue::class, 'raspuns_id');
     }
-    
 
-    
 }

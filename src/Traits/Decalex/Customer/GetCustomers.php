@@ -3,6 +3,11 @@
 namespace B2B\Traits\Decalex\Customer;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Models\Decalex\CustomerRegister;
+use B2B\Models\Decalex\CustomerChestionar;
+use B2B\Models\Decalex\CustomerCentralizator;
+use B2B\Models\Decalex\CustomerFile;
+use B2B\Models\Decalex\CustomerCurs;
 
 trait GetCustomers {
 
@@ -20,55 +25,50 @@ trait GetCustomers {
 
             /** REGISTRE */
             'audit' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 2)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 2)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 2)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 2)->count(),
             ],
 
             'incidente' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 1)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 1)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 1)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 1)->count(),
             ],
 
             'ropa' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 5)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 5)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 5)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 5)->count(),
             ],
 
             'ropaimputerniciti' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 6)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 6)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 6)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 6)->count(),
             ],
 
             'consimtaminte' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 3)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 3)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 3)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 3)->count(),
             ],
             
             'cereridsar' => [
-                'count' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('register_id', 4)->count(),
-                'count_public' => \B2B\Models\Decalex\CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 4)->count(),
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 4)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 4)->count(),
             ],
-
-            
-            
-            
-
 
 
             'chestionare' => [
-                'count' => \B2B\Models\Decalex\CustomerChestionar::where('customer_id', $customer_id)->count(),
+                'count' => CustomerChestionar::where('customer_id', $customer_id)->count(),
             ],
 
             'centralizatoare' => [
-                'count' => \B2B\Models\Decalex\CustomerCentralizator::where('customer_id', $customer_id)->count(),
+                'count' => CustomerCentralizator::where('customer_id', $customer_id)->count(),
             ],
 
             'files' => [
-                'count' => \B2B\Models\Decalex\CustomerFile::where('customer_id', $customer_id)->count(),
+                'count' => CustomerFile::where('customer_id', $customer_id)->count(),
             ],
 
             'educatie' => [
-                'count' => \B2B\Models\Decalex\CustomerCurs::where('customer_id', $customer_id)->count(),
+                'count' => CustomerCurs::where('customer_id', $customer_id)->count(),
             ], 
         ];
     }

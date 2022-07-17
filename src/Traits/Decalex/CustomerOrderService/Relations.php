@@ -2,16 +2,17 @@
 
 namespace B2B\Traits\Decalex\CustomerOrderService;
 
+use B2B\Models\Decalex\CustomerOrder;
+use B2B\Models\Decalex\Service;
+
 trait Relations {
 
-    /** services->service  */
     public function service() {
-        return $this->belongsTo(\B2B\Models\Decalex\Service::class, 'service_id');
+        return $this->belongsTo(Service::class, 'service_id');
     }
 
-    /** services->order  */
     public function order() {
-        return $this->belongsTo(\B2B\Models\Decalex\CustomerOrder::class, 'order_id');
+        return $this->belongsTo(CustomerOrder::class, 'order_id');
     }
     
 }

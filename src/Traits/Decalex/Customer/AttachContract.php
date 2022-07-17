@@ -2,13 +2,15 @@
 
 namespace B2B\Traits\Decalex\Customer;
 
+use B2B\Models\Decalex\CustomerContract;
+
 trait AttachContract {
 
     public function attachContract($input) {
         
         $collectionInput = collect($input);
 
-        $contract = \B2B\Models\Decalex\CustomerContract::create([
+        $contract = CustomerContract::create([
             ...$collectionInput->only(['number', 'date_from', 'date_to', 'prelungire_automata'])->toArray(), 
             'created_by' => \Sentinel::check()->id, 
             'status' => 'active',

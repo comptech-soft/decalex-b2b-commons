@@ -2,11 +2,12 @@
 
 namespace B2B\Traits\Decalex\RegisterRow;
 
+use B2B\Models\Decalex\RegisterRowValue;
+
 trait Relations {
 
-    /** row->row-values */
     function values() {
-        return $this->hasMany(\B2B\Models\Decalex\RegisterRowValue::class, 'row_id');
+        return $this->hasMany(RegisterRowValue::class, 'row_id');
     }
     
 }

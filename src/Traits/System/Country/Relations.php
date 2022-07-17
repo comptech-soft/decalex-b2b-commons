@@ -2,11 +2,12 @@
 
 namespace B2B\Traits\System\Country;
 
+use B2B\Models\System\Region;
+
 trait Relations {
 
-    /** country->regions */
     function regions() {
-        return $this->hasMany(\B2B\Models\System\Region::class, 'country_id');
+        return $this->hasMany(Region::class, 'country_id');
     }
 
 }

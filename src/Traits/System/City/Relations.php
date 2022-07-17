@@ -2,13 +2,12 @@
 
 namespace B2B\Traits\System\City;
 
+use B2B\Models\System\Region;
+
 trait Relations {
 
-    /** city->region  */
     public function region() {
-        return $this->belongsTo(\B2B\Models\System\Region::class, 'region_id');
+        return $this->belongsTo(Region::class, 'region_id');
     }
-
-    
 
 }

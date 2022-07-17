@@ -2,6 +2,8 @@
 
 namespace B2B\Traits\Decalex\Intrebare;
 
+use B2B\Models\Decalex\IntrebareRaspuns;
+
 trait CreateQuestion { 
 
     public function AttachRaspuns($raspuns) {
@@ -10,11 +12,11 @@ trait CreateQuestion {
             $input = [
                 ...$raspuns,
                 'intrebare_id' => $this->id,
-                'order_no' => $raspuns['order_no'] ? $raspuns['order_no'] : \B2B\Models\Decalex\IntrebareRaspuns::getNextOrderNo($this->id),
+                'order_no' => $raspuns['order_no'] ? $raspuns['order_no'] : IntrebareRaspuns::getNextOrderNo($this->id),
                 'created_by' => \Sentinel::check()->id,
                 'updated_by' => \Sentinel::check()->id,
             ];
-            $answer = \B2B\Models\Decalex\IntrebareRaspuns::create($input);
+            $answer = IntrebareRaspuns::create($input);
         }
         return $answer;
     }
