@@ -4,8 +4,8 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerCurs\GetCustomerCursuri;
-use Decalex\Traits\CustomerCurs\Relations;
+use B2B\Traits\Decalex\CustomerCurs\GetCustomerCursuri;
+use B2B\Traits\Decalex\CustomerCurs\Relations;
 
 class CustomerCurs extends Model {
 

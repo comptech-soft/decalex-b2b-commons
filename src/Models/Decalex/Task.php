@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Task\Actions;
-use Decalex\Traits\Task\GetTasks;
-use Decalex\Traits\Task\Export;
-use Decalex\Traits\Task\Relations;
-use Decalex\Traits\Task\Reorder;
+use B2B\Traits\Decalex\Task\Actions;
+use B2B\Traits\Decalex\Task\GetTasks;
+use B2B\Traits\Decalex\Task\Export;
+use B2B\Traits\Decalex\Task\Relations;
+use B2B\Traits\Decalex\Task\Reorder;
 
 class Task extends Model {
 

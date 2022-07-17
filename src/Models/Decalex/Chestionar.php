@@ -4,24 +4,24 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Chestionar\Actions;
-use Decalex\Traits\Chestionar\GetChestionare;
-use Decalex\Traits\Chestionar\Export;
-use Decalex\Traits\Chestionar\Relations;
-use Decalex\Traits\Chestionar\SaveDraft;
-use Decalex\Traits\Chestionar\SaveIntrebare;
-use Decalex\Traits\Chestionar\UpdateIntrebare;
-use Decalex\Traits\Chestionar\DeleteIntrebare;
-use Decalex\Traits\Chestionar\AddSubintrebare;
-use Decalex\Traits\Chestionar\DeleteSubintrebare;
-use Decalex\Traits\Chestionar\ReorderIntrebari;
-use Decalex\Traits\Chestionar\InsertRaspuns;
-use Decalex\Traits\Chestionar\UpdateRaspuns;
-use Decalex\Traits\Chestionar\DeleteRaspuns;
-use Decalex\Traits\Chestionar\ReorderRaspunsuri;
-use Decalex\Traits\Chestionar\SearchIntrebare;
-use Decalex\Traits\Chestionar\AddIntrebari;
-use Decalex\Traits\Chestionar\XlsImport;
+use B2B\Traits\Decalex\Chestionar\Actions;
+use B2B\Traits\Decalex\Chestionar\GetChestionare;
+use B2B\Traits\Decalex\Chestionar\Export;
+use B2B\Traits\Decalex\Chestionar\Relations;
+use B2B\Traits\Decalex\Chestionar\SaveDraft;
+use B2B\Traits\Decalex\Chestionar\SaveIntrebare;
+use B2B\Traits\Decalex\Chestionar\UpdateIntrebare;
+use B2B\Traits\Decalex\Chestionar\DeleteIntrebare;
+use B2B\Traits\Decalex\Chestionar\AddSubintrebare;
+use B2B\Traits\Decalex\Chestionar\DeleteSubintrebare;
+use B2B\Traits\Decalex\Chestionar\ReorderIntrebari;
+use B2B\Traits\Decalex\Chestionar\InsertRaspuns;
+use B2B\Traits\Decalex\Chestionar\UpdateRaspuns;
+use B2B\Traits\Decalex\Chestionar\DeleteRaspuns;
+use B2B\Traits\Decalex\Chestionar\ReorderRaspunsuri;
+use B2B\Traits\Decalex\Chestionar\SearchIntrebare;
+use B2B\Traits\Decalex\Chestionar\AddIntrebari;
+use B2B\Traits\Decalex\Chestionar\XlsImport;
 
 class Chestionar extends Model {
 

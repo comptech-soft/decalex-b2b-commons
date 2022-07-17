@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerRegister\Actions;
-use Decalex\Traits\CustomerRegister\GetRegisters;
-// use Decalex\Traits\CustomerRegister\Export;
-use Decalex\Traits\CustomerRegister\Relations;
+use B2B\Traits\Decalex\CustomerRegister\Actions;
+use B2B\Traits\Decalex\CustomerRegister\GetRegisters;
+// use B2B\Traits\Decalex\CustomerRegister\Export;
+use B2B\Traits\Decalex\CustomerRegister\Relations;
 
 class CustomerRegister extends Model {
 

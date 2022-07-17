@@ -4,12 +4,12 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Intrebare\Actions;
-use Decalex\Traits\Intrebare\GetIntrebari;
-use Decalex\Traits\Intrebare\Export;
-use Decalex\Traits\Intrebare\Relations;
-use Decalex\Traits\Intrebare\Reorder;
-use Decalex\Traits\Intrebare\CreateQuestion;
+use B2B\Traits\Decalex\Intrebare\Actions;
+use B2B\Traits\Decalex\Intrebare\GetIntrebari;
+use B2B\Traits\Decalex\Intrebare\Export;
+use B2B\Traits\Decalex\Intrebare\Relations;
+use B2B\Traits\Decalex\Intrebare\Reorder;
+use B2B\Traits\Decalex\Intrebare\CreateQuestion;
 
 use Kalnoy\Nestedset\NodeTrait;
 

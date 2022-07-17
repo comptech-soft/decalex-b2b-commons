@@ -4,9 +4,9 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerDepartament\GetCustomerDepartamente;
-use Decalex\Traits\CustomerDepartament\Relations;
-use Decalex\Traits\CustomerDepartament\Actions;
+use B2B\Traits\Decalex\CustomerDepartament\GetCustomerDepartamente;
+use B2B\Traits\Decalex\CustomerDepartament\Relations;
+use B2B\Traits\Decalex\CustomerDepartament\Actions;
 
 class CustomerDepartament extends Model {
 

@@ -4,8 +4,8 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerChestionar\GetCustomerChestionare;
-use Decalex\Traits\CustomerChestionar\Relations;
+use B2B\Traits\Decalex\CustomerChestionar\GetCustomerChestionare;
+use B2B\Traits\Decalex\CustomerChestionar\Relations;
 
 class CustomerChestionar extends Model {
 

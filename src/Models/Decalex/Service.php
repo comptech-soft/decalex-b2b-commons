@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Service\Actions;
-use Decalex\Traits\Service\GetServices;
-use Decalex\Traits\Service\Reorder;
-use Decalex\Traits\Service\Export;
+use B2B\Traits\Decalex\Service\Actions;
+use B2B\Traits\Decalex\Service\GetServices;
+use B2B\Traits\Decalex\Service\Reorder;
+use B2B\Traits\Decalex\Service\Export;
 
 class Service extends Model {
     use Actions, GetServices, Reorder, Export;

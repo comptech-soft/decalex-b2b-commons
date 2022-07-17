@@ -4,9 +4,9 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CursFisier\Actions;
-use Decalex\Traits\CursFisier\GetFiles;
-use Decalex\Traits\CursFisier\Attributes;
+use B2B\Traits\Decalex\CursFisier\Actions;
+use B2B\Traits\Decalex\CursFisier\GetFiles;
+use B2B\Traits\Decalex\CursFisier\Attributes;
 
 class CursFisier extends Model {
 

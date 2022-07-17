@@ -4,13 +4,13 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\RegisterRow\Actions;
-use Decalex\Traits\RegisterRow\GetRegisterRows;
-use Decalex\Traits\RegisterRow\Export;
-use Decalex\Traits\RegisterRow\Relations;
-use Decalex\Traits\RegisterRow\Reorder;
-use Decalex\Traits\RegisterRow\SaveRegister;
-use Decalex\Traits\RegisterRow\DeleteAll;
+use B2B\Traits\Decalex\RegisterRow\Actions;
+use B2B\Traits\Decalex\RegisterRow\GetRegisterRows;
+use B2B\Traits\Decalex\RegisterRow\Export;
+use B2B\Traits\Decalex\RegisterRow\Relations;
+use B2B\Traits\Decalex\RegisterRow\Reorder;
+use B2B\Traits\Decalex\RegisterRow\SaveRegister;
+use B2B\Traits\Decalex\RegisterRow\DeleteAll;
 
 class RegisterRow extends Model {
 

@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Cartalyst\Models\User;
 
-use Decalex\Traits\Team\GetTeam;
-use Decalex\Traits\Team\AvailablePersons;
-use Decalex\Traits\Team\Actions;
-use Decalex\Traits\Team\Relations;
+use B2B\Traits\Decalex\Team\GetTeam;
+use B2B\Traits\Decalex\Team\AvailablePersons;
+use B2B\Traits\Decalex\Team\Actions;
+use B2B\Traits\Decalex\Team\Relations;
 
 class Team extends User {
 

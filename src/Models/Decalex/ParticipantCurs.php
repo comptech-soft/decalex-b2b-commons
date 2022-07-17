@@ -4,7 +4,7 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\ParticipantCurs\Actions;
+use B2B\Traits\Decalex\ParticipantCurs\Actions;
 
 class ParticipantCurs extends Model {
 

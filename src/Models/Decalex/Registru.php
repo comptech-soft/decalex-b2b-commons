@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Registru\Actions;
-use Decalex\Traits\Registru\GetRegisters;
-use Decalex\Traits\Registru\Export;
-use Decalex\Traits\Registru\Relations;
+use B2B\Traits\Decalex\Registru\Actions;
+use B2B\Traits\Decalex\Registru\GetRegisters;
+use B2B\Traits\Decalex\Registru\Export;
+use B2B\Traits\Decalex\Registru\Relations;
 
 class Registru extends Model {
 

@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\EmailTemplate\Actions;
-use Decalex\Traits\EmailTemplate\GetEmailTemplates;
-use Decalex\Traits\EmailTemplate\Export;
-use Decalex\Traits\EmailTemplate\Relations;
-use Decalex\Traits\EmailTemplate\Reorder;
+use B2B\Traits\Decalex\EmailTemplate\Actions;
+use B2B\Traits\Decalex\EmailTemplate\GetEmailTemplates;
+use B2B\Traits\Decalex\EmailTemplate\Export;
+use B2B\Traits\Decalex\EmailTemplate\Relations;
+use B2B\Traits\Decalex\EmailTemplate\Reorder;
 
 class EmailTemplate extends Model {
 

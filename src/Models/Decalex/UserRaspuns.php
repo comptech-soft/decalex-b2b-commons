@@ -4,8 +4,8 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\UserRaspuns\GetRaspunsuri;
-use Decalex\Traits\UserRaspuns\Relations;
+use B2B\Traits\Decalex\UserRaspuns\GetRaspunsuri;
+use B2B\Traits\Decalex\UserRaspuns\Relations;
 
 class UserRaspuns extends Model {
 

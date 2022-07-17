@@ -3,15 +3,15 @@
 namespace B2B\Models\Decalex;
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Customer\Actions;
-use Decalex\Traits\Customer\AttachContactPerson;
-use Decalex\Traits\Customer\AttachContract;
-use Decalex\Traits\Customer\ProcessLogo;
-use Decalex\Traits\Customer\GetCustomers;
-use Decalex\Traits\Customer\Relations;
-use Decalex\Traits\Customer\Export;
-use Decalex\Traits\Customer\GetActiveServices;
-use Decalex\Traits\Customer\XlsImport;
+use B2B\Traits\Decalex\Customer\Actions;
+use B2B\Traits\Decalex\Customer\AttachContactPerson;
+use B2B\Traits\Decalex\Customer\AttachContract;
+use B2B\Traits\Decalex\Customer\ProcessLogo;
+use B2B\Traits\Decalex\Customer\GetCustomers;
+use B2B\Traits\Decalex\Customer\Relations;
+use B2B\Traits\Decalex\Customer\Export;
+use B2B\Traits\Decalex\Customer\GetActiveServices;
+use B2B\Traits\Decalex\Customer\XlsImport;
 
 class Customer extends Model {
     use Actions, AttachContactPerson, AttachContract, ProcessLogo, GetCustomers, Relations, Export, GetActiveServices, XlsImport;

@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Category\Actions;
-use Decalex\Traits\Category\GetCategories;
-use Decalex\Traits\Category\Export;
-use Decalex\Traits\Category\Relations;
-use Decalex\Traits\Category\Reorder;
+use B2B\Traits\Decalex\Category\Actions;
+use B2B\Traits\Decalex\Category\GetCategories;
+use B2B\Traits\Decalex\Category\Export;
+use B2B\Traits\Decalex\Category\Relations;
+use B2B\Traits\Decalex\Category\Reorder;
 
 class Category extends Model {
 

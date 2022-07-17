@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerContract\Actions;
-use Decalex\Traits\CustomerContract\GetContracts;
-use Decalex\Traits\CustomerContract\Export;
-use Decalex\Traits\CustomerContract\Relations;
+use B2B\Traits\Decalex\CustomerContract\Actions;
+use B2B\Traits\Decalex\CustomerContract\GetContracts;
+use B2B\Traits\Decalex\CustomerContract\Export;
+use B2B\Traits\Decalex\CustomerContract\Relations;
 
 class CustomerContract extends Model {
 

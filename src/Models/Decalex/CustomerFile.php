@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerFile\Actions;
-use Decalex\Traits\CustomerFile\GetFiles;
-use Decalex\Traits\CustomerFile\Attributes;
-// use Decalex\Traits\CustomerFolder\Relations;
+use B2B\Traits\Decalex\CustomerFile\Actions;
+use B2B\Traits\Decalex\CustomerFile\GetFiles;
+use B2B\Traits\Decalex\CustomerFile\Attributes;
+// use B2B\Traits\Decalex\CustomerFolder\Relations;
 
 
 class CustomerFile extends Model {

@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\ChestionarIntrebare\Actions;
-use Decalex\Traits\ChestionarIntrebare\GetIntrebari;
-use Decalex\Traits\ChestionarIntrebare\Export;
-use Decalex\Traits\ChestionarIntrebare\Relations;
+use B2B\Traits\Decalex\ChestionarIntrebare\Actions;
+use B2B\Traits\Decalex\ChestionarIntrebare\GetIntrebari;
+use B2B\Traits\Decalex\ChestionarIntrebare\Export;
+use B2B\Traits\Decalex\ChestionarIntrebare\Relations;
 
 class ChestionarIntrebare extends Model {
 

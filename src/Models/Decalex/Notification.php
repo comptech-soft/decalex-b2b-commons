@@ -4,9 +4,9 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Notification\GetNotifications;
+use B2B\Traits\Decalex\Notification\GetNotifications;
 
-use Decalex\Traits\Notification\Actions;
+use B2B\Traits\Decalex\Notification\Actions;
 
 class Notification extends Model {
 

@@ -4,9 +4,9 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Curs\GetCursuri;
-use Decalex\Traits\Curs\Relations;
-use Decalex\Traits\Curs\Actions;
+use B2B\Traits\Decalex\Curs\GetCursuri;
+use B2B\Traits\Decalex\Curs\Relations;
+use B2B\Traits\Decalex\Curs\Actions;
 
 class Curs extends Model {
 

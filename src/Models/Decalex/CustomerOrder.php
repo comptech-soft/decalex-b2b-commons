@@ -4,10 +4,10 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerOrder\GetOrders;
-use Decalex\Traits\CustomerOrder\Relations;
-use Decalex\Traits\CustomerOrder\Export;
-use Decalex\Traits\CustomerOrder\Actions;
+use B2B\Traits\Decalex\CustomerOrder\GetOrders;
+use B2B\Traits\Decalex\CustomerOrder\Relations;
+use B2B\Traits\Decalex\CustomerOrder\Export;
+use B2B\Traits\Decalex\CustomerOrder\Actions;
 
 class CustomerOrder extends Model {
 

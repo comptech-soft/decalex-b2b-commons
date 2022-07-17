@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\IntrebareRaspuns\Actions;
-use Decalex\Traits\IntrebareRaspuns\GetRaspunsuri;
-use Decalex\Traits\IntrebareRaspuns\Export;
-use Decalex\Traits\IntrebareRaspuns\Relations;
-use Decalex\Traits\IntrebareRaspuns\Reorder;
+use B2B\Traits\Decalex\IntrebareRaspuns\Actions;
+use B2B\Traits\Decalex\IntrebareRaspuns\GetRaspunsuri;
+use B2B\Traits\Decalex\IntrebareRaspuns\Export;
+use B2B\Traits\Decalex\IntrebareRaspuns\Relations;
+use B2B\Traits\Decalex\IntrebareRaspuns\Reorder;
 
 class IntrebareRaspuns extends Model {
 

@@ -4,12 +4,12 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CentralizatorColumn\Actions;
-use Decalex\Traits\CentralizatorColumn\GetCentralizatorColumns;
-use Decalex\Traits\CentralizatorColumn\Export;
-use Decalex\Traits\CentralizatorColumn\Relations;
-use Decalex\Traits\CentralizatorColumn\Reorder;
-use Decalex\Traits\CentralizatorColumn\Attributes;
+use B2B\Traits\Decalex\CentralizatorColumn\Actions;
+use B2B\Traits\Decalex\CentralizatorColumn\GetCentralizatorColumns;
+use B2B\Traits\Decalex\CentralizatorColumn\Export;
+use B2B\Traits\Decalex\CentralizatorColumn\Relations;
+use B2B\Traits\Decalex\CentralizatorColumn\Reorder;
+use B2B\Traits\Decalex\CentralizatorColumn\Attributes;
 
 class CentralizatorColumn extends Model {
 

@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\TipIntrebare\Actions;
-use Decalex\Traits\TipIntrebare\GetTipuri;
-use Decalex\Traits\TipIntrebare\Export;
-use Decalex\Traits\TipIntrebare\Relations;
-use Decalex\Traits\TipIntrebare\Reorder;
+use B2B\Traits\Decalex\TipIntrebare\Actions;
+use B2B\Traits\Decalex\TipIntrebare\GetTipuri;
+use B2B\Traits\Decalex\TipIntrebare\Export;
+use B2B\Traits\Decalex\TipIntrebare\Relations;
+use B2B\Traits\Decalex\TipIntrebare\Reorder;
 
 class TipIntrebare extends Model {
 

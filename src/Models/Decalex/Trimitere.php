@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\Trimitere\Actions;
-use Decalex\Traits\Trimitere\GetTrimiteri;
-use Decalex\Traits\Trimitere\Export;
-use Decalex\Traits\Trimitere\Relations;
-use Decalex\Traits\Trimitere\Trimite;
+use B2B\Traits\Decalex\Trimitere\Actions;
+use B2B\Traits\Decalex\Trimitere\GetTrimiteri;
+use B2B\Traits\Decalex\Trimitere\Export;
+use B2B\Traits\Decalex\Trimitere\Relations;
+use B2B\Traits\Decalex\Trimitere\Trimite;
 
 class Trimitere extends Model {
 

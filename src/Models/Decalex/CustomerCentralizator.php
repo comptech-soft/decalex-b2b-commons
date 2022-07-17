@@ -4,8 +4,8 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerCentralizator\GetCustomerCentralizatoare;
-use Decalex\Traits\CustomerCentralizator\Relations;
+use B2B\Traits\Decalex\CustomerCentralizator\GetCustomerCentralizatoare;
+use B2B\Traits\Decalex\CustomerCentralizator\Relations;
 
 class CustomerCentralizator extends Model {
 

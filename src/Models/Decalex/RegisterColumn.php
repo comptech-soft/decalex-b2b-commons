@@ -4,11 +4,11 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\RegisterColumn\Actions;
-use Decalex\Traits\RegisterColumn\GetRegisterColumns;
-use Decalex\Traits\RegisterColumn\Export;
-use Decalex\Traits\RegisterColumn\Relations;
-use Decalex\Traits\RegisterColumn\Reorder;
+use B2B\Traits\Decalex\RegisterColumn\Actions;
+use B2B\Traits\Decalex\RegisterColumn\GetRegisterColumns;
+use B2B\Traits\Decalex\RegisterColumn\Export;
+use B2B\Traits\Decalex\RegisterColumn\Relations;
+use B2B\Traits\Decalex\RegisterColumn\Reorder;
 
 class RegisterColumn extends Model {
 

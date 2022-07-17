@@ -4,12 +4,12 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-// use Decalex\Traits\Planning\Actions;
-// use Decalex\Traits\Planning\GetPlanning;
-// use Decalex\Traits\Planning\Export;
-use Decalex\Traits\PlanningUser\Relations;
-// use Decalex\Traits\Planning\Reorder;
-// use Decalex\Traits\Planning\UpdateTaskStatus;
+// use B2B\Traits\Decalex\Planning\Actions;
+// use B2B\Traits\Decalex\Planning\GetPlanning;
+// use B2B\Traits\Decalex\Planning\Export;
+use B2B\Traits\Decalex\PlanningUser\Relations;
+// use B2B\Traits\Decalex\Planning\Reorder;
+// use B2B\Traits\Decalex\Planning\UpdateTaskStatus;
 
 class PlanningUser extends Model {
 

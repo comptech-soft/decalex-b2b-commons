@@ -4,9 +4,9 @@ namespace B2B\Models\Decalex;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Decalex\Traits\CustomerFolder\Actions;
-use Decalex\Traits\CustomerFolder\GetFolders;
-use Decalex\Traits\CustomerFolder\Relations;
+use B2B\Traits\Decalex\CustomerFolder\Actions;
+use B2B\Traits\Decalex\CustomerFolder\GetFolders;
+use B2B\Traits\Decalex\CustomerFolder\Relations;
 
 use Kalnoy\Nestedset\NodeTrait;
 
