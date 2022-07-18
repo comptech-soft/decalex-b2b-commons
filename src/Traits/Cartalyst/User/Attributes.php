@@ -33,7 +33,7 @@ trait Attributes {
         {
             return $this->roles()->first();
         }
-        return $this->roles()->where('type', 'admin')->first();
+        return $this->roles()->where('type', config('app.platform'))->first();
     }
 
     public function getIconAttribute() {
