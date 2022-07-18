@@ -26,21 +26,16 @@ class Config {
             /** Atasez clientii de care raspunde $user */
             /** deocamdata la rolul operator */
             $user->workingCustomers = NULL;
+
             if($user->role->slug == 'operator')
             {
                 $user->workingCustomers = TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
             }
 
-            \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
-
             $user->settings = UserSetting::where('user_id', $user->id)->get()->pluck('value', 'code');
 
-            \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
         }
-
-        \Log::info(__LINE__ . '===>' . ($user ? $user->id : 'No user'));
         
-
         return [
             'user' => $user ? $user : NULL,
             'locale' => $locale,
