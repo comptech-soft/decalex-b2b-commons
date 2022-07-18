@@ -49,6 +49,7 @@ class Config {
             'shortname' => config('app.shortname'),
             'url' => config('app.url'),
             'env' => config('app.env'),
+            'platform' => config('app.platform'),
             'sysconfig' => Configuration::all(),
             'languages' => [
                 'ro' => [
