@@ -5,6 +5,7 @@ namespace B2B\Models\System;
 use B2B\Models\Decalex\TeamCustomer;
 use B2B\Models\Decalex\UserSetting;
 use B2B\Models\System\Configuration;
+use B2B\Models\Decalex\CustomerPerson;
 
 class Config {
 
@@ -21,19 +22,34 @@ class Config {
             $locale = 'en';
         }
 
+        $customers = [];
+
         if($user)
         {
-            /** Atasez clientii de care raspunde $user */
-            /** deocamdata la rolul operator */
-            $user->workingCustomers = NULL;
-
-            if($user->role->slug == 'operator')
+            if($user->role)
             {
-                $user->workingCustomers = TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
+                if($user->role->type == 'admin')
+                {
+                    /** 
+                     * Atasez clientii de care raspunde $user, deocamdata la rolul operator
+                     * user.workingCustomers = clientii tasati unui operator
+                     **/
+                    $user->workingCustomers = NULL;
+                    if($user->role->slug == 'operator')
+                    {
+                        $user->workingCustomers = TeamCustomer::where('user_id', $user->id)->orderBy('customer_id')->get();
+                    }
+                }
+
+                if($user->role->type == 'b2b')
+                {
+                    $customers = CustomerPerson::where('user_id', $user->id)->with(['customer'])->get()->map(function($record) {
+                        return $record->customer;
+                    });
+                }
             }
-
+            
             $user->settings = UserSetting::where('user_id', $user->id)->get()->pluck('value', 'code');
-
         }
         
         return [
@@ -46,6 +62,15 @@ class Config {
             'env' => config('app.env'),
             'platform' => config('app.platform'),
             'sysconfig' => Configuration::all(),
+
+            /**
+             * customers = clienti atasati userului (contului, persons) curent [CUSTOMER -> CUSTOERS-PERSONS -> USERS]
+             */
+            'customers' => $customers,
+
+            /**
+             * languages = localizarile existente
+             */
             'languages' => [
                 'ro' => [
                     'caption' => 'Romanian',
