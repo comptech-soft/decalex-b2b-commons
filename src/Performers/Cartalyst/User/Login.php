@@ -26,7 +26,7 @@ class Login extends Perform {
         $cnt = 0;
         foreach($user->roles as $i => $role)
         {
-            if($role->type == 'admin')
+            if($role->type == config('app.platform') )
             {
                 $cnt++;
             }
@@ -34,7 +34,6 @@ class Login extends Perform {
 
         if( $cnt != 1)
         {
-            \Log::info('BUM BUMM. Logout');
             \Sentinel::logout(null, true);
             \Cache::flush();
             
@@ -45,8 +44,6 @@ class Login extends Perform {
             
             throw new \Exception('Datele de autentificare nu se potrivesc în înregistrările noastre.');
         }
-        
-        \Log::info('Login. OK.');
 
         $this->payload['user'] = $user;
 
