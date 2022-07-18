@@ -10,6 +10,7 @@ class DecalexServiceProvider extends ServiceProvider
 
     public function boot() {
 
+        dd(config('app.platform'));
         Route::middleware('web')->group(function () {
             /** System Routes */
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/system/home.php');
