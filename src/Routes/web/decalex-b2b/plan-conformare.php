@@ -1,9 +1,11 @@
 <?php
 
+use B2B\Http\Controllers\Client;
+
 /** 
  * PLAN CONFORMARE
  **/
-Route::middleware(['is-authenticated'])->prefix('plan-conformare')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('plan-conformare')->namespace(Client::class)->group(function(){
     
     Route::get('/', 'PlanConformareController@index');
     Route::post('items', 'PlanConformareController@getItems');

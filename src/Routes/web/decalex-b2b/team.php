@@ -1,9 +1,11 @@
 <?php
 
+use B2B\Http\Controllers\Client;
+
 /** 
  * DECALEX TEAM 
  **/
-Route::middleware(['is-authenticated'])->prefix('team')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('team')->namespace(Client::class)->group(function(){
     
     Route::get('/', 'TeamController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'TeamController@getItems');

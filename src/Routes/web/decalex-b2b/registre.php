@@ -1,12 +1,14 @@
 <?php
 
-Route::middleware(['is-authenticated'])->prefix('registre')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+use B2B\Http\Controllers\Client;
+
+Route::middleware(['is-authenticated'])->prefix('registre')->namespace(Client::class)->group(function(){
     Route::get('{slug}', 'RegisterController@index'); 
     // Route::post('items', 'CentralizatoareController@getItems');
 });
 
 /** REGISTRELE CLIENTILOR **/
-Route::middleware(['is-authenticated'])->prefix('customers-registers')->namespace(\Decalex\Http\Controllers::class)->group(function(){    
+Route::middleware(['is-authenticated'])->prefix('customers-registers')->namespace(Client::class)->group(function(){    
     Route::post('items', 'CustomersRegistersController@getItems');
     Route::post('action/{action}', 'CustomersRegistersController@doAction');
     Route::post('export', 'CustomersRegistersController@export');
@@ -14,7 +16,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-registers')->namespac
 });
 
 
-Route::middleware(['is-authenticated'])->prefix('customers-registers-rows')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-registers-rows')->namespace(Client::class)->group(function(){
     Route::post('items', 'CustomersRegistersRowsController@getItems');
     Route::post('change-status', 'CustomersRegistersRowsController@changeStatus');
     Route::post('action/{action}', 'CustomersRegistersRowsController@doAction');
@@ -23,7 +25,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-registers-rows')->nam
 /** 
  * REGISTRE. Coloanele asociate la la un registru
  **/
-Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(Client::class)->group(function(){
     
     Route::post('items', 'RegistreColoaneController@getItems');
     Route::post('action/{action}', 'RegistreColoaneController@doAction');

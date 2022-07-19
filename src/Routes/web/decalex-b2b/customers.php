@@ -1,9 +1,11 @@
 <?php
 
+use B2B\Http\Controllers\Client;
+
 /** 
  * CUSTOMERS
  **/
-Route::middleware(['is-authenticated'])->prefix('customers')->namespace(\Decalex\Http\Controllers::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers')->namespace(Client::class)->group(function(){
     
     Route::get('/', 'CustomersController@index');
     Route::post('items', 'CustomersController@getItems');
