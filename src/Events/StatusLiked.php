@@ -30,6 +30,6 @@ class StatusLiked implements ShouldBroadcast {
     }
 
     public function broadcastOn() {
-        return ['status-liked'];
+        return new PrivateChannel('status-liked');
     }
 }
