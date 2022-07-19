@@ -26,7 +26,7 @@ class StatusLiked implements ShouldBroadcast {
     }
 
     public function broadcastAs() {
-        return  'status-liked'
+        return  'status-liked';
     }
 
     public function broadcastOn() {
