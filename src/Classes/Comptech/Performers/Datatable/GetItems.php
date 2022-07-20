@@ -175,7 +175,7 @@ class GetItems extends Perform {
 
         $initialCount = $this->query->count();
 
-        if($this->input['per_page'] == -1)
+        if(! array_key_exists('per_page', $this->input) || ($this->input['per_page'] == -1))
         {
             $this->input['per_page'] = $initialCount;
         }
