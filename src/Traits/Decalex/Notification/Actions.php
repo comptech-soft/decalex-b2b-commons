@@ -12,7 +12,7 @@ trait Actions {
         return [
             'entity.required' => 'Entitatea trebuie completată.',
             'action.required' => 'Acțiunea trebuie completată.',
-            'props.title.required' => 'Titlul trebuie completat.',
+            'title.required' => 'Titlul trebuie completat.',
             'message.required' => 'Mesajul trebuie completat.',
         ];
     }
@@ -28,7 +28,7 @@ trait Actions {
                 new UniqueNotification($input),
             ],
             'action' => 'required',
-            'props.title' => 'required',
+            'title' => 'required',
             'message' => 'required',
         ];
 
