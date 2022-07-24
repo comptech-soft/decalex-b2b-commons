@@ -10,10 +10,12 @@ trait Actions {
     public static function GetMessages($action, $input) {
 
         return [
-            'entity.required' => 'Entitatea trebuie completată.',
+            'entity.required' => 'Entitatea trebuie selectată.',
             'action.required' => 'Acțiunea trebuie completată.',
             'title.required' => 'Titlul trebuie completat.',
             'message.required' => 'Mesajul trebuie completat.',
+            'message.platform' => 'Sensul notificării trebuie selectat.',
+            
         ];
     }
 
