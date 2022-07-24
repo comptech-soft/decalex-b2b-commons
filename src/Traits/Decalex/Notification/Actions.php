@@ -14,7 +14,7 @@ trait Actions {
             'action.required' => 'Acțiunea trebuie completată.',
             'title.required' => 'Titlul trebuie completat.',
             'message.required' => 'Mesajul trebuie completat.',
-            'message.platform' => 'Sensul notificării trebuie selectat.',
+            'platform.required' => 'Sensul notificării trebuie selectat.',
             
         ];
     }
@@ -32,6 +32,7 @@ trait Actions {
             'action' => 'required',
             'title' => 'required',
             'message' => 'required',
+            'platform' => 'required',
         ];
 
         return $result;
