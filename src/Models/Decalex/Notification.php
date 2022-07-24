@@ -23,6 +23,8 @@ class Notification extends Model {
         'entity',
         'action',
         'message',
+        'title',
+        'platform',
         'props',
         'created_by',
         'updated_by'
