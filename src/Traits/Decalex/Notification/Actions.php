@@ -49,7 +49,7 @@ trait Actions {
             ],
         ]);
 
-        return ! $validator->fails();
+        return $validator->fails() ? 0 : 1;
     }
 
 }
