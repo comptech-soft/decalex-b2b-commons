@@ -43,7 +43,13 @@ trait Actions {
     }
 
     public static function validateUniqueNotificationType($input) {
-        dd($input);
+        $validator = \Validator::make($input, [
+            'action' => [
+                new UniqueNotification($input),
+            ],
+        ]);
+
+        return ! $validator->fails();
     }
 
 }
