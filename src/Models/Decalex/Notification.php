@@ -14,7 +14,7 @@ use B2B\Traits\Decalex\Notification\Relations;
 
 class Notification extends Model {
 
-    use GetNotifications, Actions; 
+    use GetNotifications, Actions, Relations; 
     
     protected $table = 'notification-types';
 
