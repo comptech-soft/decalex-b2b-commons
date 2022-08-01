@@ -22,9 +22,7 @@ class NotificationsController extends Controller {
     }
 
     public function validateUniqueNotificationType(Request $r) {
-        return $r->all();
+        return Notification::validateUniqueNotificationType($r->all());
     }
-
-    
 
 }

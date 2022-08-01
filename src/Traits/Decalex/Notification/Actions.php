@@ -16,7 +16,7 @@ trait Actions {
             'message.required' => 'Mesajul trebuie completat.',
             'platform.required' => 'Sensul notificării trebuie selectat.',
         ];
-        
+
     }
 
     public static function GetRules($action, $input) {
@@ -40,6 +40,10 @@ trait Actions {
 
     public static function doAction($action, $input) {
         return (new DoAction($action, $input, __CLASS__))->Perform();
+    }
+
+    public static function validateUniqueNotificationType($input) {
+        dd($input);
     }
 
 }
