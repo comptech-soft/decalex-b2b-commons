@@ -7,10 +7,16 @@ use B2B\Models\Decalex\CustomerNotification;
 
 trait GetNotifications {
 
+    /**
+     * getItems: ==> tipurile de notificari
+     */
     public static function getItems($input) {
-        return (new GetItems($input, self::query(), __CLASS__))->Perform();
+        return (new GetItems($input, self::query()->withCount('notifications'), __CLASS__))->Perform();
     }
 
+    /**
+     * getByEntityAndAction
+     */
     public static function getByEntityAndAction($entity, $action) {
 
         $record = self::where('entity', $entity)->where('action', $action)->first();
@@ -26,7 +32,9 @@ trait GetNotifications {
         return $record;
     }
 
-
+    /**
+     * Notify
+     */
     public function Notify($input) {
 
         CustomerNotification::create([

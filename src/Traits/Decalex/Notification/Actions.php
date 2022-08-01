@@ -15,7 +15,6 @@ trait Actions {
             'title.required' => 'Titlul trebuie completat.',
             'message.required' => 'Mesajul trebuie completat.',
             'platform.required' => 'Sensul notificării trebuie selectat.',
-            
         ];
     }
 
