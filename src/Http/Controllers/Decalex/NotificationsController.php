@@ -21,4 +21,10 @@ class NotificationsController extends Controller {
         return Notification::doAction($action, $r->all());
     }
 
+    public function validateUniqueNotificationType(Request $r) {
+        return $r->all();
+    }
+
+    
+
 }

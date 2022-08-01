@@ -16,6 +16,7 @@ trait Actions {
             'message.required' => 'Mesajul trebuie completat.',
             'platform.required' => 'Sensul notificării trebuie selectat.',
         ];
+        
     }
 
     public static function GetRules($action, $input) {

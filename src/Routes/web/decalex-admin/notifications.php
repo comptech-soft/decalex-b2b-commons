@@ -9,6 +9,8 @@ Route::middleware(['is-authenticated'])->prefix('notifications')->namespace(Deca
     Route::post('items', 'NotificationsController@getItems');
     Route::post('action/{action}', 'NotificationsController@doAction');
 
+    Route::post('validate-unique-notification-type', 'NotificationsController@validateUniqueNotificationType');
+
 });
 
 
