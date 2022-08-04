@@ -6,13 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 use B2B\Traits\Decalex\EmailTemplate\Actions;
 use B2B\Traits\Decalex\EmailTemplate\GetEmailTemplates;
-use B2B\Traits\Decalex\EmailTemplate\Export;
-use B2B\Traits\Decalex\EmailTemplate\Relations;
-use B2B\Traits\Decalex\EmailTemplate\Reorder;
 
 class EmailTemplate extends Model {
 
-    use Actions, GetEmailTemplates, Relations, Export, Reorder;
+    use Actions, GetEmailTemplates;
     
     protected $table = 'email-templates';
 
