@@ -21,4 +21,8 @@ class EmailTemplatesController extends Controller {
         return EmailTemplate::doAction($action, $r->all());
     }
 
+    public function validateUniqueEmailName(Request $r) {
+        return EmailTemplate::validateUniqueEmailName($r->all());
+    }
+
 }

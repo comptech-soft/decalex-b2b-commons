@@ -8,5 +8,7 @@ Route::middleware(['is-authenticated'])->prefix('email-templates')->namespace(De
     Route::get('/', 'EmailTemplatesController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'EmailTemplatesController@getItems');
     Route::post('action/{action}', 'EmailTemplatesController@doAction');
+
+    Route::post('validate-unique-email-name', 'EmailTemplatesController@validateUniqueEmailName');
     
 });
