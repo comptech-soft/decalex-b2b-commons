@@ -10,5 +10,7 @@ Route::middleware(['is-authenticated'])->prefix('email-templates')->namespace(De
     Route::post('action/{action}', 'EmailTemplatesController@doAction');
 
     Route::post('validate-unique-email-name', 'EmailTemplatesController@validateUniqueEmailName');
+    Route::post('validate-unique-email-template', 'EmailTemplatesController@validateUniqueEmailTemplate');
+    
     
 });

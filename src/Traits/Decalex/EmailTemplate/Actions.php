@@ -65,4 +65,18 @@ trait Actions {
         return $validator->fails() ? 0 : 1;
     }
 
+    public static function validateUniqueEmailTemplate($input) {
+        $validator = \Validator::make($input, [
+            'action' => [
+                new UniqueEmailTemplate($input),
+            ],
+        ]);
+
+        return $validator->fails() ? 0 : 1;
+    }
+
+
+    
+
+
 }
