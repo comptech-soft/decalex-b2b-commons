@@ -3,15 +3,24 @@
 namespace B2B\Traits\Decalex\EmailTemplate;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\EmailTemplates\UniqueEmailTemplate;
 
 trait Actions {
 
-    /** Get Rules */
+    public static function GetMessages($action, $input) {
+
+        return [
+            'entity.required' => 'Entitatea trebuie selectată.',
+            'action.required' => 'Acțiunea trebuie completată.',
+            'subject.required' => 'Suiectul trebuie completat.',
+            'body.required' => 'Mesajul trebuie completat.',
+            'platform.required' => 'Sensul emailului trebuie selectat.',
+        ];
+
+    }
+
     public static function GetRules($action, $input) {
-        /**
-         * Acelasi numar de contract poate fi la mai multi customers (clienti)
-         * Un client nu poate sa aiba de doua ori acelasi numar de contract
-         */
+
         if($action == 'delete')
         {
             return NULL;
@@ -19,7 +28,14 @@ trait Actions {
         $result = [
             'name' => 'required|unique:email-templates,name',
             'subject' => 'required',
-        ];
+            'entity' => [
+                'required',
+                new UniqueEmailTemplate($input),
+            ],
+            'action' => 'required',
+            'message' => 'required',
+            'platform' => 'required',
+        ];        
 
         if($action == 'update')
         {
