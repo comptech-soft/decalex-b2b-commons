@@ -50,7 +50,7 @@ trait Actions {
         return (new DoAction($action, $input, __CLASS__))->Perform();
     }
 
-    public static function validateUniqueNotificationType($input) {
+    public static function validateUniqueEmailName($input) {
         $validator = \Validator::make($input, [
             'action' => [
                 new UniqueEmailTemplate($input),
