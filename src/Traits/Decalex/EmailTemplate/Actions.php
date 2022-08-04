@@ -13,7 +13,7 @@ trait Actions {
             'entity.required' => 'Entitatea trebuie selectată.',
             'action.required' => 'Acțiunea trebuie completată.',
             'subject.required' => 'Suiectul trebuie completat.',
-            'body.required' => 'Mesajul trebuie completat.',
+            'body.required' => 'Corpul emailului trebuie completat.',
             'platform.required' => 'Sensul emailului trebuie selectat.',
         ];
 
@@ -33,7 +33,7 @@ trait Actions {
                 new UniqueEmailTemplate($input),
             ],
             'action' => 'required',
-            'message' => 'required',
+            'body' => 'required',
             'platform' => 'required',
         ];        
 
@@ -74,9 +74,5 @@ trait Actions {
 
         return $validator->fails() ? 0 : 1;
     }
-
-
-    
-
 
 }
