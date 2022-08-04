@@ -39,7 +39,6 @@ trait Actions {
 
         if($action == 'update')
         {
-            
             $result['name'] .= (',' . $input['id']);
         }
 
@@ -51,10 +50,16 @@ trait Actions {
     }
 
     public static function validateUniqueEmailName($input) {
+
+        $rule = 'required|unique:email-templates,name';
+
+        if($input['id'])
+        {
+            $rule .= (',' . $input['id']);
+        }
+
         $validator = \Validator::make($input, [
-            'action' => [
-                new UniqueEmailTemplate($input),
-            ],
+            'name' => $rule,
         ]);
 
         return $validator->fails() ? 0 : 1;
