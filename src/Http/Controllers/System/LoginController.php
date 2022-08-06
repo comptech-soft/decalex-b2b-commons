@@ -14,7 +14,6 @@ class LoginController extends Controller {
     }
 
     public function login(Request $r) {
-        \Log::info(__METHOD__);
         return User::login($r->only(['email', 'password', 'remember_me']));
     }
 

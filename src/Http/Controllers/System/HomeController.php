@@ -9,11 +9,7 @@ use B2B\Classes\Comptech\Helpers\Response;
 class HomeController extends Controller {
 
     public function index(Request $r) {
-
-        dd(__METHOD__);
-
-
-        return Response::View('~templates.index', asset('apps/login/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/login/index.js'));
     }
 
 }
