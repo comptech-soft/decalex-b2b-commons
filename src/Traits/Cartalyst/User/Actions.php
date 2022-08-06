@@ -9,6 +9,7 @@ use B2B\Rules\Cartalyst\User\UpdatedPassword;
 use B2B\Performers\Cartalyst\User\ChangePassword;
 use B2B\Performers\Cartalyst\User\AttachAvatar;
 use B2B\Performers\Cartalyst\User\SaveEmailSignature;
+use B2B\Performers\Cartalyst\User\SaveDashboard;
 
 trait Actions {
 
@@ -141,6 +142,15 @@ trait Actions {
 
     public static function saveEmailSignature($input) {
         return (new SaveEmailSignature($input))
+            ->SetSuccessMessage('Salvare cu succes.')
+            ->SetExceptionMessage([
+                \Exception::class => NULL
+            ])
+            ->Perform();
+    }
+
+    public static function saveDashboard($input) {
+        return (new SaveDashboard($input))
             ->SetSuccessMessage('Salvare cu succes.')
             ->SetExceptionMessage([
                 \Exception::class => NULL
