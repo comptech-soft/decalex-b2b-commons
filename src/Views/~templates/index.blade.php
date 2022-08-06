@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
-    @include('~templates.elements.head')
+    @include('decalex-b2b-commons::~templates.elements.head')
 
     <body>
         <div id="app">
@@ -11,6 +11,6 @@
             </bootstrap>
         </div>
 
-        @include('~templates.elements.scripts')
+        @include('decalex-b2b-commons::~templates.elements.scripts')
     </body>
 </html>
