@@ -33,5 +33,11 @@ class UsersController extends Controller {
         return User::saveEmailSignature($r->only(['id', 'signature']));
     }
 
+    public function saveDashboard(Request $r) {
+
+        dd($request->all());
+        // return User::saveDashboard($r->only(['id', 'signature']));
+    }
+
     
 }

@@ -11,7 +11,9 @@ Route::middleware(['is-authenticated'])->prefix('users')->namespace(Cartalyst::c
 
     Route::post('change-password', 'UsersController@changePassword');
     Route::post('change-avatar', 'UsersController@changeAvatar');
+    
     Route::post('save-email-signature', 'UsersController@saveEmailSignature');
+    Route::post('save-dashboard', 'UsersController@saveDashboard');
     
 });
 
