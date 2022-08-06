@@ -83,6 +83,6 @@ class DecalexServiceProvider extends ServiceProvider
         });
 
 
-        
+        $this->loadViewsFrom(__DIR__ . '/../Views', 'decalex-b2b-commons');
     }
 }
