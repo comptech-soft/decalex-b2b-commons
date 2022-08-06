@@ -35,7 +35,7 @@ class UsersController extends Controller {
 
     public function saveDashboard(Request $r) {
 
-        dd($request->all());
+        dd($r->all());
         // return User::saveDashboard($r->only(['id', 'signature']));
     }
 
