@@ -10,7 +10,7 @@ class SaveDashboard extends Perform {
     public function Action() {
 
         UserSetting::saveSetting([
-            'user_id' => $this->input['id'], 
+            'user_id' => $this->input['user_id'], 
             'code' => 'dashboard-' . $this->input['platform'] . '-' . $this->input['customer-id'],
             'value' => $this->input['lists'],
         ]);
