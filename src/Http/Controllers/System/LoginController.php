@@ -10,7 +10,6 @@ use B2B\Models\Cartalyst\User;
 class LoginController extends Controller {
 
     public function index(Request $r) {
-        dd(__METHOD__);
         return Response::View('~templates.index', asset('apps/login/index.js'));
     }
 

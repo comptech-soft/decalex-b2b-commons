@@ -10,9 +10,8 @@ class HomeController extends Controller {
 
     public function index(Request $r) {
 
-        $user = \Sentinel::check();
+        dd(__METHOD__);
 
-        \Log::info(__METHOD__ . ($user ? $user->id : 'No user ...'));
 
         return Response::View('~templates.index', asset('apps/login/index.js'));
     }
