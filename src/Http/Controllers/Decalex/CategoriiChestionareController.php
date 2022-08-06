@@ -10,7 +10,7 @@ use B2B\Models\Decalex\Category;
 class CategoriiChestionareController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/categorii-chestionare/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/categorii-chestionare/index.js'));
     }
 
     public function getItems(Request $r) {

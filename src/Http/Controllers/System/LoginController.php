@@ -10,7 +10,7 @@ use B2B\Models\Cartalyst\User;
 class LoginController extends Controller {
 
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/login/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/login/index.js'));
     }
 
     public function login(Request $r) {

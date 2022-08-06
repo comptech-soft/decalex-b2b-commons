@@ -10,7 +10,7 @@ use B2B\Models\Decalex\RegisterColumn;
 class RopaRegisterColumnsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/ropa-register-columns/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/ropa-register-columns/index.js'));
     }
 
     public function getItems(Request $r) {

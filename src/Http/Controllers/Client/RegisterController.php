@@ -18,7 +18,7 @@ class RegisterController extends Controller {
             return redirect('/');
         }
 
-        return Response::View('~templates.index', asset('apps/registre/index.js'), [], [
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/registre/index.js'), [], [
             'registru' => $registru,
         ]);
     }

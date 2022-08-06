@@ -10,7 +10,7 @@ use B2B\Classes\Comptech\Helpers\Response;
 class RapoarteController extends Controller {
     
     public function index($categorie) {
-        return Response::View('~templates.index', asset('apps/rapoarte/index.js'), [], ['categorie' => $categorie]);
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/rapoarte/index.js'), [], ['categorie' => $categorie]);
     }
 
     

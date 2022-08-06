@@ -9,7 +9,7 @@ use B2B\Classes\Comptech\Helpers\Response;
 class RegisterIncidenteSecuritateColumnsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/register-incidente-securitate-columns/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/register-incidente-securitate-columns/index.js'));
     }
 
   

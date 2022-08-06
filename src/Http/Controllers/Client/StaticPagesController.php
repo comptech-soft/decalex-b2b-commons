@@ -9,15 +9,15 @@ use B2B\Classes\Comptech\Helpers\Response;
 class StaticPagesController extends Controller {
 
     public function contactIndex(Request $r) {
-        return Response::View('~templates.index', asset('apps/contact/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/contact/index.js'));
     }
     
     public function politicaCookiesIndex(Request $r) {
-        return Response::View('~templates.index', asset('apps/politica-cookies/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/politica-cookies/index.js'));
     }
 
     public function termeniLegaliIndex(Request $r) {
-        return Response::View('~templates.index', asset('apps/termeni-legali/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/termeni-legali/index.js'));
     }
     
 }

@@ -10,7 +10,7 @@ use B2B\Models\Cartalyst\User;
 class ForgotPasswordController extends Controller {
 
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/forgot-password/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/forgot-password/index.js'));
     }
 
     public function forgotPassword(Request $r) {

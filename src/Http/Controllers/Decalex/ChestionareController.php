@@ -10,7 +10,7 @@ use B2B\Models\Decalex\Chestionar;
 class ChestionareController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/chestionare/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/chestionare/index.js'));
     }
 
     public function getItems(Request $r) {

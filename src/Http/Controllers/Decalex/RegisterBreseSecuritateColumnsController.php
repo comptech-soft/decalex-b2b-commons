@@ -10,7 +10,7 @@ use B2B\Models\Decalex\Register;
 class RegisterBreseSecuritateColumnsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/register-brese-securitate-columns/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/register-brese-securitate-columns/index.js'));
     }
 
     public function getItems(Request $r) {

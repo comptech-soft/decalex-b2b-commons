@@ -10,7 +10,7 @@ use B2B\Classes\Comptech\Helpers\Response;
 class TimesheetController extends Controller {
     
     public function index() {
-        return Response::View('~templates.index', asset('apps/timesheet/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/timesheet/index.js'));
     }
 
 }

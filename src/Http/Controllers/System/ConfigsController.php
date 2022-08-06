@@ -10,7 +10,7 @@ use B2B\Models\System\Configuration;
 class ConfigsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/configs/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/configs/index.js'));
     }
 
     public function getItems(Request $r) {

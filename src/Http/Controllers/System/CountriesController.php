@@ -10,7 +10,7 @@ use B2B\Models\System\Country;
 class CountriesController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/countries/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/countries/index.js'));
     }
 
     public function getItems(Request $r) {

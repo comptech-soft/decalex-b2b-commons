@@ -10,7 +10,7 @@ use B2B\Models\Cartalyst\User;
 class ResetPasswordController extends Controller {
 
     public function index($code) {
-        return Response::View('~templates.index', asset('apps/reset-password/index.js'), [], ['code' => $code]);
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/reset-password/index.js'), [], ['code' => $code]);
     }
 
     public function resetPassword(Request $r) {

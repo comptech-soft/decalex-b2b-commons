@@ -11,7 +11,7 @@ use B2B\Models\Cartalyst\Permission;
 class PermissionsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/permissions/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/permissions/index.js'));
     }
 
     public function getItems(Request $r) {

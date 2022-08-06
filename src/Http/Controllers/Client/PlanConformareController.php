@@ -10,7 +10,7 @@ use B2B\Classes\Comptech\Helpers\Response;
 class PlanConformareController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/plan-conformare/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/plan-conformare/index.js'));
     }
 
     // public function getItems(Request $r) {

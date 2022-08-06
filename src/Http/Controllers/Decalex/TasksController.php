@@ -10,7 +10,7 @@ use B2B\Models\Decalex\Task;
 class TasksController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/tasks/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/tasks/index.js'));
     }
 
     public function getItems(Request $r) {

@@ -10,7 +10,7 @@ use B2B\Models\Cartalyst\Role;
 class RolesController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('~templates.index', asset('apps/roles/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/roles/index.js'));
     }
 
     public function getItems(Request $r) {
