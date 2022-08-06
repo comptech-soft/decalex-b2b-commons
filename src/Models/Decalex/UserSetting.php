@@ -15,6 +15,7 @@ class UserSetting extends Model {
 
     protected $casts = [
         'props' => 'json',
+        'value' => 'json',
     ];
 
     protected $fillable = [

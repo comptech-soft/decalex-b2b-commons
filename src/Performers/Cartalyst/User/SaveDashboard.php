@@ -9,11 +9,13 @@ class SaveDashboard extends Perform {
 
     public function Action() {
 
-        UserSetting::saveSetting([
+        $record = UserSetting::saveSetting([
             'user_id' => $this->input['user_id'], 
             'code' => 'dashboard-' . $this->input['platform'] . '-' . $this->input['customer_id'],
             'value' => $this->input['lists'],
         ]);
+
+        $this->payload['record'] = $record;
         
     }
 } 
