@@ -21,7 +21,6 @@ class SaveSetting extends Perform {
             ]);
         }
         
-        return $record;
     }
 
 } 
