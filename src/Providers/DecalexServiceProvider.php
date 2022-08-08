@@ -33,6 +33,7 @@ class DecalexServiceProvider extends ServiceProvider
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-departamente.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-persons.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-monthly-reports.php');
+            $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-contracts.php');
 
             if(config('app.platform') == 'admin')
             {
@@ -40,7 +41,7 @@ class DecalexServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/categorii.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/centralizatoare.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/chestionare.php');
-                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/contracts.php');
+                
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-centralizatoare.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-chestionare.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-cursuri.php');
@@ -70,7 +71,7 @@ class DecalexServiceProvider extends ServiceProvider
             {
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/centralizatoare.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/chestionare.php');
-                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/contracts.php');
+                // $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/contracts.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/cursuri.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/customer-profile.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/customer-team.php');
