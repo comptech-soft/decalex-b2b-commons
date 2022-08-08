@@ -4,27 +4,21 @@ namespace B2B\Performers\Decalex\CustomerCentralizator;
 
 use B2B\Classes\Comptech\Helpers\Perform;
 
-// use B2B\Models\Decalex\CustomerFile;
-// use B2B\Models\Decalex\CustomerFolder;
+use B2B\Models\Decalex\CustomerCentralizator;
 
 class GetSummaries extends Perform {
 
     public function Action() {
 
-        dd($this->input);
-        // $count_folders = CustomerFolder::where('customer_id', $this->input['customer_id'])->count();
-        // $count_files = CustomerFile::where('customer_id', $this->input['customer_id'])->count();
+        $count_centralizatoare = CustomerCentralizator::where('customer_id', $this->input['customer_id'])->count();
+        
+        $this->payload = [
 
-        // $this->payload = [
+            'centralizatoare' => [
+                'count_centralizatoare' => $count_centralizatoare,
+            ],
 
-        //     'folders' => [
-        //         'count_folders' => $count_folders,
-        //     ],
-
-        //     'files' => [
-        //         'count_files' => $count_files,
-        //     ],
-        // ];
+        ];
         
     }
 
