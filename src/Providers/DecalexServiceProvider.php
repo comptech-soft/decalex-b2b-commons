@@ -38,6 +38,9 @@ class DecalexServiceProvider extends ServiceProvider
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-centralizatoare.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-chestionare.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-cursuri.php');
+            $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-registers.php');
+
+            
             
             if(config('app.platform') == 'admin')
             {
@@ -53,7 +56,7 @@ class DecalexServiceProvider extends ServiceProvider
                 
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-notifications.php');
                 
-                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-registers.php');
+                
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-services.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/educatie.php');
@@ -85,7 +88,7 @@ class DecalexServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/notifications.php');
                 //$this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/persons.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/plan-conformare.php');
-                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/registre.php');
+                // $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/registre.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/team.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-b2b/users-settings.php');
             }

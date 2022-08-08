@@ -17,6 +17,10 @@ class CustomersRegistersController extends Controller {
         return CustomerRegister::doAction($action, $r->all());
     }
 
+    public function getSummaries(Request $r) {
+        return CustomerRegister::getSummaries($r->all());
+    }
+
     // public function export(Request $r) {
     //     return CustomerRegister::export($r->all());
     // }

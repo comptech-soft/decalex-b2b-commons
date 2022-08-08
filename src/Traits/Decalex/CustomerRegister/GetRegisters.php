@@ -7,8 +7,7 @@ use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 trait GetRegisters {
 
     /**  Get items */
-    public static function getQuery()
-    {
+    public static function getQuery() {
         return 
             self::query()
 
@@ -25,6 +24,11 @@ trait GetRegisters {
     /**  Get items */
     public static function getItems($input) {
         return (new GetItems($input, self::getQuery(), __CLASS__))->Perform();
+    }
+
+    public static function getSummaries($input) {
+        dd($input);
+        //return (new GetSummaries($input))->Perform();
     }
 
 }
