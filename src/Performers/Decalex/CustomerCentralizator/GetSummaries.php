@@ -3,7 +3,6 @@
 namespace B2B\Performers\Decalex\CustomerCentralizator;
 
 use B2B\Classes\Comptech\Helpers\Perform;
-
 use B2B\Models\Decalex\CustomerCentralizator;
 
 class GetSummaries extends Perform {
