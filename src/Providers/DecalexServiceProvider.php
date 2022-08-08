@@ -32,7 +32,8 @@ class DecalexServiceProvider extends ServiceProvider
             /** Decalex commons routes */
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-departamente.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-persons.php');
-            
+            $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-monthly-reports.php');
+
             if(config('app.platform') == 'admin')
             {
                 /**  Decalex admin Routes */
