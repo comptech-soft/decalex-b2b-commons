@@ -3,7 +3,7 @@
 use B2B\Http\Controllers\Client;
 
 Route::middleware(['is-authenticated'])->prefix('chestionare')->namespace(Client::class)->group(function(){
-    Route::get('/', 'ChestionareController@index'); 
+     
     Route::post('items', 'ChestionareController@getItems');
 });
 
