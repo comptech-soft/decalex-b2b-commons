@@ -24,6 +24,6 @@ class ForgotPassword extends Mailable {
     public function build() {
         return $this
             ->subject(config('app.name') . ' - ' . __('Reset password') )
-            ->markdown('cartalyst.emails.users.forgot-password');
+            ->markdown('decalex-b2b-commons::cartalyst.emails.users.forgot-password');
     }
 }
