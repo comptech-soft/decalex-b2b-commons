@@ -16,5 +16,10 @@ class CustomersFoldersController extends Controller {
     public function doAction($action, Request $r) {
         return CustomerFolder::doAction($action, $r->all());
     }
+
+    public function getSummaries(Request $r) {
+        dd($r->all());
+        // return CustomerFolder::doAction($action, $r->all());
+    }
     
 }
