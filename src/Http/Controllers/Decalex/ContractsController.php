@@ -10,7 +10,7 @@ use B2B\Models\Decalex\CustomerContract;
 class ContractsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/contracts/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/customer-contracts/index.js'));
     }
 
     public function getItems(Request $r) {
