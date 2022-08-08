@@ -13,7 +13,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-contracts')->namespac
     Route::get('export-preview', 'ContractsController@exportPreview');
 });
 
-Route::middleware(['is-authenticated'])->prefix('customers-comenzi')->namespace(Client::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-comenzi')->namespace(Decalex::class)->group(function(){
     
     Route::post('items', 'OrdersController@getItems');
 
