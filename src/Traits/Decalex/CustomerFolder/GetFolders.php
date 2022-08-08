@@ -17,7 +17,6 @@ trait GetFolders {
     }
 
     public static function getSummaries($input) {
-    
         return (new GetSummaries($input))->Perform();
     }
 

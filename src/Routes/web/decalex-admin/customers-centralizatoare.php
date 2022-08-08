@@ -6,6 +6,6 @@ Route::middleware(['is-authenticated'])->prefix('customers-centralizatoare')->na
 
     Route::post('items', 'CustomersCentralizatoareController@getItems');
 
-    Route::post('get-summaries', 'CustomersFoldersController@getSummaries');
+    Route::post('get-summaries', 'CustomersCentralizatoareController@getSummaries');
 
 });
