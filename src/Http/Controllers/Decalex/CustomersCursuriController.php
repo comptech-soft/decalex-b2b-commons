@@ -9,6 +9,10 @@ use B2B\Models\Decalex\CustomerCurs;
 
 class CustomersCursuriController extends Controller {
     
+    public function index(Request $r) {
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/customer-cursuri/index.js'));
+    }
+
     public function getItems(Request $r) {
         return CustomerCurs::getItems($r->all());
     }

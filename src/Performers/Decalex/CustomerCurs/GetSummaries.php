@@ -14,7 +14,7 @@ class GetSummaries extends Perform {
         $this->payload = [
 
             'cursuri' => [
-                'count_cursuri' => 1907 + $count_cursuri,
+                'count_cursuri' => $count_cursuri,
             ],
 
         ];
