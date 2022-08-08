@@ -19,7 +19,6 @@ trait GetCustomerCentralizatoare {
     }
 
     public static function getSummaries($input) {
-        dd($input);
         return (new GetSummaries($input))->Perform();
     }
 
