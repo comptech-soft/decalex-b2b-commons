@@ -3,22 +3,14 @@
 namespace B2B\Traits\Decalex\CustomerRegister;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Performers\Decalex\CustomerRegister\GetSummaries;
 
 trait GetRegisters {
 
     /**  Get items */
     public static function getQuery() {
         return 
-            self::query()
-
-            // ->leftJoin(
-            //     'customers',
-            //     function($j) {
-            //         $j->on('customers.id', '=', 'customers-contracts.customer_id');
-            //     }
-            // )
-            // ->select('customers-contracts.*')
-        ;
+            self::query();
     }
 
     /**  Get items */
@@ -27,8 +19,7 @@ trait GetRegisters {
     }
 
     public static function getSummaries($input) {
-        dd($input);
-        //return (new GetSummaries($input))->Perform();
+        return (new GetSummaries($input))->Perform();
     }
 
 }
