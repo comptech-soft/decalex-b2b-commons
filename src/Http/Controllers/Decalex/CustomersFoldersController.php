@@ -8,7 +8,11 @@ use B2B\Classes\Comptech\Helpers\Response;
 use B2B\Models\Decalex\CustomerFolder;
 
 class CustomersFoldersController extends Controller {
-     
+    
+    public function index(Request $r) {
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/customer-documente/index.js'));
+    }
+
     public function getItems(Request $r) {
         return CustomerFolder::getItems($r->all());
     }
