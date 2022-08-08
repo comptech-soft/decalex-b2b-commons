@@ -17,4 +17,8 @@ class CustomersCentralizatoareController extends Controller {
         return CustomerCentralizator::getItems($r->all());
     }
 
+    public function getSummaries(Request $r) {
+        return CustomerCentralizator::getSummaries($r->all());
+    }
+
 }
