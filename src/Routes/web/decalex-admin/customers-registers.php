@@ -5,6 +5,8 @@ use B2B\Http\Controllers\Decalex;
 /** REGISTRELE CLIENTILOR **/
 Route::middleware(['is-authenticated'])->prefix('customers-registers')->namespace(Decalex::class)->group(function(){ 
 
+    Route::get('{slug}', 'CustomersRegistersController@index'); 
+
     Route::post('items', 'CustomersRegistersController@getItems');
 
     Route::post('action/{action}', 'CustomersRegistersController@doAction');

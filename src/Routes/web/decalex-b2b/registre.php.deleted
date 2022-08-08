@@ -3,7 +3,7 @@
 use B2B\Http\Controllers\Client;
 
 Route::middleware(['is-authenticated'])->prefix('registre')->namespace(Client::class)->group(function(){
-    Route::get('{slug}', 'RegisterController@index'); 
+    
     // Route::post('items', 'CentralizatoareController@getItems');
 });
 
