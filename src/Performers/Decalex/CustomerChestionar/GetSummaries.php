@@ -3,22 +3,21 @@
 namespace B2B\Performers\Decalex\CustomerChestionar;
 
 use B2B\Classes\Comptech\Helpers\Perform;
-use B2B\Models\Decalex\CustomerCentralizator;
+use B2B\Models\Decalex\CustomerChestionar;
 
 class GetSummaries extends Perform {
 
     public function Action() {
 
-        dd($this->input);
-        // $count_centralizatoare = CustomerCentralizator::where('customer_id', $this->input['customer_id'])->count();
+        $count_chestionare = CustomerChestionar::where('customer_id', $this->input['customer_id'])->count();
         
-        // $this->payload = [
+        $this->payload = [
 
-        //     'centralizatoare' => [
-        //         'count_centralizatoare' => $count_centralizatoare,
-        //     ],
+            'chestionare' => [
+                'count_chestionare' => $count_chestionare,
+            ],
 
-        // ];
+        ];
         
     }
 
