@@ -29,3 +29,5 @@ Route::middleware(['is-authenticated'])->prefix('registre-coloane')->namespace(D
 
 });
 
+
+

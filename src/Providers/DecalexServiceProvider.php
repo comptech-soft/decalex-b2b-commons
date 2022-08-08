@@ -30,6 +30,9 @@ class DecalexServiceProvider extends ServiceProvider
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/static-pages.php');
 
             /** Decalex commons routes */
+
+            $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/registre.php');
+            
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-departamente.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-persons.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-monthly-reports.php');
@@ -65,7 +68,7 @@ class DecalexServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/notifications.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/planning.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/rapoarte.php');
-                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/registre.php');
+               
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/services.php');
                 
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/tasks.php');
