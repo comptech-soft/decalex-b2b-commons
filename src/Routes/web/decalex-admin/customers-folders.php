@@ -5,6 +5,8 @@ use B2B\Http\Controllers\Decalex;
 /** CUSTOMERS FOLDERS **/
 Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(Decalex::class)->group(function(){
     
+    Route::get('/', 'CustomersFoldersController@index'); 
+
     Route::post('items', 'CustomersFoldersController@getItems');
     Route::post('action/{action}', 'CustomersFoldersController@doAction');
 
