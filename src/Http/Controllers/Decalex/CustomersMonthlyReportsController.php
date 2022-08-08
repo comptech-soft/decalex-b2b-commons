@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use B2B\Classes\Comptech\Helpers\Response;
 
-class PersonsController extends Controller {
+class CustomersMonthlyReportsController extends Controller {
     
     public function index(Request $r) {
         return Response::View('decalex-b2b-commons::~templates.index', asset('apps/monthly-reports/index.js'));
