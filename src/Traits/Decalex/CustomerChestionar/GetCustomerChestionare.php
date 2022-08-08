@@ -3,7 +3,7 @@
 namespace B2B\Traits\Decalex\CustomerChestionar;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
-use B2B\Performers\Decalex\CustomerChestonar\GetSummaries;
+use B2B\Performers\Decalex\CustomerChestionar\GetSummaries;
 
 trait GetCustomerChestionare {
 
