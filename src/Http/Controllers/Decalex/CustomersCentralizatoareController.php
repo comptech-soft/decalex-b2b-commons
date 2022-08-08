@@ -18,7 +18,6 @@ class CustomersCentralizatoareController extends Controller {
     }
 
     public function getSummaries(Request $r) {
-        dd($r->all());
         return CustomerCentralizator::getSummaries($r->all());
     }
 
