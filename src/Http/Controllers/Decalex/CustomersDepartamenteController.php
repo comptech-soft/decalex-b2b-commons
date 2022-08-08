@@ -10,7 +10,7 @@ use B2B\Models\Decalex\CustomerDepartament;
 class CustomersDepartamenteController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/departments/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/customer-departments/index.js'));
     }
 
     public function getItems(Request $r) {
