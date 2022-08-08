@@ -6,6 +6,8 @@ Route::middleware(['is-authenticated'])->prefix('customers-chestionare')->namesp
 
     Route::post('items', 'CustomersChestionareController@getItems');
 
+    Route::post('get-summaries', 'CustomersChestionareController@getSummaries');
+
 });
 
 Route::middleware(['is-authenticated'])->prefix('customers-chestionar-raspunsuri')->namespace(Decalex::class)->group(function(){
