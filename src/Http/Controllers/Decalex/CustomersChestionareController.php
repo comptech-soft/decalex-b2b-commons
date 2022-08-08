@@ -17,4 +17,8 @@ class CustomersChestionareController extends Controller {
         return CustomerChestionar::getItems($r->all());
     }
 
+    public function getSummaries(Request $r) {
+        return CustomerChestionar::getSummaries($r->all());
+    }
+
 }
