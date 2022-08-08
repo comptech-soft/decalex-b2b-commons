@@ -39,8 +39,8 @@ class CustomersController extends Controller {
         ]);
     }
 
-    public function getCustomerStatistics(Request $r) {
-        return Customer::getCustomerStatistics($r->customer_id);
-    }
+    // public function getCustomerStatistics(Request $r) {
+    //     return Customer::getCustomerStatistics($r->customer_id);
+    // }
 
 }
