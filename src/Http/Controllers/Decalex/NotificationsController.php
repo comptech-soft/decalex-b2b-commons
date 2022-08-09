@@ -10,7 +10,7 @@ use B2B\Models\Decalex\Notification;
 class NotificationsController extends Controller {
     
     public function index(Request $r) {
-        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/notifications/index.js'));
+        return Response::View('decalex-b2b-commons::~templates.index', asset('apps/notifications-templates/index.js'));
     }
 
     public function getItems(Request $r) {
