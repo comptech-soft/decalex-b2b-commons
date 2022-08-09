@@ -3,7 +3,7 @@
 use B2B\Http\Controllers\Decalex;
 
 /** ORDERS **/
-Route::middleware(['is-authenticated'])->prefix('orders')->namespace(Decalex::class)->group(function(){
+Route::middleware(['is-authenticated'])->prefix('customers-orders')->namespace(Decalex::class)->group(function(){
     
     Route::get('/', 'OrdersController@index'); //->middleware(['has-permission:roles']);
     Route::post('items', 'OrdersController@getItems');

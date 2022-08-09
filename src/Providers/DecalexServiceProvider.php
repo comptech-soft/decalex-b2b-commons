@@ -37,6 +37,7 @@ class DecalexServiceProvider extends ServiceProvider
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-persons.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-monthly-reports.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-contracts.php');
+            $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-orders.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-folders.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-centralizatoare.php');
             $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-chestionare.php');
