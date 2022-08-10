@@ -21,9 +21,9 @@ class CustomersController extends Controller {
         return Customer::getCustomer($r->slug);
     }
 
-    // public function getCustomerStatistics(Request $r) {
-    //     return Customer::getCustomerStatistics($r->customer_id);
-    // }
+    public function getCustomerStatistics(Request $r) {
+        return Customer::getCustomerStatistics($r->customer_id);
+    }
 
     /** Serviciile din comenzile/contractele active ale unui clienti */
     public function getActiveServices(Request $r) {
