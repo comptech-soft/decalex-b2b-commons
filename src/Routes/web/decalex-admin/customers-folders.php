@@ -10,7 +10,7 @@ Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(
     Route::post('items', 'CustomersFoldersController@getItems');
     Route::post('action/{action}', 'CustomersFoldersController@doAction');
 
-    Route::post('get-ancestors', 'CustomersFoldersController@getAncestors');
+    Route::post('get-ancestors', 'CustomersFoldersController@getFolderAncestors');
 
     Route::post('get-summaries', 'CustomersFoldersController@getSummaries');
 });

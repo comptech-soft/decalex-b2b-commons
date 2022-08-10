@@ -17,7 +17,7 @@ trait GetFolders {
         ))->Perform();
     }
 
-    public static function getAncestors($input) {
+    public static function getFolderAncestors($input) {
         return (new GetAncestors($input))->Perform();
     }
 
