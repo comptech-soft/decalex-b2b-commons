@@ -23,53 +23,53 @@ trait GetCustomers {
         
         return [
 
-            // /** REGISTRE */
-            // 'audit' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 2)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 2)->count(),
-            // ],
+            /** REGISTRE */
+            'audit' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 2)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 2)->count(),
+            ],
 
-            // 'incidente' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 1)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 1)->count(),
-            // ],
+            'incidente' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 1)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 1)->count(),
+            ],
 
-            // 'ropa' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 5)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 5)->count(),
-            // ],
+            'ropa' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 5)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 5)->count(),
+            ],
 
-            // 'ropaimputerniciti' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 6)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 6)->count(),
-            // ],
+            'ropaimputerniciti' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 6)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 6)->count(),
+            ],
 
-            // 'consimtaminte' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 3)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 3)->count(),
-            // ],
+            'consimtaminte' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 3)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 3)->count(),
+            ],
             
-            // 'cereridsar' => [
-            //     'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 4)->count(),
-            //     'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 4)->count(),
-            // ],
+            'cereridsar' => [
+                'count' => CustomerRegister::where('customer_id', $customer_id)->where('register_id', 4)->count(),
+                'count_public' => CustomerRegister::where('customer_id', $customer_id)->where('status', 'public')->where('register_id', 4)->count(),
+            ],
 
 
-            // 'chestionare' => [
-            //     'count' => CustomerChestionar::where('customer_id', $customer_id)->count(),
-            // ],
+            'chestionare' => [
+                'count' => CustomerChestionar::where('customer_id', $customer_id)->count(),
+            ],
 
-            // 'centralizatoare' => [
-            //     'count' => CustomerCentralizator::where('customer_id', $customer_id)->count(),
-            // ],
+            'centralizatoare' => [
+                'count' => CustomerCentralizator::where('customer_id', $customer_id)->count(),
+            ],
 
-            // 'files' => [
-            //     'count' => CustomerFile::where('customer_id', $customer_id)->count(),
-            // ],
+            'files' => [
+                'count' => CustomerFile::where('customer_id', $customer_id)->count(),
+            ],
 
-            // 'educatie' => [
-            //     'count' => CustomerCurs::where('customer_id', $customer_id)->count(),
-            // ], 
+            'educatie' => [
+                'count' => CustomerCurs::where('customer_id', $customer_id)->count(),
+            ], 
         ];
     }
 
