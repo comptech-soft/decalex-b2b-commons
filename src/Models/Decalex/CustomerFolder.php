@@ -16,7 +16,7 @@ class CustomerFolder extends Model {
     
     protected $table = 'customers-folders';
 
-    protected $with = ['children', 'files', 'ancestors'];
+    protected $with = ['children', 'files', 'parent'];
 
     protected $casts = [
         'id' => 'integer',
