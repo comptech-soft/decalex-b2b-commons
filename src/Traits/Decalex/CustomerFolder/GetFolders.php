@@ -4,6 +4,7 @@ namespace B2B\Traits\Decalex\CustomerFolder;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 use B2B\Performers\Decalex\CustomerFolder\GetSummaries;
+use B2B\Performers\Decalex\CustomerFolder\GetAncestors;
 
 trait GetFolders {
 
@@ -14,6 +15,10 @@ trait GetFolders {
             self::query()->whereRaw('( (`customers-folders`.`deleted` IS NULL) OR (`customers-folders`.`deleted` = 0))'), 
             __CLASS__
         ))->Perform();
+    }
+
+    public static function getAncestors($input) {
+        return (new GetAncestors($input))->Perform();
     }
 
     public static function getSummaries($input) {
