@@ -13,7 +13,7 @@ class GetAncestors extends Perform {
 
         $node = CustomerFolder::find($this->input['folder_id']);
         
-        $this->payload['ancestors'] = $node->ancestors;
+        $this->payload['ancestors'] = $node->ancestors()->withCountChildren->get();
     }
 
 }
