@@ -7,12 +7,6 @@ use Maatwebsite\Excel\Concerns\ToModel;
 
 class ChestionarImportAdvanced implements ToModel {
 
-    
-    public function model(array $row)
-    {
-        \Log::info('-->' . $row[0]);
+    public function model(array $row) {
     }
-
-    
-
 }

@@ -9,14 +9,13 @@ trait Logout {
     public static function logout() {
         try
         {
-            \Log::info('Bye. Bye.');
 
             \Sentinel::logout(null, true);
             \Cache::flush();
             
             /** 16.07.2022 ---- */
-            request()->session()->invalidate();
-            request()->session()->regenerateToken();
+            // request()->session()->invalidate();
+            // request()->session()->regenerateToken();
             /** ---- */
 
             return Response::OK('Bye!', []);
