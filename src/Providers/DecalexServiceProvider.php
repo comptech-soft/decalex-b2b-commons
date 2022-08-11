@@ -53,14 +53,8 @@ class DecalexServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/centralizatoare.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/chestionare.php');
                 
-                
-                
-                
-               
-                
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-notifications.php');
-                
-                
+                                
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers-services.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/customers.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/educatie.php');
@@ -98,7 +92,6 @@ class DecalexServiceProvider extends ServiceProvider
             }
 
         });
-
 
         $this->loadViewsFrom(__DIR__ . '/../Views', 'decalex-b2b-commons');
     }
