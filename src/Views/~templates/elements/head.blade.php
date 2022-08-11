@@ -20,6 +20,7 @@
     <meta name="base-url" content="{{ config('app.url') }}" />
     <meta name="app-name" content="{{ config('app.name') }}" />
     <meta name="platform" content="{{ config('app.platform') }}" />
+    <meta name="environment" content="{{ config('app.env') }}" />
 
     @yield('styles')
 
