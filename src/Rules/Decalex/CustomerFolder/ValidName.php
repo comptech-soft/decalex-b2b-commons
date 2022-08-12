@@ -47,6 +47,6 @@ class ValidName implements Rule {
 
     public function message()
     {
-        return 'Fișierul ("' . $this->input['name'] . '") deja există.';
+        return 'Folderul "' . $this->input['name'] . '" deja există.';
     }
 }
