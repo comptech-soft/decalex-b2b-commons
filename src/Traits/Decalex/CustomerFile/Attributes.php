@@ -14,5 +14,10 @@ trait Attributes {
         return in_array($ext, ['jpg', 'jpeg', 'png']);
     }   
 
+    public function getIsOfficeAttribute() {
+        $ext = strtolower($this->file_original_extension);
+        return in_array($ext, ['doc', 'docx', 'xls', 'xlsx']);
+    }  
+
 
 }
