@@ -7,16 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 use B2B\Traits\Decalex\CustomerFile\Actions;
 use B2B\Traits\Decalex\CustomerFile\GetFiles;
 use B2B\Traits\Decalex\CustomerFile\Attributes;
-// use B2B\Traits\Decalex\CustomerFolder\Relations;
-
 
 class CustomerFile extends Model {
 
-    use Actions, GetFiles, Attributes; //,  Relations, Export;
+    use Actions, GetFiles, Attributes; 
     
     protected $table = 'customers-files';
 
-    protected $appends  = ['icon', 'is_image'];
+    protected $appends  = ['icon', 'is_image', 'is_office'];
 
     protected $casts = [
         'id' => 'integer',

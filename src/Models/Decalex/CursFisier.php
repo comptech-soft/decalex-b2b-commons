@@ -14,7 +14,7 @@ class CursFisier extends Model {
     
     protected $table = 'educatie-fisiere';
 
-    protected $appends  = ['icon', 'is_image', 'is_office'];
+    protected $appends  = ['icon', 'is_image'];
 
     protected $casts = [
         'id' => 'integer',
