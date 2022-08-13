@@ -51,7 +51,7 @@ trait Actions {
 
     public static function validateFolderName($input) {
         $validator = \Validator::make($input, [
-            'action' => [
+            'name' => [
                 new ValidName($input),
             ],
         ]);
