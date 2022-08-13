@@ -21,6 +21,8 @@ Route::middleware(['is-authenticated'])->prefix('customers-files')->namespace(De
     Route::post('items', 'CustomersFilesController@getItems');
     Route::post('change-status', 'CustomersFilesController@changeStatus');
     Route::post('change-files-status', 'CustomersFilesController@changeFilesStatus');
+    Route::post('delete-files', 'CustomersFilesController@deleteFiles');
+
     Route::post('attach-register-files', 'CustomersFilesController@attachRegisterFiles');
     Route::post('get-register-row-files', 'CustomersFilesController@getRegisterRowFiles');
 
