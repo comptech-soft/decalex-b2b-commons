@@ -17,8 +17,6 @@ class CustomerFile extends Model {
 
     protected $appends  = ['icon', 'is_image', 'is_office', 'just_name'];
 
-    protected $with = ['folder'];
-
     protected $casts = [
         'id' => 'integer',
         'created_by' => 'integer',
