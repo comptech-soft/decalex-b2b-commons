@@ -11,7 +11,7 @@ use B2B\Models\Decalex\CustomerFile;
 class DeleteFiles extends Perform {
 
     public function Action() {
-        CustomerFile::whereIn($this->input['files'])->delete();
+        CustomerFile::whereIn('id',  $this->input['files'])->delete();
     }
 
 } 
