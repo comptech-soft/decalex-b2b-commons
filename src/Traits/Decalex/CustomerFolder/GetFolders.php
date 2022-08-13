@@ -13,7 +13,6 @@ trait GetFolders {
         return (new GetItems(
             $input, 
             self::query()
-                ->with(['files'])
                 ->whereRaw('( (`customers-folders`.`deleted` IS NULL) OR (`customers-folders`.`deleted` = 0))'), 
             __CLASS__
         ))->Perform();
