@@ -12,7 +12,9 @@ trait GetFolders {
     public static function getItems($input) {
         return (new GetItems(
             $input, 
-            self::query()->whereRaw('( (`customers-folders`.`deleted` IS NULL) OR (`customers-folders`.`deleted` = 0))'), 
+            self::query()
+                ->with(['files'])
+                ->whereRaw('( (`customers-folders`.`deleted` IS NULL) OR (`customers-folders`.`deleted` = 0))'), 
             __CLASS__
         ))->Perform();
     }
