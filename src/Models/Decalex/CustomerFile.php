@@ -14,7 +14,7 @@ class CustomerFile extends Model {
     
     protected $table = 'customers-files';
 
-    protected $appends  = ['icon', 'is_image', 'is_office'];
+    protected $appends  = ['icon', 'is_image', 'is_office', 'just_name'];
 
     protected $casts = [
         'id' => 'integer',

@@ -19,5 +19,9 @@ trait Attributes {
         return in_array($ext, ['doc', 'docx', 'xls', 'xlsx']);
     }  
 
+    public function getJustNameAttribute() {
+        return \Str::replace('.' + $this->file_original_extension, '', $this->file_original_name);
+    } 
+
 
 }
