@@ -20,7 +20,7 @@ trait Attributes {
     }  
 
     public function getJustNameAttribute() {
-        return \Str::replace('.' + $this->file_original_extension, '', $this->file_original_name);
+        return \Str::replace('.' . $this->file_original_extension, '', $this->file_original_name);
     } 
 
 
