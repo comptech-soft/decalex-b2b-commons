@@ -11,8 +11,8 @@ Route::middleware(['is-authenticated'])->prefix('customers-folders')->namespace(
     Route::post('action/{action}', 'CustomersFoldersController@doAction');
 
     Route::post('get-ancestors', 'CustomersFoldersController@getFolderAncestors');
-
     Route::post('get-summaries', 'CustomersFoldersController@getSummaries');
+    Route::post('validate-folder-name', 'CustomersFoldersController@validateFolderName');
 });
 
 /** CUSTOMERS FILES **/

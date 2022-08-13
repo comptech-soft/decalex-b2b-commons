@@ -49,4 +49,14 @@ trait Actions {
         return (new DoAction($action, $input, __CLASS__))->Perform();
     }
 
+    public static function validateFolderName($input) {
+        $validator = \Validator::make($input, [
+            'action' => [
+                new ValidName($input),
+            ],
+        ]);
+
+        return $validator->fails() ? 0 : 1;
+    }
+
 }

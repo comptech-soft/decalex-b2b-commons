@@ -28,5 +28,9 @@ class CustomersFoldersController extends Controller {
     public function getSummaries(Request $r) {
         return CustomerFolder::getSummaries($r->all());
     }
+
+    public function validateFolderName(Request $r) {
+        return CustomerFolder::validateFolderName($r->all());
+    }
     
 }
