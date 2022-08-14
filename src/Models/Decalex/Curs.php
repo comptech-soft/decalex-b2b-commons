@@ -27,6 +27,7 @@ class Curs extends Model {
         'updated_by' => 'integer',
         'tematica' => 'json',
         'file' => 'json',
+        'k_avatar' => 'json',
     ];
 
     protected $fillable = [
@@ -41,6 +42,12 @@ class Curs extends Model {
         'date_to',
         'props',
         'file',
+        'k_id',
+        'k_level',
+        'k_duration',
+        'k_number_students_enrolled',
+        'k_from_training_tracker',
+        'k_avatar',
         'created_by',
         'updated_by'
     ];
