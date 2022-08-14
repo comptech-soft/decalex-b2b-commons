@@ -10,7 +10,7 @@ class GetSummary extends Perform {
 
     public function Action() {
         
-        $uncategorized_count = Curs::whereIsNull('category_id')->count();
+        $uncategorized_count = Curs::whereNull('category_id')->count();
 
         $this->payload = [
             'uncategorized_count' => $uncategorized_count,
