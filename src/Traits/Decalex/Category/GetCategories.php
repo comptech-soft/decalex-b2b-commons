@@ -11,7 +11,12 @@ trait GetCategories {
         {
             return (new GetItems($input, self::query(), __CLASS__))->Perform();
         }
-        return (new GetItems($input, self::query()->where('type', $type), __CLASS__))->Perform();
+
+        return (new GetItems(
+            $input, 
+            self::query()->where('type', $type)->withCount($type), 
+            __CLASS__
+        ))->Perform();
     }
 
 }
