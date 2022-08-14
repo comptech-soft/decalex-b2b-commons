@@ -19,7 +19,15 @@ trait GetCursuri {
     }
 
     public static function getItems($input) {
-        return (new GetItems($input, self::getQuery()->with(['customercursuri.trimitere.detalii.customer', 'customercursuri.participanti']), __CLASS__))->Perform();
+        return (new GetItems(
+            $input, 
+            self::getQuery()->with([
+                'customercursuri.trimitere.detalii.customer', 
+                'customercursuri.participanti'
+            ]), 
+            __CLASS__
+        ))
+        ->Perform();
     }
 
 }

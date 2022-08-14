@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use B2B\Traits\Decalex\Curs\GetCursuri;
 use B2B\Traits\Decalex\Curs\Relations;
 use B2B\Traits\Decalex\Curs\Actions;
+use B2B\Traits\Decalex\Curs\Sync;
 
 class Curs extends Model {
 
-    use GetCursuri, Relations, Actions;
+    use GetCursuri, Relations, Actions, Sync;
 
     protected $table = 'educatie';
 

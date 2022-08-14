@@ -77,31 +77,6 @@ trait Actions {
         return $curs;
     }
 
-    // public static function doDuplicate($input, $centralizator) {
-    //     return self::doInsert($input, null);
-    // }
-
-    // public static function doUpdate($input, $centralizator) {
-    //     $collectionInput = collect($input);
-
-    //     $centralizator->update($collectionInput->except(['columns'])->toArray());
-
-    //     if(array_key_exists('columns', $input))
-    //     {
-    //         $centralizator->attachColumns($collectionInput->only(['columns'])->toArray()['columns']);
-    //     }
-
-    //     return $centralizator;
-    // }
-
-    // public static function doDelete($input, $centralizator) {
-        
-    //     $centralizator->deleted = 1;
-    //     $centralizator->updated_by = \Sentinel::check()->id;
-    //     $centralizator->save();
-    //     return $centralizator;
-    // }
-
     public static function doAction($action, $input) {
         return (new DoAction($action, $input, __CLASS__))->Perform();
     }
