@@ -23,7 +23,7 @@ class EducatieController extends Controller {
 
     public function doSync(Request $r) {
         
-        dd(__METHOD__);
+        dd(__METHOD__, config('knolyx'));
         // return Curs::doAction($r->all());
     }
 
