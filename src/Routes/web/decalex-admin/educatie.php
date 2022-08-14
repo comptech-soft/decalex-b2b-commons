@@ -9,7 +9,7 @@ Route::middleware(['is-authenticated'])->prefix('educatie')->namespace(Decalex::
     Route::post('items', 'EducatieController@getItems');
     Route::post('action/{action}', 'EducatieController@doAction');
 
-    Route::post('sincronizare', 'EducatieController@sincroniare');
+    Route::post('sincronizare', 'EducatieController@doSync');
 });
 
 /** 
