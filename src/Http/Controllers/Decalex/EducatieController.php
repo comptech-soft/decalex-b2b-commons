@@ -21,6 +21,13 @@ class EducatieController extends Controller {
         return Curs::doAction($action, $r->all());
     }
 
+    public function getSummary(Request $r) {
+        return Curs::getSummary($r->all());
+    }
+
+    /**
+     * KNOLYX
+     */
     public function doSync(Request $r) {
         return Curs::doSync($r->all());
     }
@@ -28,6 +35,8 @@ class EducatieController extends Controller {
     public function saveSync(Request $r) {
         return Curs::saveSync($r->all());
     }
+
+    
 
     
 }

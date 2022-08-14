@@ -8,6 +8,8 @@ Route::middleware(['is-authenticated'])->prefix('educatie')->namespace(Decalex::
     Route::get('/', 'EducatieController@index'); 
     Route::post('items', 'EducatieController@getItems');
     Route::post('action/{action}', 'EducatieController@doAction');
+    Route::post('get-summary', 'EducatieController@getSummary');
+    
 
     /**
      * KNLOYX

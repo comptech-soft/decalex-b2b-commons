@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Curs;
 
 use B2B\Classes\Comptech\Performers\Datatable\GetItems;
+use B2B\Performers\Decalex\Curs\GetSummary;
 
 trait GetCursuri {
 
@@ -28,6 +29,12 @@ trait GetCursuri {
             __CLASS__
         ))
         ->Perform();
+    }
+
+    public static function getSummary($input) {
+        return (new GetSummary($input))
+            ->SetSuccessMessage('Succes!')
+            ->Perform();
     }
 
 }
