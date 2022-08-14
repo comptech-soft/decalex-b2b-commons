@@ -14,7 +14,7 @@ class CategoriiCursuriController extends Controller {
     }
 
     public function getItems(Request $r) {
-        return Category::getItems($r->all());
+        return Category::getItems($r->all(), 'cursuri');
     }
 
     public function doAction($action, Request $r) {
