@@ -21,4 +21,11 @@ class EducatieController extends Controller {
         return Curs::doAction($action, $r->all());
     }
 
+    public function doSync(Request $r) {
+        
+        dd(__METHOD__);
+        // return Curs::doAction($r->all());
+    }
+
+    
 }
