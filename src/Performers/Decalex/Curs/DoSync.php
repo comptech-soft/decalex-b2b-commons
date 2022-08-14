@@ -10,7 +10,12 @@ class DoSync extends Perform {
 
     public function Action() {
         
-        dd(__METHOD__, config('knolyx'));
+        $response =  Http::withHeaders([
+            'X-Project-Id' => config('knolyx.project_id'),
+            'X-Api-Key' => config('knolyx.app_key')
+        ])->get(config('knolyx.endpoint') . 'course?pagination.page=0&pagination.size=20');
+
+        dd($response);
     }
 
 } 
