@@ -15,7 +15,7 @@ class DoSync extends Perform {
             'X-Api-Key' => config('knolyx.app_key')
         ])->get(config('knolyx.endpoint') . 'course?pagination.page=0&pagination.size=20');
 
-        dd($response->json());
+        $payload['cursuri'] = $response->json(); 
     }
 
 } 
