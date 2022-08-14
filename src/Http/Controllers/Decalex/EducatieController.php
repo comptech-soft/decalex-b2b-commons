@@ -25,5 +25,9 @@ class EducatieController extends Controller {
         return Curs::doSync($r->all());
     }
 
+    public function saveSync(Request $r) {
+        return Curs::saveSync($r->all());
+    }
+
     
 }
