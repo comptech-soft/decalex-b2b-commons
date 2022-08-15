@@ -41,9 +41,6 @@ class Trimitere extends Model {
         'updated_by'
     ];
 
-    public static function getNextNumber($type) {
-        $records = \DB::select("SELECT MAX(CAST(`number` AS UNSIGNED)) as max_number FROM `trimiteri` WHERE type='" . $type . "'");
-        return number_format(1 + $records[0]->max_number, 0, '', '');
-    }
+    
 
 }

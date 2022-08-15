@@ -25,7 +25,7 @@ class ShareController extends Controller {
     }
 
     public function doAction($action, Request $r) {
-        return Service::doAction($action, $r->all());
+        return Trimitere::doAction($action, $r->all());
     }
 
     
