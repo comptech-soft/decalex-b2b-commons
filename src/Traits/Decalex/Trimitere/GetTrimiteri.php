@@ -7,23 +7,18 @@ use B2B\Classes\Comptech\Performers\Datatable\GetItems;
 trait GetTrimiteri {
 
     /**  Get items */
-    public static function getQuery()
-    {
-        return 
-            self::query()
-            // ->leftJoin(
-            //     'customers',
-            //     function($j) {
-            //         $j->on('customers.id', '=', 'customers-contracts.customer_id');
-            //     }
-            // )
-            // ->select('customers-contracts.*')
-        ;
+    public static function getItems($input) {
+        return (new GetItems($input, self::query()->with(['detalii.customer']), __CLASS__))->Perform();
     }
 
-    /**  Get items */
-    public static function getItems($input) {
-        return (new GetItems($input, self::getQuery()->with(['detalii.customer']), __CLASS__))->Perform();
+    public static function getNextNumber($type) {
+        $records = \DB::select("
+            SELECT 
+                MAX(CAST(`number` AS UNSIGNED)) as max_number 
+            FROM `trimiteri` 
+            WHERE type='" . $type . "'"
+        );
+        return number_format(1 + $records[0]->max_number, 0, '', '');
     }
 
 }

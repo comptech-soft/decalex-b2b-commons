@@ -7,5 +7,5 @@ Route::middleware(['is-authenticated'])->prefix('share')->namespace(Decalex::cla
     
     Route::get('/{entity}', 'ShareController@index'); 
 
-    
+    Route::post('action/{action}', 'ShareController@doAction');
 });

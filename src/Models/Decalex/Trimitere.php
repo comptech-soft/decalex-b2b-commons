@@ -19,7 +19,7 @@ class Trimitere extends Model {
     protected $casts = [
         'id' => 'integer',
         'customers' => 'json',
-        'chestionare' => 'json',
+        'entities' => 'json',
         'created_by' => 'integer',
         'updated_by' => 'integer',
     ];
@@ -34,7 +34,7 @@ class Trimitere extends Model {
         'completed_to',
         'effective_time',
         'customers',
-        'chestionare',
+        'entities',
         'created_at',
         'updated_at',
         'created_by',

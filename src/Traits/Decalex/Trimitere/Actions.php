@@ -40,8 +40,15 @@ trait Actions {
         return $result;
     }
 
+    public static function DoInsert($input, $trimitere) {
+        dd($input, $trimitere);
+    }
+
     public static function doAction($action, $input) {
         return (new DoAction($action, $input, __CLASS__))->Perform();
     }
+
+
+
 
 }
