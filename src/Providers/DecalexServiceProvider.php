@@ -69,7 +69,10 @@ class DecalexServiceProvider extends ServiceProvider
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/tasks.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/team-customers.php');
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/team.php');
+
                 $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/trimiteri.php');
+                $this->loadRoutesFrom(__DIR__ . '/../Routes/web/decalex-admin/share.php');
+
             }
 
             if(config('app.platform') == 'b2b')
