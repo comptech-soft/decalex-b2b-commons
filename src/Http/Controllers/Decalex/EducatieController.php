@@ -36,7 +36,14 @@ class EducatieController extends Controller {
         return Curs::saveSync($r->all());
     }
 
-    
+    public function openKnolyxCourse(Request $r) {
 
+        dd($r->all());
+        
+        return Curs::openKnolyxCourse($r->all());
+    }
+
+    
+    
     
 }
