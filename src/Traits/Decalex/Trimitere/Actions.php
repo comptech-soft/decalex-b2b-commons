@@ -15,16 +15,15 @@ trait Actions {
             return NULL;
         }
         $result = [
-            'number' => 'required',
+            'number' => [
+                'required',
+                new ValidNumber($input),
+            ],
             'date' => [
                 'required',
                 'date',
-                new ValidNumber($input),
             ],
-            // 'completed_from' => 'required|date',
-            // 'completed_to' => 'required|date',
-            // 'effective_time' => 'required|numeric'
-            
+            // 'effective_time' => 'required|numeric'            
         ];
 
         return $result;
