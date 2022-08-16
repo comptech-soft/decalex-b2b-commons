@@ -32,8 +32,7 @@ class ValidNumber implements Rule {
         return TRUE;
     }
 
-    public function message()
-    {
+    public function message() {
         return 'Trimiterea numărul ' . $this->input['number'] . ' este deja înregistrată.';
     }
 }
