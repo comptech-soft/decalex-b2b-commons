@@ -3,6 +3,7 @@
 namespace B2B\Traits\Decalex\Trimitere;
 
 use B2B\Classes\Comptech\Performers\Datatable\DoAction;
+use B2B\Rules\Decalex\Trimitere\ValidNumber;
 
 trait Actions {
 
@@ -15,7 +16,11 @@ trait Actions {
         }
         $result = [
             'number' => 'required',
-            'date' => 'required|date',
+            'date' => [
+                'required',
+                'date',
+                new ValidNumber($input),
+            ],
             // 'completed_from' => 'required|date',
             // 'completed_to' => 'required|date',
             // 'effective_time' => 'required|numeric'
