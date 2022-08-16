@@ -63,18 +63,25 @@ class OpenKnolyxCourse extends Perform {
         
         $user = array_key_exists('user_id', $this->input) ? User::find($this->input['user_id']) : \Sentinel::check();
         
+        /**
+         * #1. PUT {{baseURL}}/public/api/v1/user/provision
+         */
         self::CreateKnolyxUser($user);
 
         if( ! $user['k_id'] ) 
         {
-            throw new \Exception('NU am utilizator Knolyx.');
+            throw new \Exception('Nu am utilizator Knolyx.');
         }
 
+        /**
+         * #2. GET {{baseURL}}/public/api/v1/business-rule/course/{{courseId}}
+         */
         $course_id = Curs::find($this->input['curs_id'])->k_id;
-
         $courseRole = self::GetCourseRole($course_id);
 
-
+        /**
+         * #3. POST {{baseURL}}/public/api/v1/business-rule/course/{{courseId}}
+         */
         if( ! array_key_exists('USER', $courseRole['associations']) )
         {
             $courseRole['associations']['USER'] = [];
@@ -85,7 +92,6 @@ class OpenKnolyxCourse extends Perform {
             $courseRole['associations']['USER'][] = $user['k_id'];
             self::SetCourseRole($course_id, $courseRole);
         }
-
         
     }
 

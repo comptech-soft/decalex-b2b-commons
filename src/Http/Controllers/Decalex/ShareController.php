@@ -22,6 +22,7 @@ class ShareController extends Controller {
                 ]
             );
         }
+        return redirect();
     }
 
     public function doAction($action, Request $r) {
