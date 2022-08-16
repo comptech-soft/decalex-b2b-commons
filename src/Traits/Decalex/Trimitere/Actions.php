@@ -22,8 +22,7 @@ trait Actions {
             'date' => [
                 'required',
                 'date',
-            ],
-            // 'effective_time' => 'required|numeric'            
+            ],        
         ];
 
         return $result;
@@ -34,11 +33,7 @@ trait Actions {
 
         $result = [
             'number.required' => 'Numărul trebuie completat',
-            'date.required' => 'Data trebuie completată',
-            // 'completed_from.required' => 'Intervalul trebuie completat',
-            // 'completed_to.required' => 'Intervalul trebuie completat',
-            // 'effective_time.required' => 'Timpul de lucru trebuie completat',
-            
+            'date.required' => 'Data trebuie completată',            
         ];
 
         return $result;

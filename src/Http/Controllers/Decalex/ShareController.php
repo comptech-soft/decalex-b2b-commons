@@ -28,5 +28,9 @@ class ShareController extends Controller {
         return Trimitere::doAction($action, $r->all());
     }
 
+    public function getNextNumber(Request $r) {
+        return Trimitere::getNextNumber($r->type);
+    }
+
     
 }

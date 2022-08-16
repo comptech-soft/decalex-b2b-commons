@@ -67,6 +67,8 @@ Route::middleware(['is-authenticated'])->prefix('chestionare')->namespace(Decale
 Route::middleware(['is-authenticated'])->prefix('chestionare-trimiteri')->namespace(Decalex::class)->group(function(){
     
     Route::post('action/{action}', 'ChestionareTrimiteriController@doAction');
+    
+    /** asta va disparea*/
     Route::post('get-next-number', 'ChestionareTrimiteriController@getNextNumber');
     Route::post('trimite', 'ChestionareTrimiteriController@trimite');
 
