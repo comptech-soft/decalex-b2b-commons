@@ -11,7 +11,7 @@ class ShareController extends Controller {
     
     public function index($entity, Request $r) {
 
-        if( in_array($entity, ['curs', 'centralizator']) )
+        if( in_array($entity, ['curs', 'centralizator', 'chestionar']) )
         {
             return Response::View(
                 'decalex-b2b-commons::~templates.index', 
