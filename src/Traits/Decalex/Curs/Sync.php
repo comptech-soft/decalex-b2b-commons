@@ -4,8 +4,14 @@ namespace B2B\Traits\Decalex\Curs;
 
 use B2B\Performers\Decalex\Curs\DoSync;
 use B2B\Performers\Decalex\Curs\SaveSync;
+use B2B\Performers\Decalex\Curs\OpenKnolyxCourse;
 
 trait Sync {
+
+    public static function openKnolyxCourse($input) {
+        return (new OpenKnolyxCourse($input))
+            ->Perform();
+    }
 
     public static function doSync($input) {
         return (new DoSync($input))
