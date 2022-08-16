@@ -12,7 +12,7 @@ class ChestionareTrimiteriController extends Controller {
         return Trimitere::doAction($action, $r->all());
     }
 
-    /** va disparea */
+    /** asta va disparea cand sunt gata trimiterile*/
     public function getNextNumber(Request $r) {
         return Trimitere::getNextNumber($r->type);
     }
