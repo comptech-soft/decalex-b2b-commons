@@ -33,5 +33,9 @@ class ShareController extends Controller {
         return Trimitere::getNextNumber($r->type);
     }
 
+    public function sendTrimitere(Request $r) {
+        return Trimitere::sendTrimitere($r->type);
+    }
+
     
 }

@@ -10,4 +10,8 @@ Route::middleware(['is-authenticated'])->prefix('share')->namespace(Decalex::cla
     Route::post('action/{action}', 'ShareController@doAction');
 
     Route::post('get-next-number', 'ShareController@getNextNumber');
+
+    Route::post('send-trimitere', 'ShareController@sendTrimitere');
+
+    
 });
