@@ -34,7 +34,7 @@ class ShareController extends Controller {
     }
 
     public function sendTrimitere(Request $r) {
-        return Trimitere::sendTrimitere($r->type);
+        return Trimitere::sendTrimitere($r->all());
     }
 
     
