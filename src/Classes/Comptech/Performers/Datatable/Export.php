@@ -4,7 +4,7 @@ namespace B2B\Classes\Comptech\Performers\Datatable;
 
 use B2B\Classes\Comptech\Helpers\Perform;
 use B2B\Classes\Comptech\Helpers\ExcelExport;
-use B2B\Models\System\Export;
+use B2B\Models\System\Export as ModelExport;
 
 /**
  * inregistrarile exportate trebuie sa se gaseasca in input['items']
@@ -14,7 +14,7 @@ class Export extends Perform {
     public $model = NULL;
     public $records = [];
     public $viewFile = NULL;        // blade-ul dupa care se face exportul
-    public $columns = [];     // coloanele ce se exporta
+    public $columns = [];           // coloanele ce se exporta
 
     public function __construct($input, $model, $viewFile, $columns) {
         parent::__construct($input, NULL, NULL);
@@ -41,7 +41,7 @@ class Export extends Perform {
                 
         \Excel::store($export, $filename, NULL, NULL, ['visibility' => 'public']);
 
-        Export::create([
+        ModelExport::create([
             'card_id' => NULL,
             'user_id' => \Sentinel::check()->id,
             'customer_id' => NULL,
