@@ -23,7 +23,7 @@ trait Export {
                 'items' => $chestionar->intrebari,
             ], 
             __CLASS__, 
-            'exports.chestionar.xls-export', 
+            'decalex-b2b-commons::exports.chestionar.xls-export', 
             self::$exportedColumns
             
         ))->Perform();

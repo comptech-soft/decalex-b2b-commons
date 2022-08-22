@@ -45,7 +45,7 @@ trait Export {
         return (new ExportPerformer(
             $input, 
             __CLASS__, 
-            'exports.contracts.xls-export', 
+            'decalex-b2b-commons::exports.contracts.xls-export', 
             self::$exportedColumns
             
         ))->Perform();

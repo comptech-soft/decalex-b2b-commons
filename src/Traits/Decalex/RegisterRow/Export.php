@@ -18,7 +18,7 @@ trait Export {
         return (new ExportPerformer(
             $input, 
             __CLASS__, 
-            'exports.ropa-register.xls-export', 
+            'decalex-b2b-commons::exports.ropa-register.xls-export', 
             RegisterColumn::where('register_id', 1)->orderBy('order_no')->get()->toArray()
             
         ))->Perform();

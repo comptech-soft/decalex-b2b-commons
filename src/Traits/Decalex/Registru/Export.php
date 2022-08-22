@@ -39,7 +39,7 @@ trait Export {
                 ]
             ], 
             __CLASS__, 
-            'exports.registru.xls-export', 
+            'decalex-b2b-commons::exports.registru.xls-export', 
             self::$exportedColumns
             
         ))->Perform();

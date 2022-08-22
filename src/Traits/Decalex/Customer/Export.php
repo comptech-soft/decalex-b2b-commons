@@ -16,7 +16,7 @@ trait Export {
         return (new ExportPerformer(
             $input, 
             __CLASS__, 
-            'exports.customers.xls-export', 
+            'decalex-b2b-commons::exports.customers.xls-export', 
             self::$exportedColumns
             
         ))->Perform();

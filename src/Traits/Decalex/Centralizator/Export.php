@@ -23,7 +23,7 @@ trait Export {
                 'items' => $centralizator->columns,
             ], 
             __CLASS__, 
-            'exports.centralizator.xls-export', 
+            'decalex-b2b-commons::exports.centralizator.xls-export', 
             self::$exportedColumns
             
         ))->Perform();
