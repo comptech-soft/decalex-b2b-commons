@@ -18,7 +18,7 @@
 @endforeach
 
 @if(count($intrebare['children']) > 0)
-    @include('exports.chestionar.intrebare', [
+    @include('decalex-b2b-commons::exports.chestionar.intrebare', [
         'intrebare' => $intrebare['children'][0],
         'nivel' => $nivel + 1,
     ])

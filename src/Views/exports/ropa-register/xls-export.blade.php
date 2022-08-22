@@ -1,9 +1,9 @@
 <table>
     <thead>
         <tr>
-            @include('exports.~pieces.th', ['caption' => 'Nr<br/>Crt'])
+            @include('decalex-b2b-commons::exports.~pieces.th', ['caption' => 'Nr<br/>Crt'])
             @foreach($columns as $i => $column)
-                @include('exports.~pieces.th', ['caption' => $column['caption']])
+                @include('decalex-b2b-commons::exports.~pieces.th', ['caption' => $column['caption']])
             @endforeach
         </tr>
     </thead>
@@ -11,9 +11,9 @@
     <tbody>
         @foreach($records as $i => $record)
             <tr>
-            @include('exports.~pieces.td', ['caption' => $i + 1])
+            @include('decalex-b2b-commons::exports.~pieces.td', ['caption' => $i + 1])
             @foreach($columns as $j => $column)
-                @include('exports.~pieces.td', ['caption' => $record['column-' . $column['id']]])
+                @include('decalex-b2b-commons::exports.~pieces.td', ['caption' => $record['column-' . $column['id']]])
             @endforeach
             </tr>
         @endforeach
